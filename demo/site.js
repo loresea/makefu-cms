@@ -79,13 +79,16 @@ function label(){return familyLabels[industry.family]||familyLabels['service-con
 function safe(s){return String(s||'').replace(/[<>&"]/g,'')}
 function ensureImage(url,label='MAKEFU'){return url||((window.fallbackImageData&&fallbackImageData(label,industry?.accent||'#f97316'))||'')}
 function fillToMin(list,min,factory){const arr=[...(list||[])];let i=0;while(arr.length<min)arr.push(factory(arr.length,i++));return arr}
+function contentGridColumns(){return ['catalog','commerce'].includes(preset?.layout)?4:3}
+function contentGridCount(rows=2){return contentGridColumns()*rows}
+function contentGridClass(){return 'contentGrid cols-'+contentGridColumns()}
 
 
 function renderShell(){
   const l=label(),brand=document.querySelector('#brand');
-  brand.innerHTML=window.industryLogoMarkup?industryLogoMarkup(industry.name,industry.accent,industry.family,'headerLogo',(preset.navVariant==='dark'||preset.style==='creative-studio')?'dark':'light'):industry.name;
+  brand.innerHTML=window.industryLogoMarkup?industryLogoMarkup(industry.name,industry.accent,industry.family,'headerLogo',(['dark','stacked'].includes(preset.navVariant)||preset.style==='creative-studio')?'dark':'light'):industry.name;
   brand.href=route('site-home.html');
-  document.querySelector('#topText').textContent=industry.category+' · '+styleLabel(preset.style)+' · '+layoutLabel(preset.layout);
+  document.querySelector('#topText').textContent=industry.category+' · '+styleLabel(preset.style)+' · '+layoutLabel(preset.layout)+' · '+navLabel(preset.navVariant);
   document.querySelector('#navLinks').innerHTML=[
     ['site-home.html','首页','home'],
     ['site-products.html',l.nav2,'products'],
@@ -102,6 +105,7 @@ function renderShell(){
 }
 function styleLabel(v){return ({'tech-minimal':'科技极简','industrial-pro':'工业专业','legal-luxury':'专业高端','travel-immersive':'沉浸旅行','home-editorial':'家居杂志','medical-clean':'医疗清洁','education-friendly':'教育成长','food-brand':'餐饮品牌','ecommerce-modern':'现代电商','local-conversion':'本地转化','realestate-premium':'地产高端','creative-studio':'创意工作室'})[v]||v}
 function layoutLabel(v){return ({split:'左右分栏',fullscreen:'沉浸全屏',centered:'居中展示',editorial:'杂志排版',catalog:'产品目录',conversion:'获客转化',authority:'专业权威',portfolio:'作品集',commerce:'商城陈列',property:'项目地产'})[v]||v}
+function navLabel(v){return ({light:'清爽导航',glass:'玻璃导航',dark:'深色导航',line:'线性导航',pill:'悬浮胶囊导航',stacked:'上下分层导航','brand-center':'品牌居中导航',minimal:'极简导航'})[v]||v}
 
 function renderPage(){
   if(page==='home')return renderHome();
@@ -130,11 +134,11 @@ function statsSection(){
 }
 function productNames(){
   const m={travel:['京都慢旅 6 日','云南秋色 8 日','欧洲私家团'],renovation:['全案设计','旧房翻新','软装搭配'],accounting:['小规模代理记账','一般纳税人服务','财税顾问'],lawyer:['公司商事','劳动用工','婚姻家事']};
-  return fillToMin(m[industry.slug]||[industry.name+'核心产品 A',industry.name+'解决方案 B',industry.name+'定制服务 C'],6,(idx)=>industry.name+'扩展服务 '+(idx+1));
+  const count=contentGridCount(2);return fillToMin(m[industry.slug]||[industry.name+'核心产品 A',industry.name+'解决方案 B',industry.name+'定制服务 C'],count,(idx)=>industry.name+'扩展服务 '+(idx+1)).slice(0,count);
 }
 function caseNames(){
   const m={travel:['日本关西亲子私家团','川西摄影小团','欧洲蜜月定制'],renovation:['170㎡改善型住宅','98㎡旧房翻新','商业空间改造'],accounting:['科技企业财税规范项目','电商公司历史账务梳理','外贸企业税务顾问'],lawyer:['股权回购争议专项','高级管理人员竞业限制争议','复杂家事财产梳理']};
-  return fillToMin(m[industry.slug]||[industry.name+'代表项目一',industry.name+'客户案例二',industry.name+'交付案例三'],6,(idx)=>industry.name+'项目案例 '+(idx+1));
+  const count=contentGridCount(2);return fillToMin(m[industry.slug]||[industry.name+'代表项目一',industry.name+'客户案例二',industry.name+'交付案例三'],count,(idx)=>industry.name+'项目案例 '+(idx+1)).slice(0,count);
 }
 function newsTitles(){return fillToMin([industry.name+'客户最常关心的 6 个问题','选择'+industry.name+'服务商时要看什么？',industry.name+'网站内容应该怎样持续更新？','2026 年'+industry.name+'行业趋势与注意事项','一个真实'+industry.name+'项目是怎么落地的？'],7,(idx)=>industry.name+'行业观察与实战经验 '+(idx+1))}
 
