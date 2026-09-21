@@ -44,7 +44,7 @@ async function boot(){
 }
 function renderShell(){
   const l=label();
-  document.querySelector('#brand').innerHTML=industry.name+' <em>PRO</em>';
+  document.querySelector('#brand').innerHTML='<img alt="'+industry.name+' Logo" src="'+makeIndustryLogo(industry.name,industry.accent,industry.family)+'">';
   document.querySelector('#topText').textContent=industry.category+' · 行业官网模板';
   document.querySelector('#navLinks').innerHTML=[
     ['site-home.html','首页','home'],
@@ -56,7 +56,7 @@ function renderShell(){
   document.querySelector('#navCta').href=route('site-contact.html');
   document.querySelector('#footerBrand').textContent=industry.name+'示例企业';
   document.querySelector('#footerDesc').textContent=industry.headline;
-  document.querySelector('#footerServices').innerHTML=(pack.menus||[]).slice(1,5).join('<br>');
+  document.querySelector('#footerServices').innerHTML=(pack.menus||[]).slice(1,5).join('<br>'); const cr=document.querySelector('.copyright'); if(cr) cr.innerHTML='<a href="https://www.makefu.com/" target="_blank" rel="noopener">© 2026 '+industry.name+'示例站 · 技术支持：码科服网站开发</a> <span style="margin:0 10px">·</span> 浙ICP备2026XXXX号-1';
 }
 function renderPage(){
   if(page==='home') return renderHome();
