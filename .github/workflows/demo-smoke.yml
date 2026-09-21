@@ -75,6 +75,10 @@ jobs:
           grep -q 'text-align:center' demo/design-system.css
           grep -q 'data-layout' demo/design-system.css
           grep -q 'IMAGE_POOLS' demo/image-library.js
+          grep -q 'contentGridColumns' demo/site.js
+          grep -q 'brand-center' demo/template-presets.js
+          grep -q 'stacked' demo/design-system.css
+          grep -q 'nav_variants' demo/template-matrix.json
 
       - name: Check internal demo links
         run: |
@@ -146,6 +150,7 @@ jobs:
           matrix = json.loads(Path("demo/template-matrix.json").read_text(encoding="utf-8"))
           assert matrix["count"] == 200
           assert matrix["unique_fingerprints"] == 200
+          assert len(matrix.get("nav_variants", [])) == 8
           fingerprints = [x["fingerprint"] for x in matrix["templates"]]
           assert len(fingerprints) == len(set(fingerprints)) == 200
           assert {x["slug"] for x in matrix["templates"]} == slugs
