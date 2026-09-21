@@ -136,7 +136,7 @@ function activateIndustryTheme(t){openModal('启用行业模板：'+themeNames[t
 );document.getElementById('modalSaveBtn').textContent='确认启用';document.getElementById('modalSaveBtn').onclick=()=>{const mode=document.querySelector('input[name=contentMode]:checked')?.value||'keep';if(mode==='replace'&&!confirm('完整演示数据会替换模板相关内容。系统将先创建备份，继续吗？'))return;localStorage.setItem('makefu-demo-theme',t);localStorage.setItem('makefu-demo-content-mode',mode);closeModal();refreshTheme();pop('已启用 '+themeNames[t]+' · 内容策略：'+({keep:'保留现有内容',fill:'仅填空白',replace:'完整行业内容包'}[mode]))}}
 
 document.getElementById('themeSelect').addEventListener('change',e=>activateTheme(e.target.value));
-function openModal(title,html){modalTitle.textContent=title;modalBody.innerHTML=html;const b=document.getElementById('modalSaveBtn');if(b){b.textContent='保存';b.onclick=saveModal}modal.classList.add('on')}function closeModal(){modal.classList.remove('on')}function saveModal(){closeModal();pop('已保存（演示）')}
+function openModal(title,html){modalTitle.textContent=title;modalBody.innerHTML=html;const b=document.getElementById('modalSaveBtn');if(b){b.style.display='inline-flex';b.textContent='保存';b.onclick=saveModal}modal.classList.add('on')}function closeModal(){modal.classList.remove('on')}function saveModal(){closeModal();pop('已保存（演示）')}
 function openEditor(type){
   if(type==='article'){ location.href='./article-editor.html'; return; }
   const names={page:'页面',article:'文章',product:'产品',case:'案例'};
