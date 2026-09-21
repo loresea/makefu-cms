@@ -34,7 +34,8 @@ async function boot(){
   industryIndex=Math.max(0,reg.industries.findIndex(x=>x.slug===slug));
   industry=reg.industries[industryIndex]||reg.industries[0];
   pack=packs.packs.find(x=>x.slug===industry.slug)||packs.packs[0];
-  preset=window.getTemplatePreset?getTemplatePreset(industry,industryIndex):{style:'tech-minimal',layout:'split',motion:'fade-up',cardVariant:'soft',navVariant:'light',density:'balanced',imageShape:'landscape',radius:14};
+  preset=window.getTemplatePreset?getTemplatePreset(industry,industryIndex):{style:'tech-minimal',layout:'split',motion:'fade-up',cardVariant:'soft',navVariant:'light',density:'balanced',imageShape:'landscape',radius:14,hueShift:0,heroVariant:'photo'};
+  industry.accent=shiftHue(industry.accent||'#f97316',(preset.hueShift||0)*4);
   images=window.getIndustryImages?getIndustryImages(industry):{hero:'',products:[],cases:[],news:[],about:'',contact:''};
   applyDesign();
   renderShell();
@@ -54,10 +55,20 @@ function applyDesign(){
   body.dataset.nav=preset.navVariant;
   body.dataset.density=preset.density;
   body.dataset.imageShape=preset.imageShape;
+  body.dataset.heroVariant=preset.heroVariant||'photo';
   body.dataset.templateFingerprint=preset.fingerprint||'';
   document.title=(document.title||'行业官网')+' · '+industry.name;
 }
 
+function shiftHue(hex,degrees){
+  let h=String(hex||'#f97316').replace('#','');if(h.length===3)h=h.split('').map(x=>x+x).join('');
+  let r=parseInt(h.slice(0,2),16)/255,g=parseInt(h.slice(2,4),16)/255,b=parseInt(h.slice(4,6),16)/255;
+  const max=Math.max(r,g,b),min=Math.min(r,g,b),d=max-min,l=(max+min)/2;let hh=0,s=0;
+  if(d){s=d/(1-Math.abs(2*l-1));if(max===r)hh=60*(((g-b)/d)%6);else if(max===g)hh=60*((b-r)/d+2);else hh=60*((r-g)/d+4)}
+  hh=(hh+degrees+360)%360;const c=(1-Math.abs(2*l-1))*s,x=c*(1-Math.abs((hh/60)%2-1)),m=l-c/2;let rr=0,gg=0,bb=0;
+  if(hh<60){rr=c;gg=x}else if(hh<120){rr=x;gg=c}else if(hh<180){gg=c;bb=x}else if(hh<240){gg=x;bb=c}else if(hh<300){rr=x;bb=c}else{rr=c;bb=x}
+  return '#'+[rr+m,gg+m,bb+m].map(v=>Math.round(v*255).toString(16).padStart(2,'0')).join('');
+}
 function colorMix(hex,percent){
   const n=parseInt(String(hex).replace('#',''),16),r=n>>16,g=n>>8&255,b=n&255;
   const mix=v=>Math.round(v+(255-v)*percent/100).toString(16).padStart(2,'0');
