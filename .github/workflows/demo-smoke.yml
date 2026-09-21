@@ -1,0 +1,107 @@
+name: Demo Smoke Test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "demo/**"
+      - ".github/workflows/demo-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify required demo pages
+        run: |
+          test -f demo/index.html
+          test -f demo/cms.html
+          test -f demo/template.html
+          test -f demo/login.html
+          test -f demo/install.html
+
+      - name: Verify new-window frontend behavior
+        run: |
+          grep -q 'id="frontLink".*target="_blank"' demo/cms.html
+          grep -q '新窗口预览 ↗' demo/cms.html
+          grep -q 'target="_blank"' demo/login.html
+
+      - name: Check internal demo links
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          root = Path("demo")
+
+          class Parser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.links = []
+              def handle_starttag(self, tag, attrs):
+                  if tag == "a":
+                      d = dict(attrs)
+                      if "href" in d:
+                          self.links.append(d["href"])
+
+          errors = []
+          for html in root.glob("*.html"):
+              p = Parser()
+              p.feed(html.read_text(encoding="utf-8"))
+              for href in p.links:
+                  if not href or href.startswith(("#","http://","https://","mailto:","tel:","javascript:")):
+                      continue
+                  target = href.split("#",1)[0].split("?",1)[0]
+                  if not target:
+                      continue
+                  path = (html.parent / target).resolve()
+                  if not path.exists():
+                      errors.append(f"{html}: missing {href}")
+          if errors:
+              raise SystemExit("\n".join(errors))
+          print("Internal links OK")
+          PY
+
+      - name: Check inline JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class Scripts(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.in_script = False
+                  self.buf = []
+                  self.scripts = []
+              def handle_starttag(self, tag, attrs):
+                  if tag == "script":
+                      self.in_script = True
+                      self.buf = []
+              def handle_endtag(self, tag):
+                  if tag == "script" and self.in_script:
+                      self.scripts.append("".join(self.buf))
+                      self.in_script = False
+              def handle_data(self, data):
+                  if self.in_script:
+                      self.buf.append(data)
+
+          out = Path("/tmp/demo-js")
+          out.mkdir(exist_ok=True)
+          n = 0
+          for html in Path("demo").glob("*.html"):
+              p = Scripts()
+              p.feed(html.read_text(encoding="utf-8"))
+              for script in p.scripts:
+                  if script.strip():
+                      n += 1
+                      (out / f"{n}.js").write_text(script, encoding="utf-8")
+          print(f"Extracted {n} scripts")
+          PY
+          for f in /tmp/demo-js/*.js; do node --check "$f"; done
