@@ -1,0 +1,43 @@
+{
+  "name": "代理记账行业起步内容包",
+  "theme": "accounting",
+  "version": "1.0.0",
+  "menus": [
+    "首页",
+    "企业服务",
+    "代理记账",
+    "工商服务",
+    "财税顾问",
+    "财税知识",
+    "关于我们",
+    "免费咨询"
+  ],
+  "blocks": [
+    "home-hero",
+    "service-packages",
+    "service-process",
+    "risk-alerts"
+  ],
+  "categories": {
+    "products": [
+      "代理记账",
+      "工商注册",
+      "工商变更",
+      "财税顾问"
+    ],
+    "articles": [
+      "财税知识",
+      "政策解读",
+      "企业经营"
+    ]
+  },
+  "custom_fields": {
+    "products": [
+      "适用企业",
+      "纳税人类型",
+      "服务周期",
+      "服务内容",
+      "价格起"
+    ]
+  }
+}
