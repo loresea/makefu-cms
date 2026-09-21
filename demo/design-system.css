@@ -211,3 +211,9 @@ body[data-style="creative-studio"] .contactCard p{color:#d4d4d8!important}
   body[data-nav="pill"] .siteNav{padding:0}
   body[data-nav="pill"] .navIn{border-radius:0;border-left:0;border-right:0}
 }
+
+/* Keep product/case rows visually aligned even when a theme uses offset imagery elsewhere. */
+body[data-image-shape="offset"] .contentGrid .card:nth-child(even){transform:none!important}
+.contentGrid .media{height:230px}
+body[data-layout="catalog"] .contentGrid .media,
+body[data-layout="commerce"] .contentGrid .media{height:220px}
