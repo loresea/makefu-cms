@@ -149,11 +149,11 @@ function card(name,type,i){
 }
 function productsSection(){
   const names=productNames(),l=label();
-  return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>'+l.service+'</h2><p>首页只展示重点内容，完整内容进入独立列表和详情页。</p></div><a href="'+route('site-products.html')+'">查看全部 →</a></div><div class="grid3 stagger">'+names.map((n,i)=>card(n,'product',i)).join('')+'</div></div></section>';
+  return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>'+l.service+'</h2><p>首页只展示重点内容，完整内容进入独立列表和详情页。</p></div><a href="'+route('site-products.html')+'">查看全部 →</a></div><div class="'+contentGridClass()+' stagger">'+names.map((n,i)=>card(n,'product',i)).join('')+'</div></div></section>';
 }
 function casesSection(){
   const names=caseNames(),l=label();
-  return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>'+l.case+'</h2><p>通过真实项目、过程和结果建立行业信任。</p></div><a href="'+route('site-cases.html')+'">全部案例 →</a></div><div class="grid3 stagger">'+names.map((n,i)=>card(n,'case',i)).join('')+'</div></div></section>';
+  return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>'+l.case+'</h2><p>通过真实项目、过程和结果建立行业信任。</p></div><a href="'+route('site-cases.html')+'">全部案例 →</a></div><div class="'+contentGridClass()+' stagger">'+names.map((n,i)=>card(n,'case',i)).join('')+'</div></div></section>';
 }
 function newsSection(){
   const nn=newsTitles();
