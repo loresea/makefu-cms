@@ -105,7 +105,7 @@ GET /api/v1/search?q=keyword</div><p style="color:var(--muted)">列表支持分�
 <section class="page" id="p-audit"><div class="hero"><div><h1>操作日志</h1><p>关键后台操作可追溯。</p></div><button class="btn">导出日志</button></div><div class="card box"><table><tr><th>时间</th><th>管理员</th><th>动作</th><th>对象</th><th>IP</th></tr><tr><td>10:43:21</td><td>管理员</td><td>UPDATE</td><td>文章 #128</td><td>127.0.0.1</td></tr><tr><td>10:32:08</td><td>管理员</td><td>THEME_ACTIVATE</td><td>工业智造</td><td>127.0.0.1</td></tr><tr><td>09:58:44</td><td>管理员</td><td>BACKUP_CREATE</td><td>database.sqlite</td><td>127.0.0.1</td></tr></table></div></section>
 </div></main></div>
 
-<div class="modal" id="modal"><div class="dialog"><div class="dialogHd"><b id="modalTitle">编辑</b><button class="btn" onclick="closeModal()">×</button></div><div class="dialogBody" id="modalBody"></div><div class="dialogFt"><span></span><div><button class="btn" onclick="closeModal()">取消</button> <button class="btn dark" onclick="saveModal()">保存</button></div></div></div></div>
+<div class="modal" id="modal"><div class="dialog"><div class="dialogHd"><b id="modalTitle">编辑</b><button class="btn" onclick="closeModal()">×</button></div><div class="dialogBody" id="modalBody"></div><div class="dialogFt"><span></span><div><button class="btn" onclick="closeModal()">取消</button> <button id="modalSaveBtn" class="btn dark" onclick="saveModal()">保存</button></div></div></div></div>
 <div class="toast" id="toast"></div>
 <script>
 const titles={dashboard:'控制台',pages:'页面管理',articles:'文章管理',products:'产品管理',cases:'案例管理',media:'媒体库',blocks:'内容区块',revisions:'版本历史',forms:'表单线索',menus:'菜单管理',themes:'模板管理','theme-market':'模板市场',plugins:'插件中心','plugin-market':'插件市场',seo:'SEO 中心',redirects:'301 跳转',settings:'网站设置',users:'用户与权限',backup:'备份与迁移',update:'系统更新',health:'系统状态',developer:'API / 开发者',webhooks:'Webhooks',audit:'操作日志'};
@@ -123,10 +123,10 @@ function activateIndustryTheme(t){openModal('启用行业模板：'+themeNames[t
     '<label class="themeOption"><input type="radio" name="contentMode" value="replace"><div><b>完整应用行业演示数据（仅新站/测试站）</b><span>先自动创建备份，再用行业内容包重建菜单、模块和演示内容；已有真实内容不建议使用。</span></div></label>'+
   '</div>'+
   '<p style="margin-top:14px"><span class="badge blue">推荐机制</span> 模板和内容包分开管理，切换模板 ≠ 覆盖内容。</p>'
-);document.querySelector('#modal .dialogFt .btn.dark').onclick=()=>{const mode=document.querySelector('input[name=contentMode]:checked')?.value||'keep';if(mode==='replace'&&!confirm('完整演示数据会替换模板相关内容。系统将先创建备份，继续吗？'))return;localStorage.setItem('makefu-demo-theme',t);localStorage.setItem('makefu-demo-content-mode',mode);closeModal();refreshTheme();pop('已启用 '+themeNames[t]+' · 内容策略：'+({keep:'保留现有内容',fill:'仅填空白',replace:'完整行业内容包'}[mode]))}}
+);document.getElementById('modalSaveBtn').textContent='确认启用';document.getElementById('modalSaveBtn').onclick=()=>{const mode=document.querySelector('input[name=contentMode]:checked')?.value||'keep';if(mode==='replace'&&!confirm('完整演示数据会替换模板相关内容。系统将先创建备份，继续吗？'))return;localStorage.setItem('makefu-demo-theme',t);localStorage.setItem('makefu-demo-content-mode',mode);closeModal();refreshTheme();pop('已启用 '+themeNames[t]+' · 内容策略：'+({keep:'保留现有内容',fill:'仅填空白',replace:'完整行业内容包'}[mode]))}}
 
 document.getElementById('themeSelect').addEventListener('change',e=>activateTheme(e.target.value));
-function openModal(title,html){modalTitle.textContent=title;modalBody.innerHTML=html;modal.classList.add('on')}function closeModal(){modal.classList.remove('on')}function saveModal(){closeModal();pop('已保存（演示）')}
+function openModal(title,html){modalTitle.textContent=title;modalBody.innerHTML=html;const b=document.getElementById('modalSaveBtn');if(b){b.textContent='保存';b.onclick=saveModal}modal.classList.add('on')}function closeModal(){modal.classList.remove('on')}function saveModal(){closeModal();pop('已保存（演示）')}
 function openEditor(type){
   const names={page:'页面',article:'文章',product:'产品',case:'案例'};
   const isArticle=type==='article';
@@ -163,9 +163,10 @@ function openEditor(type){
       '<div class="field"><label>Canonical</label><input value="https://example.com/example-slug"></div>'+
       '<div class="field full"><label>SEO Description</label><textarea>用于搜索结果展示的页面描述。</textarea></div>'+
     '</div>'+
-    '<div style="margin-top:14px"><button class="btn" type="button" onclick="pop(\'草稿已自动保存\')">保存草稿</button> <button class="btn" type="button" onclick="window.open(\'./template.html?theme=\'+encodeURIComponent(currentTheme())+\'&page='+(type==='article'?'article':type),\'_blank\')">新窗口预览 ↗</button></div>'
+    '<div style="margin-top:14px"><button class="btn" type="button" onclick="pop(\'草稿已自动保存\')">保存草稿</button> <button class="btn" type="button" onclick="previewContent(\''+type+'\')">新窗口预览 ↗</button></div>'
   );
 }
+function previewContent(type){const t=currentTheme();const industry=industryThemeUrls[t];if(industry){window.open(industry,'_blank','noopener')}else{const page=type==='article'?'article':(type==='case'?'case':(type==='product'?'product':'home'));window.open('./template.html?theme='+encodeURIComponent(t)+'&page='+page,'_blank','noopener')}}
 function edCmd(cmd,val=null){document.getElementById('richEditor')?.focus();document.execCommand(cmd,false,val)}
 function formatBlock(tag){if(tag&&tag!=='段落样式')edCmd('formatBlock',tag)}
 function insertLink(){const u=prompt('请输入链接地址','https://');if(u)edCmd('createLink',u)}
@@ -174,7 +175,11 @@ function insertQuote(){edCmd('formatBlock','blockquote')}
 function toggleSource(){const e=document.getElementById('richEditor'),s=document.getElementById('sourceEditor');if(!e||!s)return;if(e.style.display==='none'){e.innerHTML=s.value;e.style.display='block';s.style.display='none'}else{s.value=e.innerHTML;e.style.display='none';s.style.display='block'}}
 function openQuick(){openModal('快速新建','<div class="cards3"><button class="btn" onclick="closeModal();openEditor(\'article\')">新建文章</button><button class="btn" onclick="closeModal();openEditor(\'product\')">新建产品</button><button class="btn" onclick="closeModal();openEditor(\'case\')">新建案例</button></div>')}
 function openBlockEditor(){openModal('内容区块编辑器','<div class="settings"><div class="field"><label>名称</label><input value="全站 CTA"></div><div class="field"><label>调用标识</label><input value="global-cta"></div><div class="field"><label>类型</label><select><option>CTA</option><option>Hero</option><option>统计</option><option>合作伙伴</option></select></div><div class="field full"><label>区块数据</label><textarea>{"title":"准备开始合作？","button_text":"提交需求","url":"/contact"}</textarea></div></div>')}
-function openRevision(){openModal('版本差异','<div class="log">- 原标题：企业官网建设指南\n+ 新标题：企业官网升级指南\n\n- 原摘要：旧版本摘要\n+ 新摘要：补充了 SEO 与长期维护说明</div><p>恢复历史版本前，当前内容会自动保存为新的修订。</p>')}
+function openRevision(){openModal('版本差异',`<div class="log">- 原标题：企业官网建设指南
++ 新标题：企业官网升级指南
+
+- 原摘要：旧版本摘要
++ 新摘要：补充了 SEO 与长期维护说明</div><p>恢复历史版本前，当前内容会自动保存为新的修订。</p>`)}
 function openWebhook(){openModal('Webhook 配置','<div class="settings"><div class="field"><label>名称</label><input value="CRM 线索同步"></div><div class="field"><label>接收地址</label><input value="https://crm.example.com/hooks/cms"></div><div class="field full"><label>事件</label><select><option>form.submitted</option><option>theme.activated</option><option>cms.updated</option><option>*</option></select></div><div class="field full"><label>签名 Secret</label><input value="••••••••••••"></div></div>')}
 function openFormBuilder(){openModal('表单构建器','<div class="field"><label>表单名称</label><input value="产品询价"></div><div class="tree"><div class="node"><span>姓名 · 文本 · 必填</span><button class="btn">编辑</button></div><div class="node"><span>联系电话 · 手机 · 必填</span><button class="btn">编辑</button></div><div class="node"><span>需求说明 · 多行文本</span><button class="btn">编辑</button></div><div class="node"><span>附件 · 文件上传</span><button class="btn">编辑</button></div></div><button class="btn">+ 添加字段</button>')}
 function installItem(name){openModal('安装：'+name,'<p>系统将执行以下检查：</p><ul><li>CMS 版本兼容性</li><li>PHP 版本与扩展</li><li>依赖插件</li><li>ZIP 路径安全</li><li>安装包 SHA256 校验</li></ul><p><span class="badge">检查通过</span></p>')}
