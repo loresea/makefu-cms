@@ -28,6 +28,10 @@ jobs:
           test -f demo/renovation.html
           test -f demo/accounting.html
           test -f demo/lawyer.html
+          test -f demo/industry-market.html
+          test -f demo/industry.html
+          test -f demo/industries.json
+          test -f demo/industry-packs.json
 
       - name: Verify new-window frontend behavior
         run: |
@@ -86,6 +90,23 @@ jobs:
               assert data.get("menus")
               assert data.get("blocks")
           print("Industry content packs OK")
+          PY
+
+      - name: Validate 100-industry registry
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          reg = json.loads(Path("demo/industries.json").read_text(encoding="utf-8"))
+          packs = json.loads(Path("demo/industry-packs.json").read_text(encoding="utf-8"))
+          assert reg["count"] == 100, reg["count"]
+          assert len(reg["industries"]) == 100
+          assert packs["count"] == 100, packs["count"]
+          assert len(packs["packs"]) == 100
+          slugs = {x["slug"] for x in reg["industries"]}
+          pack_slugs = {x["slug"] for x in packs["packs"]}
+          assert slugs == pack_slugs
+          print("100-industry registry and starter packs OK")
           PY
 
       - name: Check inline JavaScript syntax
