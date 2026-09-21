@@ -59,6 +59,11 @@ jobs:
           grep -q 'site-cases.html' demo/site.js
           grep -q 'site-about.html' demo/site.js
           grep -q 'site-contact.html' demo/site.js
+          grep -q 'makeIndustryLogo' demo/site.js
+          grep -q '浙ICP备2026XXXX号-1' demo/site.js
+          grep -q 'https://www.makefu.com/' demo/site.js
+          grep -q '200 个常用行业模板' demo/industry-market.html
+          grep -q 'templateMarketSearch' demo/cms.html
 
       - name: Check internal demo links
         run: |
@@ -120,14 +125,14 @@ jobs:
           from pathlib import Path
           reg = json.loads(Path("demo/industries.json").read_text(encoding="utf-8"))
           packs = json.loads(Path("demo/industry-packs.json").read_text(encoding="utf-8"))
-          assert reg["count"] == 100, reg["count"]
-          assert len(reg["industries"]) == 100
-          assert packs["count"] == 100, packs["count"]
-          assert len(packs["packs"]) == 100
+          assert reg["count"] == 200, reg["count"]
+          assert len(reg["industries"]) == 200
+          assert packs["count"] == 200, packs["count"]
+          assert len(packs["packs"]) == 200
           slugs = {x["slug"] for x in reg["industries"]}
           pack_slugs = {x["slug"] for x in packs["packs"]}
           assert slugs == pack_slugs
-          print("100-industry registry and starter packs OK")
+          print("200-industry registry and starter packs OK")
           PY
 
       - name: Check inline JavaScript syntax
