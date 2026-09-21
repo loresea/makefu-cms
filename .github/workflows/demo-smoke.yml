@@ -36,6 +36,7 @@ jobs:
           test -f demo/industry.html
           test -f demo/industries.json
           test -f demo/industry-packs.json
+          test -f demo/template-matrix.json
           test -f demo/site.css
           test -f demo/site.js
           test -f demo/design-system.css
@@ -142,7 +143,13 @@ jobs:
           slugs = {x["slug"] for x in reg["industries"]}
           pack_slugs = {x["slug"] for x in packs["packs"]}
           assert slugs == pack_slugs
-          print("200-industry registry and starter packs OK")
+          matrix = json.loads(Path("demo/template-matrix.json").read_text(encoding="utf-8"))
+          assert matrix["count"] == 200
+          assert matrix["unique_fingerprints"] == 200
+          fingerprints = [x["fingerprint"] for x in matrix["templates"]]
+          assert len(fingerprints) == len(set(fingerprints)) == 200
+          assert {x["slug"] for x in matrix["templates"]} == slugs
+          print("200-industry registry, content packs and unique design matrix OK")
           PY
 
       - name: Check inline JavaScript syntax
