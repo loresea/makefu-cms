@@ -95,7 +95,7 @@
       "family": "industrial-catalog",
       "accent": "#111827",
       "headline": "可靠设备，支撑每一次高效生产。",
-      "preview": "./industry.html?industry=machinery",
+      "preview": "./site-home.html?industry=machinery",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -111,7 +111,7 @@
       "family": "technical-spec",
       "accent": "#172554",
       "headline": "精准加工，从稳定的激光系统开始。",
-      "preview": "./industry.html?industry=laser",
+      "preview": "./site-home.html?industry=laser",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -127,7 +127,7 @@
       "family": "technical-spec",
       "accent": "#0f172a",
       "headline": "把重复工作交给自动化。",
-      "preview": "./industry.html?industry=automation",
+      "preview": "./site-home.html?industry=automation",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -143,7 +143,7 @@
       "family": "industrial-catalog",
       "accent": "#27272a",
       "headline": "耐用工具，为现场效率而生。",
-      "preview": "./industry.html?industry=hardware",
+      "preview": "./site-home.html?industry=hardware",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -159,7 +159,7 @@
       "family": "technical-spec",
       "accent": "#0c4a6e",
       "headline": "稳定供应，从每一颗元器件开始。",
-      "preview": "./industry.html?industry=electronics",
+      "preview": "./site-home.html?industry=electronics",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -175,7 +175,7 @@
       "family": "technical-spec",
       "accent": "#064e3b",
       "headline": "让设计可靠地落在每一层线路上。",
-      "preview": "./industry.html?industry=pcb",
+      "preview": "./site-home.html?industry=pcb",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -191,7 +191,7 @@
       "family": "ecommerce-showcase",
       "accent": "#111827",
       "headline": "用更高效的光，照亮更多场景。",
-      "preview": "./industry.html?industry=led",
+      "preview": "./site-home.html?industry=led",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -207,7 +207,7 @@
       "family": "environment-energy",
       "accent": "#052e16",
       "headline": "让清洁能源进入更多真实场景。",
-      "preview": "./industry.html?industry=new-energy",
+      "preview": "./site-home.html?industry=new-energy",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -223,7 +223,7 @@
       "family": "environment-energy",
       "accent": "#0f172a",
       "headline": "把每一束阳光转化为长期价值。",
-      "preview": "./industry.html?industry=solar",
+      "preview": "./site-home.html?industry=solar",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -239,7 +239,7 @@
       "family": "technical-spec",
       "accent": "#172554",
       "headline": "让能源在需要的时候准时出现。",
-      "preview": "./industry.html?industry=storage",
+      "preview": "./site-home.html?industry=storage",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -255,7 +255,7 @@
       "family": "technical-spec",
       "accent": "#052e16",
       "headline": "安全、稳定、长寿命的能源核心。",
-      "preview": "./industry.html?industry=battery",
+      "preview": "./site-home.html?industry=battery",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -271,7 +271,7 @@
       "family": "environment-energy",
       "accent": "#064e3b",
       "headline": "让排放更低，让生产更安心。",
-      "preview": "./industry.html?industry=environment",
+      "preview": "./site-home.html?industry=environment",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -287,7 +287,7 @@
       "family": "environment-energy",
       "accent": "#164e63",
       "headline": "让每一滴水回到合适的标准。",
-      "preview": "./industry.html?industry=water-treatment",
+      "preview": "./site-home.html?industry=water-treatment",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -303,7 +303,7 @@
       "family": "home-living",
       "accent": "#0e7490",
       "headline": "喝得到的安心，从一杯好水开始。",
-      "preview": "./industry.html?industry=water-purifier",
+      "preview": "./site-home.html?industry=water-purifier",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -319,7 +319,7 @@
       "family": "home-living",
       "accent": "#0f766e",
       "headline": "让室内空气真正可感知地变好。",
-      "preview": "./industry.html?industry=air-purification",
+      "preview": "./site-home.html?industry=air-purification",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -335,7 +335,7 @@
       "family": "technical-spec",
       "accent": "#3f3f46",
       "headline": "材料性能，决定产品上限。",
-      "preview": "./industry.html?industry=chemical",
+      "preview": "./site-home.html?industry=chemical",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -351,7 +351,7 @@
       "family": "industrial-catalog",
       "accent": "#1f2937",
       "headline": "从材料配方到稳定量产。",
-      "preview": "./industry.html?industry=rubber-plastic",
+      "preview": "./site-home.html?industry=rubber-plastic",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -367,7 +367,7 @@
       "family": "portfolio-editorial",
       "accent": "#7c2d12",
       "headline": "包装不只保护产品，也建立第一印象。",
-      "preview": "./industry.html?industry=packaging",
+      "preview": "./site-home.html?industry=packaging",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -383,7 +383,7 @@
       "family": "industrial-catalog",
       "accent": "#78350f",
       "headline": "把纸做成更适合产品的形态。",
-      "preview": "./industry.html?industry=paper",
+      "preview": "./site-home.html?industry=paper",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -399,7 +399,7 @@
       "family": "ecommerce-showcase",
       "accent": "#4c1d95",
       "headline": "从面料到成衣，让品牌更有质感。",
-      "preview": "./industry.html?industry=textile",
+      "preview": "./site-home.html?industry=textile",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -415,7 +415,7 @@
       "family": "ecommerce-showcase",
       "accent": "#831843",
       "headline": "把日常用品做成品牌表达。",
-      "preview": "./industry.html?industry=bags",
+      "preview": "./site-home.html?industry=bags",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -431,7 +431,7 @@
       "family": "home-living",
       "accent": "#3f2d20",
       "headline": "让每一件家具进入真实生活。",
-      "preview": "./industry.html?industry=furniture",
+      "preview": "./site-home.html?industry=furniture",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -447,7 +447,7 @@
       "family": "home-living",
       "accent": "#1c1917",
       "headline": "安全、隔音与采光，一扇窗都要兼顾。",
-      "preview": "./industry.html?industry=doors-windows",
+      "preview": "./site-home.html?industry=doors-windows",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -463,7 +463,7 @@
       "family": "industrial-catalog",
       "accent": "#374151",
       "headline": "稳定材料，是工程质量的底线。",
-      "preview": "./industry.html?industry=building-materials",
+      "preview": "./site-home.html?industry=building-materials",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -479,7 +479,7 @@
       "family": "portfolio-editorial",
       "accent": "#44403c",
       "headline": "天然纹理，让空间有独特秩序。",
-      "preview": "./industry.html?industry=stone",
+      "preview": "./site-home.html?industry=stone",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -495,7 +495,7 @@
       "family": "home-living",
       "accent": "#422006",
       "headline": "脚下的质感，决定家的温度。",
-      "preview": "./industry.html?industry=flooring",
+      "preview": "./site-home.html?industry=flooring",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -511,7 +511,7 @@
       "family": "home-living",
       "accent": "#1e3a8a",
       "headline": "让卫浴空间更舒适、更耐用。",
-      "preview": "./industry.html?industry=ceramic-bath",
+      "preview": "./site-home.html?industry=ceramic-bath",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -527,7 +527,7 @@
       "family": "ecommerce-showcase",
       "accent": "#111827",
       "headline": "好灯光，让空间被重新看见。",
-      "preview": "./industry.html?industry=lighting",
+      "preview": "./site-home.html?industry=lighting",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -543,7 +543,7 @@
       "family": "ecommerce-showcase",
       "accent": "#0f172a",
       "headline": "让技术真正服务日常生活。",
-      "preview": "./industry.html?industry=appliance",
+      "preview": "./site-home.html?industry=appliance",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -559,7 +559,7 @@
       "family": "corporate-tech",
       "accent": "#172554",
       "headline": "让家更懂你的习惯。",
-      "preview": "./industry.html?industry=smart-home",
+      "preview": "./site-home.html?industry=smart-home",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -575,7 +575,7 @@
       "family": "technical-spec",
       "accent": "#111827",
       "headline": "看得见、管得住、查得到。",
-      "preview": "./industry.html?industry=security",
+      "preview": "./site-home.html?industry=security",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -591,7 +591,7 @@
       "family": "professional-trust",
       "accent": "#450a0a",
       "headline": "消防安全，必须被系统化管理。",
-      "preview": "./industry.html?industry=fire-protection",
+      "preview": "./site-home.html?industry=fire-protection",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -607,7 +607,7 @@
       "family": "industrial-catalog",
       "accent": "#1f2937",
       "headline": "每一次升降，都要稳定可靠。",
-      "preview": "./industry.html?industry=elevator",
+      "preview": "./site-home.html?industry=elevator",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -623,7 +623,7 @@
       "family": "technical-spec",
       "accent": "#164e63",
       "headline": "把温度、空气和能耗一起管好。",
-      "preview": "./industry.html?industry=hvac",
+      "preview": "./site-home.html?industry=hvac",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -639,7 +639,7 @@
       "family": "technical-spec",
       "accent": "#0c4a6e",
       "headline": "稳定制冷，是生产与储存的基础。",
-      "preview": "./industry.html?industry=refrigeration",
+      "preview": "./site-home.html?industry=refrigeration",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -655,7 +655,7 @@
       "family": "industrial-catalog",
       "accent": "#292524",
       "headline": "让后厨更高效、更安全。",
-      "preview": "./industry.html?industry=kitchen-equipment",
+      "preview": "./site-home.html?industry=kitchen-equipment",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -671,7 +671,7 @@
       "family": "hospitality-experience",
       "accent": "#7f1d1d",
       "headline": "一顿饭，也可以成为品牌记忆。",
-      "preview": "./industry.html?industry=restaurant",
+      "preview": "./site-home.html?industry=restaurant",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -687,7 +687,7 @@
       "family": "hospitality-experience",
       "accent": "#1e293b",
       "headline": "从入住之前，就让人期待。",
-      "preview": "./industry.html?industry=hotel",
+      "preview": "./site-home.html?industry=hotel",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -703,7 +703,7 @@
       "family": "food-brand",
       "accent": "#78350f",
       "headline": "一杯饮品，也有自己的风味地图。",
-      "preview": "./industry.html?industry=tea-coffee",
+      "preview": "./site-home.html?industry=tea-coffee",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -719,7 +719,7 @@
       "family": "industrial-catalog",
       "accent": "#7c2d12",
       "headline": "从原料到成品，稳定才是第一标准。",
-      "preview": "./industry.html?industry=food-processing",
+      "preview": "./site-home.html?industry=food-processing",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -735,7 +735,7 @@
       "family": "food-brand",
       "accent": "#365314",
       "headline": "把产地、季节和新鲜讲清楚。",
-      "preview": "./industry.html?industry=agriculture",
+      "preview": "./site-home.html?industry=agriculture",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -751,7 +751,7 @@
       "family": "logistics-map",
       "accent": "#14532d",
       "headline": "从产地到门店，缩短每一公里。",
-      "preview": "./industry.html?industry=fresh-delivery",
+      "preview": "./site-home.html?industry=fresh-delivery",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -767,7 +767,7 @@
       "family": "healthcare-trust",
       "accent": "#0f172a",
       "headline": "专业器械，为临床效率与安全服务。",
-      "preview": "./industry.html?industry=medical-device",
+      "preview": "./site-home.html?industry=medical-device",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -783,7 +783,7 @@
       "family": "healthcare-trust",
       "accent": "#164e63",
       "headline": "让就医信息更清晰，让预约更简单。",
-      "preview": "./industry.html?industry=clinic",
+      "preview": "./site-home.html?industry=clinic",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -799,7 +799,7 @@
       "family": "healthcare-trust",
       "accent": "#0e7490",
       "headline": "让每一次看牙更安心。",
-      "preview": "./industry.html?industry=dental",
+      "preview": "./site-home.html?industry=dental",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -815,7 +815,7 @@
       "family": "healthcare-trust",
       "accent": "#831843",
       "headline": "审美与安全，应该同时被重视。",
-      "preview": "./industry.html?industry=medical-beauty",
+      "preview": "./site-home.html?industry=medical-beauty",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -831,7 +831,7 @@
       "family": "healthcare-trust",
       "accent": "#1e3a8a",
       "headline": "专业信息，让用药与合作更透明。",
-      "preview": "./industry.html?industry=pharma",
+      "preview": "./site-home.html?industry=pharma",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -847,7 +847,7 @@
       "family": "healthcare-trust",
       "accent": "#3f6212",
       "headline": "让长者得到有尊严的照护。",
-      "preview": "./industry.html?industry=eldercare",
+      "preview": "./site-home.html?industry=eldercare",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -863,7 +863,7 @@
       "family": "ecommerce-showcase",
       "accent": "#be185d",
       "headline": "陪伴每一个家庭的新开始。",
-      "preview": "./industry.html?industry=maternal",
+      "preview": "./site-home.html?industry=maternal",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -879,7 +879,7 @@
       "family": "education-programs",
       "accent": "#1e3a8a",
       "headline": "学习路径清晰，成长才更可持续。",
-      "preview": "./industry.html?industry=education",
+      "preview": "./site-home.html?industry=education",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -895,7 +895,7 @@
       "family": "education-programs",
       "accent": "#172554",
       "headline": "把申请规划做得更早、更清楚。",
-      "preview": "./industry.html?industry=study-abroad",
+      "preview": "./site-home.html?industry=study-abroad",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -911,7 +911,7 @@
       "family": "education-programs",
       "accent": "#0c4a6e",
       "headline": "让语言真正进入使用场景。",
-      "preview": "./industry.html?industry=language",
+      "preview": "./site-home.html?industry=language",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -927,7 +927,7 @@
       "family": "education-programs",
       "accent": "#1f2937",
       "headline": "把学习直接连接到职业能力。",
-      "preview": "./industry.html?industry=vocational",
+      "preview": "./site-home.html?industry=vocational",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -943,7 +943,7 @@
       "family": "education-programs",
       "accent": "#166534",
       "headline": "在安全与好奇心之间建立成长空间。",
-      "preview": "./industry.html?industry=kindergarten",
+      "preview": "./site-home.html?industry=kindergarten",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -959,7 +959,7 @@
       "family": "education-programs",
       "accent": "#1e3a8a",
       "headline": "让校园信息更开放、更清晰。",
-      "preview": "./industry.html?industry=school",
+      "preview": "./site-home.html?industry=school",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -975,7 +975,7 @@
       "family": "service-conversion",
       "accent": "#0f172a",
       "headline": "让企业更快找到对的人。",
-      "preview": "./industry.html?industry=hr",
+      "preview": "./site-home.html?industry=hr",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -991,7 +991,7 @@
       "family": "service-conversion",
       "accent": "#111827",
       "headline": "关键岗位，值得更精准地寻找。",
-      "preview": "./industry.html?industry=headhunting",
+      "preview": "./site-home.html?industry=headhunting",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1007,7 +1007,7 @@
       "family": "education-programs",
       "accent": "#172554",
       "headline": "让培训从听懂变成真正能执行。",
-      "preview": "./industry.html?industry=corporate-training",
+      "preview": "./site-home.html?industry=corporate-training",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1023,7 +1023,7 @@
       "family": "professional-trust",
       "accent": "#111827",
       "headline": "把复杂经营问题拆成可执行的动作。",
-      "preview": "./industry.html?industry=management-consulting",
+      "preview": "./site-home.html?industry=management-consulting",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1039,7 +1039,7 @@
       "family": "professional-trust",
       "accent": "#1e293b",
       "headline": "把创新成果变成可保护的资产。",
-      "preview": "./industry.html?industry=ip-service",
+      "preview": "./site-home.html?industry=ip-service",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1055,7 +1055,7 @@
       "family": "professional-trust",
       "accent": "#0f172a",
       "headline": "数据和标准，让质量可被证明。",
-      "preview": "./industry.html?industry=testing-certification",
+      "preview": "./site-home.html?industry=testing-certification",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1071,7 +1071,7 @@
       "family": "service-conversion",
       "accent": "#312e81",
       "headline": "让专业内容跨越语言边界。",
-      "preview": "./industry.html?industry=translation",
+      "preview": "./site-home.html?industry=translation",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1087,7 +1087,7 @@
       "family": "creative-agency",
       "accent": "#4c1d95",
       "headline": "让品牌被看见，也被记住。",
-      "preview": "./industry.html?industry=advertising",
+      "preview": "./site-home.html?industry=advertising",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1103,7 +1103,7 @@
       "family": "creative-agency",
       "accent": "#111827",
       "headline": "品牌不是一个 Logo，而是一套一致表达。",
-      "preview": "./industry.html?industry=branding",
+      "preview": "./site-home.html?industry=branding",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1119,7 +1119,7 @@
       "family": "portfolio-editorial",
       "accent": "#18181b",
       "headline": "把重要时刻变成可以反复观看的作品。",
-      "preview": "./industry.html?industry=photography",
+      "preview": "./site-home.html?industry=photography",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1135,7 +1135,7 @@
       "family": "creative-agency",
       "accent": "#020617",
       "headline": "从脚本到成片，把故事拍得更有力量。",
-      "preview": "./industry.html?industry=film",
+      "preview": "./site-home.html?industry=film",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1151,7 +1151,7 @@
       "family": "portfolio-editorial",
       "accent": "#9f1239",
       "headline": "婚礼只发生一天，但记忆会留很久。",
-      "preview": "./industry.html?industry=wedding",
+      "preview": "./site-home.html?industry=wedding",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1167,7 +1167,7 @@
       "family": "creative-agency",
       "accent": "#172554",
       "headline": "把一次活动做成一次完整体验。",
-      "preview": "./industry.html?industry=exhibition",
+      "preview": "./site-home.html?industry=exhibition",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1183,7 +1183,7 @@
       "family": "corporate-tech",
       "accent": "#0f172a",
       "headline": "把业务需求变成真正能用的软件。",
-      "preview": "./industry.html?industry=software",
+      "preview": "./site-home.html?industry=software",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1199,7 +1199,7 @@
       "family": "corporate-tech",
       "accent": "#172554",
       "headline": "把复杂业务流程变成更简单的软件。",
-      "preview": "./industry.html?industry=saas",
+      "preview": "./site-home.html?industry=saas",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1215,7 +1215,7 @@
       "family": "technical-spec",
       "accent": "#020617",
       "headline": "让风险更早被发现，让系统更稳定。",
-      "preview": "./industry.html?industry=cybersecurity",
+      "preview": "./site-home.html?industry=cybersecurity",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1231,7 +1231,7 @@
       "family": "corporate-tech",
       "accent": "#111827",
       "headline": "让 AI 进入真实业务，而不是停在演示里。",
-      "preview": "./industry.html?industry=ai-tech",
+      "preview": "./site-home.html?industry=ai-tech",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1247,7 +1247,7 @@
       "family": "corporate-tech",
       "accent": "#0f172a",
       "headline": "让数据变成能被决策使用的信息。",
-      "preview": "./industry.html?industry=data-service",
+      "preview": "./site-home.html?industry=data-service",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1263,7 +1263,7 @@
       "family": "ecommerce-showcase",
       "accent": "#7c2d12",
       "headline": "让产品更快被发现、更容易被购买。",
-      "preview": "./industry.html?industry=ecommerce",
+      "preview": "./site-home.html?industry=ecommerce",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1279,7 +1279,7 @@
       "family": "ecommerce-showcase",
       "accent": "#172554",
       "headline": "从产品出海到全球订单增长。",
-      "preview": "./industry.html?industry=cross-border",
+      "preview": "./site-home.html?industry=cross-border",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1295,7 +1295,7 @@
       "family": "corporate-tech",
       "accent": "#0f2f66",
       "headline": "Build trust before the first inquiry.",
-      "preview": "./industry.html?industry=foreign-trade",
+      "preview": "./site-home.html?industry=foreign-trade",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1311,7 +1311,7 @@
       "family": "logistics-map",
       "accent": "#0f172a",
       "headline": "每一票货，都应该有清晰的交付路径。",
-      "preview": "./industry.html?industry=logistics",
+      "preview": "./site-home.html?industry=logistics",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1327,7 +1327,7 @@
       "family": "logistics-map",
       "accent": "#164e63",
       "headline": "把跨境运输的复杂环节连接起来。",
-      "preview": "./industry.html?industry=freight-forwarding",
+      "preview": "./site-home.html?industry=freight-forwarding",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1343,7 +1343,7 @@
       "family": "logistics-map",
       "accent": "#1f2937",
       "headline": "让库存、仓储和配送协同起来。",
-      "preview": "./industry.html?industry=warehousing",
+      "preview": "./site-home.html?industry=warehousing",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1359,7 +1359,7 @@
       "family": "automotive-showroom",
       "accent": "#111827",
       "headline": "从看车到交付，让选择更简单。",
-      "preview": "./industry.html?industry=auto-sales",
+      "preview": "./site-home.html?industry=auto-sales",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1375,7 +1375,7 @@
       "family": "local-services",
       "accent": "#1f2937",
       "headline": "维修透明，才能放心把车交出去。",
-      "preview": "./industry.html?industry=auto-repair",
+      "preview": "./site-home.html?industry=auto-repair",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1391,7 +1391,7 @@
       "family": "automotive-showroom",
       "accent": "#0f172a",
       "headline": "需要用车时，随时有合适的选择。",
-      "preview": "./industry.html?industry=car-rental",
+      "preview": "./site-home.html?industry=car-rental",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1407,7 +1407,7 @@
       "family": "environment-energy",
       "accent": "#052e16",
       "headline": "让充电更方便，让运营更稳定。",
-      "preview": "./industry.html?industry=ev-charging",
+      "preview": "./site-home.html?industry=ev-charging",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1423,7 +1423,7 @@
       "family": "real-estate-listings",
       "accent": "#1e293b",
       "headline": "找到适合生活、工作与投资的空间。",
-      "preview": "./industry.html?industry=real-estate",
+      "preview": "./site-home.html?industry=real-estate",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1439,7 +1439,7 @@
       "family": "service-conversion",
       "accent": "#164e63",
       "headline": "把日常服务做得更及时、更透明。",
-      "preview": "./industry.html?industry=property",
+      "preview": "./site-home.html?industry=property",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1455,7 +1455,7 @@
       "family": "portfolio-editorial",
       "accent": "#365314",
       "headline": "让建筑之外，也有值得停留的空间。",
-      "preview": "./industry.html?industry=landscape",
+      "preview": "./site-home.html?industry=landscape",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1471,7 +1471,7 @@
       "family": "professional-trust",
       "accent": "#292524",
       "headline": "每一项工程，都需要可追溯的质量体系。",
-      "preview": "./industry.html?industry=construction",
+      "preview": "./site-home.html?industry=construction",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1487,7 +1487,7 @@
       "family": "portfolio-editorial",
       "accent": "#1f2937",
       "headline": "把复杂工程先在图纸里解决。",
-      "preview": "./industry.html?industry=engineering-design",
+      "preview": "./site-home.html?industry=engineering-design",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1503,7 +1503,7 @@
       "family": "local-services",
       "accent": "#0f766e",
       "headline": "把家务交给专业的人。",
-      "preview": "./industry.html?industry=cleaning",
+      "preview": "./site-home.html?industry=cleaning",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1519,7 +1519,7 @@
       "family": "local-services",
       "accent": "#1e3a8a",
       "headline": "搬家不只是搬东西，也要安排好每一步。",
-      "preview": "./industry.html?industry=moving",
+      "preview": "./site-home.html?industry=moving",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1535,7 +1535,7 @@
       "family": "local-services",
       "accent": "#7c3aed",
       "headline": "认真照顾每一位不会说话的家人。",
-      "preview": "./industry.html?industry=pet",
+      "preview": "./site-home.html?industry=pet",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1551,7 +1551,7 @@
       "family": "portfolio-editorial",
       "accent": "#831843",
       "headline": "让专业审美进入每一次服务。",
-      "preview": "./industry.html?industry=beauty",
+      "preview": "./site-home.html?industry=beauty",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1567,7 +1567,7 @@
       "family": "service-conversion",
       "accent": "#111827",
       "headline": "训练有计划，改变才更可持续。",
-      "preview": "./industry.html?industry=fitness",
+      "preview": "./site-home.html?industry=fitness",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1583,7 +1583,7 @@
       "family": "professional-trust",
       "accent": "#172554",
       "headline": "先理解风险，再选择保障。",
-      "preview": "./industry.html?industry=insurance",
+      "preview": "./site-home.html?industry=insurance",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1599,7 +1599,7 @@
       "family": "industrial-catalog",
       "accent": "#1f2937",
       "headline": "让流体系统稳定运行，从可靠泵阀开始。",
-      "preview": "./industry.html?industry=pump-valve",
+      "preview": "./site-home.html?industry=pump-valve",
       "install_modes": [
         "theme_only",
         "fill_blanks",
@@ -1615,7 +1615,7 @@
       "family": "technical-spec",
       "accent": "#27272a",
       "headline": "把精度稳定复制到每一次成型。",
-      "preview": "./industry.html?industry=mold",
+      "preview": "./site-home.html?industry=mold",
       "install_modes": [
         "theme_only",
         "fill_blanks",
