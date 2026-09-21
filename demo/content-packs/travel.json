@@ -1,0 +1,41 @@
+{
+  "name": "旅游行业起步内容包",
+  "theme": "travel",
+  "version": "1.0.0",
+  "menus": [
+    "首页",
+    "目的地",
+    "精选路线",
+    "私人定制",
+    "旅行顾问",
+    "旅行灵感",
+    "联系我们"
+  ],
+  "blocks": [
+    "home-hero",
+    "travel-search",
+    "featured-destinations",
+    "custom-travel-cta"
+  ],
+  "categories": {
+    "articles": [
+      "旅行攻略",
+      "目的地灵感",
+      "出行须知"
+    ],
+    "cases": [
+      "私家团",
+      "企业团建"
+    ]
+  },
+  "custom_fields": {
+    "products": [
+      "出发城市",
+      "旅行天数",
+      "团型",
+      "适合人群",
+      "价格起",
+      "目的地"
+    ]
+  }
+}
