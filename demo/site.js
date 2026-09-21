@@ -80,7 +80,7 @@ function safe(s){return String(s||'').replace(/[<>&"]/g,'')}
 
 function renderShell(){
   const l=label(),brand=document.querySelector('#brand');
-  brand.innerHTML=window.industryLogoMarkup?industryLogoMarkup(industry.name,industry.accent,industry.family,'headerLogo'):industry.name;
+  brand.innerHTML=window.industryLogoMarkup?industryLogoMarkup(industry.name,industry.accent,industry.family,'headerLogo',preset.navVariant==='dark'?'dark':'light'):industry.name;
   brand.href=route('site-home.html');
   document.querySelector('#topText').textContent=industry.category+' · '+styleLabel(preset.style)+' · '+layoutLabel(preset.layout);
   document.querySelector('#navLinks').innerHTML=[
