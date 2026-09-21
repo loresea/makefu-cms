@@ -112,7 +112,8 @@ function fallbackImageData(label='MAKEFU',accent='#f97316'){
 }
 function imageTag(url,alt,cls='',accent='#f97316'){
   const fb=fallbackImageData(alt,accent).replace(/'/g,'%27');
-  return '<img class="'+cls+'" src="'+url+'" alt="'+String(alt).replace(/"/g,'')+'" loading="lazy" onerror="this.onerror=null;this.src=\''+fb+'\'">';
+  const critical=/heroPhoto|pageHeroImage/.test(cls);
+  return '<img class="'+cls+'" src="'+url+'" alt="'+String(alt).replace(/"/g,'')+'" loading="'+(critical?'eager':'lazy')+'" decoding="async" '+(critical?'fetchpriority="high" ':'')+'onerror="this.onerror=null;this.src=\''+fb+'\'">';
 }
 window.getIndustryImages=getIndustryImages;
 window.fallbackImageData=fallbackImageData;
