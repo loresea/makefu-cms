@@ -1,0 +1,42 @@
+{
+  "name": "律师行业起步内容包",
+  "theme": "lawyer",
+  "version": "1.0.0",
+  "menus": [
+    "首页",
+    "专业领域",
+    "典型事项",
+    "律师团队",
+    "法律观点",
+    "律所介绍",
+    "预约咨询"
+  ],
+  "blocks": [
+    "home-hero",
+    "practice-areas",
+    "legal-process",
+    "consultation-cta"
+  ],
+  "categories": {
+    "products": [
+      "公司商事",
+      "劳动用工",
+      "婚姻家事",
+      "刑事辩护",
+      "法律顾问"
+    ],
+    "articles": [
+      "法律观点",
+      "案例解读",
+      "企业合规"
+    ]
+  },
+  "custom_fields": {
+    "cases": [
+      "专业领域",
+      "主办律师",
+      "事项阶段",
+      "关键词"
+    ]
+  }
+}
