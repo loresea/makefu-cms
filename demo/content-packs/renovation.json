@@ -1,0 +1,43 @@
+{
+  "name": "装修行业起步内容包",
+  "theme": "renovation",
+  "version": "1.0.0",
+  "menus": [
+    "首页",
+    "装修案例",
+    "设计风格",
+    "装修服务",
+    "施工工艺",
+    "设计团队",
+    "装修知识",
+    "预约量房"
+  ],
+  "blocks": [
+    "home-hero",
+    "case-highlight",
+    "process",
+    "quote-calculator"
+  ],
+  "categories": {
+    "cases": [
+      "住宅设计",
+      "旧房翻新",
+      "商业空间"
+    ],
+    "articles": [
+      "装修知识",
+      "材料工艺",
+      "户型优化"
+    ]
+  },
+  "custom_fields": {
+    "cases": [
+      "面积",
+      "户型",
+      "项目地址",
+      "设计风格",
+      "设计师",
+      "装修方式"
+    ]
+  }
+}
