@@ -128,6 +128,7 @@ function activateIndustryTheme(t){openModal('启用行业模板：'+themeNames[t
 document.getElementById('themeSelect').addEventListener('change',e=>activateTheme(e.target.value));
 function openModal(title,html){modalTitle.textContent=title;modalBody.innerHTML=html;const b=document.getElementById('modalSaveBtn');if(b){b.textContent='保存';b.onclick=saveModal}modal.classList.add('on')}function closeModal(){modal.classList.remove('on')}function saveModal(){closeModal();pop('已保存（演示）')}
 function openEditor(type){
+  if(type==='article'){ location.href='./article-editor.html'; return; }
   const names={page:'页面',article:'文章',product:'产品',case:'案例'};
   const isArticle=type==='article';
   openModal('编辑'+names[type],
