@@ -1,0 +1,1627 @@
+{
+  "version": "1.0.0",
+  "count": 100,
+  "families": {
+    "destination-explorer": 1,
+    "portfolio-editorial": 8,
+    "service-conversion": 6,
+    "professional-trust": 7,
+    "industrial-catalog": 9,
+    "technical-spec": 12,
+    "ecommerce-showcase": 8,
+    "environment-energy": 5,
+    "home-living": 6,
+    "corporate-tech": 6,
+    "hospitality-experience": 2,
+    "food-brand": 2,
+    "logistics-map": 4,
+    "healthcare-trust": 6,
+    "education-programs": 7,
+    "creative-agency": 4,
+    "automotive-showroom": 2,
+    "local-services": 4,
+    "real-estate-listings": 1
+  },
+  "industries": [
+    {
+      "id": 1,
+      "slug": "travel",
+      "name": "旅游行业",
+      "category": "文旅生活",
+      "family": "destination-explorer",
+      "accent": "#0f766e",
+      "headline": "把时间交给风景，把复杂交给我们。",
+      "preview": "./travel.html",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 2,
+      "slug": "renovation",
+      "name": "装修装饰",
+      "category": "家居建材",
+      "family": "portfolio-editorial",
+      "accent": "#292524",
+      "headline": "把房子，变成真正适合生活的家。",
+      "preview": "./renovation.html",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 3,
+      "slug": "accounting",
+      "name": "代理记账",
+      "category": "企业服务",
+      "family": "service-conversion",
+      "accent": "#0f172a",
+      "headline": "让老板看得懂账，让企业少走财税弯路。",
+      "preview": "./accounting.html",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 4,
+      "slug": "lawyer",
+      "name": "律师事务所",
+      "category": "专业服务",
+      "family": "professional-trust",
+      "accent": "#2b0b12",
+      "headline": "复杂问题，需要清晰的法律判断。",
+      "preview": "./lawyer.html",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 5,
+      "slug": "machinery",
+      "name": "机械设备",
+      "category": "工业制造",
+      "family": "industrial-catalog",
+      "accent": "#111827",
+      "headline": "可靠设备，支撑每一次高效生产。",
+      "preview": "./industry.html?industry=machinery",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 6,
+      "slug": "laser",
+      "name": "激光设备",
+      "category": "工业制造",
+      "family": "technical-spec",
+      "accent": "#172554",
+      "headline": "精准加工，从稳定的激光系统开始。",
+      "preview": "./industry.html?industry=laser",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 7,
+      "slug": "automation",
+      "name": "工业自动化",
+      "category": "工业制造",
+      "family": "technical-spec",
+      "accent": "#0f172a",
+      "headline": "把重复工作交给自动化。",
+      "preview": "./industry.html?industry=automation",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 8,
+      "slug": "hardware",
+      "name": "五金工具",
+      "category": "工业制造",
+      "family": "industrial-catalog",
+      "accent": "#27272a",
+      "headline": "耐用工具，为现场效率而生。",
+      "preview": "./industry.html?industry=hardware",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 9,
+      "slug": "electronics",
+      "name": "电子元器件",
+      "category": "电子科技",
+      "family": "technical-spec",
+      "accent": "#0c4a6e",
+      "headline": "稳定供应，从每一颗元器件开始。",
+      "preview": "./industry.html?industry=electronics",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 10,
+      "slug": "pcb",
+      "name": "PCB电路板",
+      "category": "电子科技",
+      "family": "technical-spec",
+      "accent": "#064e3b",
+      "headline": "让设计可靠地落在每一层线路上。",
+      "preview": "./industry.html?industry=pcb",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 11,
+      "slug": "led",
+      "name": "LED照明",
+      "category": "电子科技",
+      "family": "ecommerce-showcase",
+      "accent": "#111827",
+      "headline": "用更高效的光，照亮更多场景。",
+      "preview": "./industry.html?industry=led",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 12,
+      "slug": "new-energy",
+      "name": "新能源",
+      "category": "能源环保",
+      "family": "environment-energy",
+      "accent": "#052e16",
+      "headline": "让清洁能源进入更多真实场景。",
+      "preview": "./industry.html?industry=new-energy",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 13,
+      "slug": "solar",
+      "name": "光伏",
+      "category": "能源环保",
+      "family": "environment-energy",
+      "accent": "#0f172a",
+      "headline": "把每一束阳光转化为长期价值。",
+      "preview": "./industry.html?industry=solar",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 14,
+      "slug": "storage",
+      "name": "储能",
+      "category": "能源环保",
+      "family": "technical-spec",
+      "accent": "#172554",
+      "headline": "让能源在需要的时候准时出现。",
+      "preview": "./industry.html?industry=storage",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 15,
+      "slug": "battery",
+      "name": "电池",
+      "category": "能源环保",
+      "family": "technical-spec",
+      "accent": "#052e16",
+      "headline": "安全、稳定、长寿命的能源核心。",
+      "preview": "./industry.html?industry=battery",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 16,
+      "slug": "environment",
+      "name": "环保设备",
+      "category": "能源环保",
+      "family": "environment-energy",
+      "accent": "#064e3b",
+      "headline": "让排放更低，让生产更安心。",
+      "preview": "./industry.html?industry=environment",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 17,
+      "slug": "water-treatment",
+      "name": "水处理",
+      "category": "能源环保",
+      "family": "environment-energy",
+      "accent": "#164e63",
+      "headline": "让每一滴水回到合适的标准。",
+      "preview": "./industry.html?industry=water-treatment",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 18,
+      "slug": "water-purifier",
+      "name": "净水器",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#0e7490",
+      "headline": "喝得到的安心，从一杯好水开始。",
+      "preview": "./industry.html?industry=water-purifier",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 19,
+      "slug": "air-purification",
+      "name": "空气净化",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#0f766e",
+      "headline": "让室内空气真正可感知地变好。",
+      "preview": "./industry.html?industry=air-purification",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 20,
+      "slug": "chemical",
+      "name": "化工材料",
+      "category": "原材料",
+      "family": "technical-spec",
+      "accent": "#3f3f46",
+      "headline": "材料性能，决定产品上限。",
+      "preview": "./industry.html?industry=chemical",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 21,
+      "slug": "rubber-plastic",
+      "name": "塑料橡胶",
+      "category": "原材料",
+      "family": "industrial-catalog",
+      "accent": "#1f2937",
+      "headline": "从材料配方到稳定量产。",
+      "preview": "./industry.html?industry=rubber-plastic",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 22,
+      "slug": "packaging",
+      "name": "包装印刷",
+      "category": "制造服务",
+      "family": "portfolio-editorial",
+      "accent": "#7c2d12",
+      "headline": "包装不只保护产品，也建立第一印象。",
+      "preview": "./industry.html?industry=packaging",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 23,
+      "slug": "paper",
+      "name": "纸制品",
+      "category": "制造服务",
+      "family": "industrial-catalog",
+      "accent": "#78350f",
+      "headline": "把纸做成更适合产品的形态。",
+      "preview": "./industry.html?industry=paper",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 24,
+      "slug": "textile",
+      "name": "纺织服装",
+      "category": "消费制造",
+      "family": "ecommerce-showcase",
+      "accent": "#4c1d95",
+      "headline": "从面料到成衣，让品牌更有质感。",
+      "preview": "./industry.html?industry=textile",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 25,
+      "slug": "bags",
+      "name": "鞋帽箱包",
+      "category": "消费制造",
+      "family": "ecommerce-showcase",
+      "accent": "#831843",
+      "headline": "把日常用品做成品牌表达。",
+      "preview": "./industry.html?industry=bags",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 26,
+      "slug": "furniture",
+      "name": "家具家居",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#3f2d20",
+      "headline": "让每一件家具进入真实生活。",
+      "preview": "./industry.html?industry=furniture",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 27,
+      "slug": "doors-windows",
+      "name": "门窗",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#1c1917",
+      "headline": "安全、隔音与采光，一扇窗都要兼顾。",
+      "preview": "./industry.html?industry=doors-windows",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 28,
+      "slug": "building-materials",
+      "name": "建筑材料",
+      "category": "家居建材",
+      "family": "industrial-catalog",
+      "accent": "#374151",
+      "headline": "稳定材料，是工程质量的底线。",
+      "preview": "./industry.html?industry=building-materials",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 29,
+      "slug": "stone",
+      "name": "石材",
+      "category": "家居建材",
+      "family": "portfolio-editorial",
+      "accent": "#44403c",
+      "headline": "天然纹理，让空间有独特秩序。",
+      "preview": "./industry.html?industry=stone",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 30,
+      "slug": "flooring",
+      "name": "地板",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#422006",
+      "headline": "脚下的质感，决定家的温度。",
+      "preview": "./industry.html?industry=flooring",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 31,
+      "slug": "ceramic-bath",
+      "name": "陶瓷卫浴",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#1e3a8a",
+      "headline": "让卫浴空间更舒适、更耐用。",
+      "preview": "./industry.html?industry=ceramic-bath",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 32,
+      "slug": "lighting",
+      "name": "照明灯具",
+      "category": "家居建材",
+      "family": "ecommerce-showcase",
+      "accent": "#111827",
+      "headline": "好灯光，让空间被重新看见。",
+      "preview": "./industry.html?industry=lighting",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 33,
+      "slug": "appliance",
+      "name": "家电",
+      "category": "消费电子",
+      "family": "ecommerce-showcase",
+      "accent": "#0f172a",
+      "headline": "让技术真正服务日常生活。",
+      "preview": "./industry.html?industry=appliance",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 34,
+      "slug": "smart-home",
+      "name": "智能家居",
+      "category": "消费电子",
+      "family": "corporate-tech",
+      "accent": "#172554",
+      "headline": "让家更懂你的习惯。",
+      "preview": "./industry.html?industry=smart-home",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 35,
+      "slug": "security",
+      "name": "安防监控",
+      "category": "工程科技",
+      "family": "technical-spec",
+      "accent": "#111827",
+      "headline": "看得见、管得住、查得到。",
+      "preview": "./industry.html?industry=security",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 36,
+      "slug": "fire-protection",
+      "name": "消防",
+      "category": "工程科技",
+      "family": "professional-trust",
+      "accent": "#450a0a",
+      "headline": "消防安全，必须被系统化管理。",
+      "preview": "./industry.html?industry=fire-protection",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 37,
+      "slug": "elevator",
+      "name": "电梯",
+      "category": "工程科技",
+      "family": "industrial-catalog",
+      "accent": "#1f2937",
+      "headline": "每一次升降，都要稳定可靠。",
+      "preview": "./industry.html?industry=elevator",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 38,
+      "slug": "hvac",
+      "name": "暖通空调",
+      "category": "工程科技",
+      "family": "technical-spec",
+      "accent": "#164e63",
+      "headline": "把温度、空气和能耗一起管好。",
+      "preview": "./industry.html?industry=hvac",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 39,
+      "slug": "refrigeration",
+      "name": "制冷设备",
+      "category": "工程科技",
+      "family": "technical-spec",
+      "accent": "#0c4a6e",
+      "headline": "稳定制冷，是生产与储存的基础。",
+      "preview": "./industry.html?industry=refrigeration",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 40,
+      "slug": "kitchen-equipment",
+      "name": "厨房设备",
+      "category": "工程科技",
+      "family": "industrial-catalog",
+      "accent": "#292524",
+      "headline": "让后厨更高效、更安全。",
+      "preview": "./industry.html?industry=kitchen-equipment",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 41,
+      "slug": "restaurant",
+      "name": "餐饮",
+      "category": "餐饮生活",
+      "family": "hospitality-experience",
+      "accent": "#7f1d1d",
+      "headline": "一顿饭，也可以成为品牌记忆。",
+      "preview": "./industry.html?industry=restaurant",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 42,
+      "slug": "hotel",
+      "name": "酒店民宿",
+      "category": "餐饮生活",
+      "family": "hospitality-experience",
+      "accent": "#1e293b",
+      "headline": "从入住之前，就让人期待。",
+      "preview": "./industry.html?industry=hotel",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 43,
+      "slug": "tea-coffee",
+      "name": "茶饮咖啡",
+      "category": "餐饮生活",
+      "family": "food-brand",
+      "accent": "#78350f",
+      "headline": "一杯饮品，也有自己的风味地图。",
+      "preview": "./industry.html?industry=tea-coffee",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 44,
+      "slug": "food-processing",
+      "name": "食品加工",
+      "category": "食品农业",
+      "family": "industrial-catalog",
+      "accent": "#7c2d12",
+      "headline": "从原料到成品，稳定才是第一标准。",
+      "preview": "./industry.html?industry=food-processing",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 45,
+      "slug": "agriculture",
+      "name": "农产品",
+      "category": "食品农业",
+      "family": "food-brand",
+      "accent": "#365314",
+      "headline": "把产地、季节和新鲜讲清楚。",
+      "preview": "./industry.html?industry=agriculture",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 46,
+      "slug": "fresh-delivery",
+      "name": "生鲜配送",
+      "category": "食品农业",
+      "family": "logistics-map",
+      "accent": "#14532d",
+      "headline": "从产地到门店，缩短每一公里。",
+      "preview": "./industry.html?industry=fresh-delivery",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 47,
+      "slug": "medical-device",
+      "name": "医疗器械",
+      "category": "医疗健康",
+      "family": "healthcare-trust",
+      "accent": "#0f172a",
+      "headline": "专业器械，为临床效率与安全服务。",
+      "preview": "./industry.html?industry=medical-device",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 48,
+      "slug": "clinic",
+      "name": "医院诊所",
+      "category": "医疗健康",
+      "family": "healthcare-trust",
+      "accent": "#164e63",
+      "headline": "让就医信息更清晰，让预约更简单。",
+      "preview": "./industry.html?industry=clinic",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 49,
+      "slug": "dental",
+      "name": "口腔",
+      "category": "医疗健康",
+      "family": "healthcare-trust",
+      "accent": "#0e7490",
+      "headline": "让每一次看牙更安心。",
+      "preview": "./industry.html?industry=dental",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 50,
+      "slug": "medical-beauty",
+      "name": "医美",
+      "category": "医疗健康",
+      "family": "healthcare-trust",
+      "accent": "#831843",
+      "headline": "审美与安全，应该同时被重视。",
+      "preview": "./industry.html?industry=medical-beauty",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 51,
+      "slug": "pharma",
+      "name": "医药",
+      "category": "医疗健康",
+      "family": "healthcare-trust",
+      "accent": "#1e3a8a",
+      "headline": "专业信息，让用药与合作更透明。",
+      "preview": "./industry.html?industry=pharma",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 52,
+      "slug": "eldercare",
+      "name": "养老服务",
+      "category": "医疗健康",
+      "family": "healthcare-trust",
+      "accent": "#3f6212",
+      "headline": "让长者得到有尊严的照护。",
+      "preview": "./industry.html?industry=eldercare",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 53,
+      "slug": "maternal",
+      "name": "母婴",
+      "category": "生活服务",
+      "family": "ecommerce-showcase",
+      "accent": "#be185d",
+      "headline": "陪伴每一个家庭的新开始。",
+      "preview": "./industry.html?industry=maternal",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 54,
+      "slug": "education",
+      "name": "教育培训",
+      "category": "教育培训",
+      "family": "education-programs",
+      "accent": "#1e3a8a",
+      "headline": "学习路径清晰，成长才更可持续。",
+      "preview": "./industry.html?industry=education",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 55,
+      "slug": "study-abroad",
+      "name": "留学服务",
+      "category": "教育培训",
+      "family": "education-programs",
+      "accent": "#172554",
+      "headline": "把申请规划做得更早、更清楚。",
+      "preview": "./industry.html?industry=study-abroad",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 56,
+      "slug": "language",
+      "name": "语言培训",
+      "category": "教育培训",
+      "family": "education-programs",
+      "accent": "#0c4a6e",
+      "headline": "让语言真正进入使用场景。",
+      "preview": "./industry.html?industry=language",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 57,
+      "slug": "vocational",
+      "name": "职业培训",
+      "category": "教育培训",
+      "family": "education-programs",
+      "accent": "#1f2937",
+      "headline": "把学习直接连接到职业能力。",
+      "preview": "./industry.html?industry=vocational",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 58,
+      "slug": "kindergarten",
+      "name": "幼儿园",
+      "category": "教育培训",
+      "family": "education-programs",
+      "accent": "#166534",
+      "headline": "在安全与好奇心之间建立成长空间。",
+      "preview": "./industry.html?industry=kindergarten",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 59,
+      "slug": "school",
+      "name": "学校院校",
+      "category": "教育培训",
+      "family": "education-programs",
+      "accent": "#1e3a8a",
+      "headline": "让校园信息更开放、更清晰。",
+      "preview": "./industry.html?industry=school",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 60,
+      "slug": "hr",
+      "name": "人力资源",
+      "category": "企业服务",
+      "family": "service-conversion",
+      "accent": "#0f172a",
+      "headline": "让企业更快找到对的人。",
+      "preview": "./industry.html?industry=hr",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 61,
+      "slug": "headhunting",
+      "name": "招聘猎头",
+      "category": "企业服务",
+      "family": "service-conversion",
+      "accent": "#111827",
+      "headline": "关键岗位，值得更精准地寻找。",
+      "preview": "./industry.html?industry=headhunting",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 62,
+      "slug": "corporate-training",
+      "name": "企业培训",
+      "category": "企业服务",
+      "family": "education-programs",
+      "accent": "#172554",
+      "headline": "让培训从听懂变成真正能执行。",
+      "preview": "./industry.html?industry=corporate-training",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 63,
+      "slug": "management-consulting",
+      "name": "管理咨询",
+      "category": "专业服务",
+      "family": "professional-trust",
+      "accent": "#111827",
+      "headline": "把复杂经营问题拆成可执行的动作。",
+      "preview": "./industry.html?industry=management-consulting",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 64,
+      "slug": "ip-service",
+      "name": "知识产权",
+      "category": "专业服务",
+      "family": "professional-trust",
+      "accent": "#1e293b",
+      "headline": "把创新成果变成可保护的资产。",
+      "preview": "./industry.html?industry=ip-service",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 65,
+      "slug": "testing-certification",
+      "name": "检测认证",
+      "category": "专业服务",
+      "family": "professional-trust",
+      "accent": "#0f172a",
+      "headline": "数据和标准，让质量可被证明。",
+      "preview": "./industry.html?industry=testing-certification",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 66,
+      "slug": "translation",
+      "name": "翻译服务",
+      "category": "专业服务",
+      "family": "service-conversion",
+      "accent": "#312e81",
+      "headline": "让专业内容跨越语言边界。",
+      "preview": "./industry.html?industry=translation",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 67,
+      "slug": "advertising",
+      "name": "广告传媒",
+      "category": "创意服务",
+      "family": "creative-agency",
+      "accent": "#4c1d95",
+      "headline": "让品牌被看见，也被记住。",
+      "preview": "./industry.html?industry=advertising",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 68,
+      "slug": "branding",
+      "name": "品牌设计",
+      "category": "创意服务",
+      "family": "creative-agency",
+      "accent": "#111827",
+      "headline": "品牌不是一个 Logo，而是一套一致表达。",
+      "preview": "./industry.html?industry=branding",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 69,
+      "slug": "photography",
+      "name": "摄影摄像",
+      "category": "创意服务",
+      "family": "portfolio-editorial",
+      "accent": "#18181b",
+      "headline": "把重要时刻变成可以反复观看的作品。",
+      "preview": "./industry.html?industry=photography",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 70,
+      "slug": "film",
+      "name": "影视制作",
+      "category": "创意服务",
+      "family": "creative-agency",
+      "accent": "#020617",
+      "headline": "从脚本到成片，把故事拍得更有力量。",
+      "preview": "./industry.html?industry=film",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 71,
+      "slug": "wedding",
+      "name": "婚庆",
+      "category": "生活服务",
+      "family": "portfolio-editorial",
+      "accent": "#9f1239",
+      "headline": "婚礼只发生一天，但记忆会留很久。",
+      "preview": "./industry.html?industry=wedding",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 72,
+      "slug": "exhibition",
+      "name": "会展活动",
+      "category": "企业服务",
+      "family": "creative-agency",
+      "accent": "#172554",
+      "headline": "把一次活动做成一次完整体验。",
+      "preview": "./industry.html?industry=exhibition",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 73,
+      "slug": "software",
+      "name": "软件开发",
+      "category": "数字科技",
+      "family": "corporate-tech",
+      "accent": "#0f172a",
+      "headline": "把业务需求变成真正能用的软件。",
+      "preview": "./industry.html?industry=software",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 74,
+      "slug": "saas",
+      "name": "SaaS软件",
+      "category": "数字科技",
+      "family": "corporate-tech",
+      "accent": "#172554",
+      "headline": "把复杂业务流程变成更简单的软件。",
+      "preview": "./industry.html?industry=saas",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 75,
+      "slug": "cybersecurity",
+      "name": "网络安全",
+      "category": "数字科技",
+      "family": "technical-spec",
+      "accent": "#020617",
+      "headline": "让风险更早被发现，让系统更稳定。",
+      "preview": "./industry.html?industry=cybersecurity",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 76,
+      "slug": "ai-tech",
+      "name": "AI智能科技",
+      "category": "数字科技",
+      "family": "corporate-tech",
+      "accent": "#111827",
+      "headline": "让 AI 进入真实业务，而不是停在演示里。",
+      "preview": "./industry.html?industry=ai-tech",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 77,
+      "slug": "data-service",
+      "name": "数据服务",
+      "category": "数字科技",
+      "family": "corporate-tech",
+      "accent": "#0f172a",
+      "headline": "让数据变成能被决策使用的信息。",
+      "preview": "./industry.html?industry=data-service",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 78,
+      "slug": "ecommerce",
+      "name": "电商零售",
+      "category": "电商贸易",
+      "family": "ecommerce-showcase",
+      "accent": "#7c2d12",
+      "headline": "让产品更快被发现、更容易被购买。",
+      "preview": "./industry.html?industry=ecommerce",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 79,
+      "slug": "cross-border",
+      "name": "跨境电商",
+      "category": "电商贸易",
+      "family": "ecommerce-showcase",
+      "accent": "#172554",
+      "headline": "从产品出海到全球订单增长。",
+      "preview": "./industry.html?industry=cross-border",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 80,
+      "slug": "foreign-trade",
+      "name": "外贸公司",
+      "category": "电商贸易",
+      "family": "corporate-tech",
+      "accent": "#0f2f66",
+      "headline": "Build trust before the first inquiry.",
+      "preview": "./industry.html?industry=foreign-trade",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 81,
+      "slug": "logistics",
+      "name": "物流运输",
+      "category": "物流供应链",
+      "family": "logistics-map",
+      "accent": "#0f172a",
+      "headline": "每一票货，都应该有清晰的交付路径。",
+      "preview": "./industry.html?industry=logistics",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 82,
+      "slug": "freight-forwarding",
+      "name": "货运代理",
+      "category": "物流供应链",
+      "family": "logistics-map",
+      "accent": "#164e63",
+      "headline": "把跨境运输的复杂环节连接起来。",
+      "preview": "./industry.html?industry=freight-forwarding",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 83,
+      "slug": "warehousing",
+      "name": "仓储供应链",
+      "category": "物流供应链",
+      "family": "logistics-map",
+      "accent": "#1f2937",
+      "headline": "让库存、仓储和配送协同起来。",
+      "preview": "./industry.html?industry=warehousing",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 84,
+      "slug": "auto-sales",
+      "name": "汽车销售",
+      "category": "汽车服务",
+      "family": "automotive-showroom",
+      "accent": "#111827",
+      "headline": "从看车到交付，让选择更简单。",
+      "preview": "./industry.html?industry=auto-sales",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 85,
+      "slug": "auto-repair",
+      "name": "汽车维修",
+      "category": "汽车服务",
+      "family": "local-services",
+      "accent": "#1f2937",
+      "headline": "维修透明，才能放心把车交出去。",
+      "preview": "./industry.html?industry=auto-repair",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 86,
+      "slug": "car-rental",
+      "name": "汽车租赁",
+      "category": "汽车服务",
+      "family": "automotive-showroom",
+      "accent": "#0f172a",
+      "headline": "需要用车时，随时有合适的选择。",
+      "preview": "./industry.html?industry=car-rental",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 87,
+      "slug": "ev-charging",
+      "name": "充电桩服务",
+      "category": "汽车服务",
+      "family": "environment-energy",
+      "accent": "#052e16",
+      "headline": "让充电更方便，让运营更稳定。",
+      "preview": "./industry.html?industry=ev-charging",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 88,
+      "slug": "real-estate",
+      "name": "房地产",
+      "category": "地产工程",
+      "family": "real-estate-listings",
+      "accent": "#1e293b",
+      "headline": "找到适合生活、工作与投资的空间。",
+      "preview": "./industry.html?industry=real-estate",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 89,
+      "slug": "property",
+      "name": "物业管理",
+      "category": "地产工程",
+      "family": "service-conversion",
+      "accent": "#164e63",
+      "headline": "把日常服务做得更及时、更透明。",
+      "preview": "./industry.html?industry=property",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 90,
+      "slug": "landscape",
+      "name": "园林景观",
+      "category": "地产工程",
+      "family": "portfolio-editorial",
+      "accent": "#365314",
+      "headline": "让建筑之外，也有值得停留的空间。",
+      "preview": "./industry.html?industry=landscape",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 91,
+      "slug": "construction",
+      "name": "建筑工程",
+      "category": "地产工程",
+      "family": "professional-trust",
+      "accent": "#292524",
+      "headline": "每一项工程，都需要可追溯的质量体系。",
+      "preview": "./industry.html?industry=construction",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 92,
+      "slug": "engineering-design",
+      "name": "工程设计",
+      "category": "地产工程",
+      "family": "portfolio-editorial",
+      "accent": "#1f2937",
+      "headline": "把复杂工程先在图纸里解决。",
+      "preview": "./industry.html?industry=engineering-design",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 93,
+      "slug": "cleaning",
+      "name": "保洁家政",
+      "category": "本地服务",
+      "family": "local-services",
+      "accent": "#0f766e",
+      "headline": "把家务交给专业的人。",
+      "preview": "./industry.html?industry=cleaning",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 94,
+      "slug": "moving",
+      "name": "搬家服务",
+      "category": "本地服务",
+      "family": "local-services",
+      "accent": "#1e3a8a",
+      "headline": "搬家不只是搬东西，也要安排好每一步。",
+      "preview": "./industry.html?industry=moving",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 95,
+      "slug": "pet",
+      "name": "宠物服务",
+      "category": "生活服务",
+      "family": "local-services",
+      "accent": "#7c3aed",
+      "headline": "认真照顾每一位不会说话的家人。",
+      "preview": "./industry.html?industry=pet",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 96,
+      "slug": "beauty",
+      "name": "美容美发",
+      "category": "生活服务",
+      "family": "portfolio-editorial",
+      "accent": "#831843",
+      "headline": "让专业审美进入每一次服务。",
+      "preview": "./industry.html?industry=beauty",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 97,
+      "slug": "fitness",
+      "name": "健身运动",
+      "category": "生活服务",
+      "family": "service-conversion",
+      "accent": "#111827",
+      "headline": "训练有计划，改变才更可持续。",
+      "preview": "./industry.html?industry=fitness",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 98,
+      "slug": "insurance",
+      "name": "保险服务",
+      "category": "金融服务",
+      "family": "professional-trust",
+      "accent": "#172554",
+      "headline": "先理解风险，再选择保障。",
+      "preview": "./industry.html?industry=insurance",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 99,
+      "slug": "pump-valve",
+      "name": "泵阀设备",
+      "category": "工业制造",
+      "family": "industrial-catalog",
+      "accent": "#1f2937",
+      "headline": "让流体系统稳定运行，从可靠泵阀开始。",
+      "preview": "./industry.html?industry=pump-valve",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    },
+    {
+      "id": 100,
+      "slug": "mold",
+      "name": "模具制造",
+      "category": "工业制造",
+      "family": "technical-spec",
+      "accent": "#27272a",
+      "headline": "把精度稳定复制到每一次成型。",
+      "preview": "./industry.html?industry=mold",
+      "install_modes": [
+        "theme_only",
+        "fill_blanks",
+        "full_demo"
+      ],
+      "status": "preview-ready"
+    }
+  ]
+}
