@@ -36,12 +36,29 @@ jobs:
           test -f demo/industry.html
           test -f demo/industries.json
           test -f demo/industry-packs.json
+          test -f demo/site.css
+          test -f demo/site.js
+          test -f demo/site-home.html
+          test -f demo/site-products.html
+          test -f demo/site-product.html
+          test -f demo/site-cases.html
+          test -f demo/site-case.html
+          test -f demo/site-news.html
+          test -f demo/site-news-detail.html
+          test -f demo/site-about.html
+          test -f demo/site-contact.html
+          test -f demo/editor.html
 
-      - name: Verify new-window frontend behavior
+      - name: Verify admin and multi-page behavior
         run: |
           grep -q 'id="frontLink".*target="_blank"' demo/cms.html
-          grep -q '新窗口预览 ↗' demo/cms.html
-          grep -q 'target="_blank"' demo/login.html
+          grep -q 'position:fixed;left:0;top:0;bottom:0;width:184px' demo/cms.html
+          grep -q "location.href='./editor.html?type=article'" demo/cms.html
+          grep -q 'site-news-detail.html' demo/site.js
+          grep -q 'site-products.html' demo/site.js
+          grep -q 'site-cases.html' demo/site.js
+          grep -q 'site-about.html' demo/site.js
+          grep -q 'site-contact.html' demo/site.js
 
       - name: Check internal demo links
         run: |
@@ -150,3 +167,4 @@ jobs:
           print(f"Extracted {n} scripts")
           PY
           for f in /tmp/demo-js/*.js; do node --check "$f"; done
+          node --check demo/site.js
