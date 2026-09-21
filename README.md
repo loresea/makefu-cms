@@ -2,13 +2,14 @@
 
 轻量级企业建站 CMS，基于 **Laravel + Filament**，默认支持 **SQLite 上传即用**，并可迁移至 MySQL。
 
-> 当前阶段：1.0.0 RC4 商业化候选版
+> 当前阶段：1.0.0 RC5 商业化候选版
 
 ## 在线演示
 
 - 后台演示：https://loresea.github.io/makefu-cms/cms.html
 - 安装向导：https://loresea.github.io/makefu-cms/install.html
 - 登录页：https://loresea.github.io/makefu-cms/login.html
+- 200 行业模板库：https://loresea.github.io/makefu-cms/industry-market.html
 - 通用模板预览：https://loresea.github.io/makefu-cms/template.html?theme=default&page=home
 - 旅游行业：https://loresea.github.io/makefu-cms/travel.html
 - 装修行业：https://loresea.github.io/makefu-cms/renovation.html
@@ -80,6 +81,8 @@
 6. 筑家设计（装修行业）
 7. 企财管家（代理记账）
 8. 衡正律师（律师行业）
+
+当前行业注册表已扩展到 **200 个常用行业模板**，后台模板市场支持分类、搜索、无需安装预览和三种启用方式。所有行业模板使用图片型 SVG Logo，前台统一带主站版权链接与演示备案信息。
 
 行业模板采用“Theme + 可选 Starter Content Pack”模式。切换模板默认不会覆盖真实内容；可选择仅换外观、只填空白行业内容、或在新站中完整导入演示数据。
 
