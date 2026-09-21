@@ -48,12 +48,13 @@ jobs:
           test -f demo/site-about.html
           test -f demo/site-contact.html
           test -f demo/editor.html
+          test -f demo/article-editor.html
 
       - name: Verify admin and multi-page behavior
         run: |
           grep -q 'id="frontLink".*target="_blank"' demo/cms.html
           grep -q 'position:fixed;left:0;top:0;bottom:0;width:184px' demo/cms.html
-          grep -q "location.href='./editor.html?type=article'" demo/cms.html
+          grep -q "location.href='./article-editor.html'" demo/cms.html
           grep -q 'site-news-detail.html' demo/site.js
           grep -q 'site-products.html' demo/site.js
           grep -q 'site-cases.html' demo/site.js
