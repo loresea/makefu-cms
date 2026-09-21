@@ -24,6 +24,10 @@ jobs:
           test -f demo/template.html
           test -f demo/login.html
           test -f demo/install.html
+          test -f demo/travel.html
+          test -f demo/renovation.html
+          test -f demo/accounting.html
+          test -f demo/lawyer.html
 
       - name: Verify new-window frontend behavior
         run: |
@@ -66,6 +70,22 @@ jobs:
           if errors:
               raise SystemExit("\n".join(errors))
           print("Internal links OK")
+          PY
+
+      - name: Validate industry content packs
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          required = ["travel","renovation","accounting","lawyer"]
+          for slug in required:
+              p = Path("demo/content-packs") / f"{slug}.json"
+              assert p.exists(), f"missing {p}"
+              data = json.loads(p.read_text(encoding="utf-8"))
+              assert data.get("theme") == slug
+              assert data.get("menus")
+              assert data.get("blocks")
+          print("Industry content packs OK")
           PY
 
       - name: Check inline JavaScript syntax
