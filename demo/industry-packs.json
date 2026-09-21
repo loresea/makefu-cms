@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "count": 100,
+  "version": "1.1.0",
+  "count": 200,
   "packs": [
     {
       "slug": "travel",
@@ -5051,6 +5051,5060 @@
         "hero_title": "把精度稳定复制到每一次成型。",
         "hero_description": "面向模具制造企业的行业化官网起步内容，可按真实业务替换。",
         "cta_title": "了解模具制造的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "tax-planning",
+      "name": "税务筹划行业起步内容包",
+      "theme": "tax-planning",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "专业领域",
+        "典型案例",
+        "专业团队",
+        "专业观点",
+        "关于我们",
+        "预约咨询"
+      ],
+      "blocks": [
+        "home-hero",
+        "practice-areas",
+        "trust-points",
+        "consultation-cta"
+      ],
+      "categories": {
+        "articles": [
+          "税务筹划知识",
+          "税务筹划案例",
+          "税务筹划常见问题"
+        ],
+        "primary": [
+          "专业领域",
+          "典型案例",
+          "专业团队"
+        ]
+      },
+      "custom_fields": [
+        "服务领域",
+        "负责人",
+        "服务阶段",
+        "关键词",
+        "风险提示"
+      ],
+      "demo_content": {
+        "hero_title": "专业判断，让服务更值得信赖。",
+        "hero_description": "面向税务筹划企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解税务筹划的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "company-registration",
+      "name": "公司注册行业起步内容包",
+      "theme": "company-registration",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务套餐",
+        "服务流程",
+        "客户案例",
+        "常见问题",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "service-packages",
+        "process",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "公司注册知识",
+          "公司注册案例",
+          "公司注册常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务套餐",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "适用对象",
+        "服务周期",
+        "服务内容",
+        "价格起",
+        "服务范围"
+      ],
+      "demo_content": {
+        "hero_title": "把复杂服务讲清楚，让客户更容易选择。",
+        "hero_description": "面向公司注册企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解公司注册的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "business-services",
+      "name": "工商服务行业起步内容包",
+      "theme": "business-services",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务套餐",
+        "服务流程",
+        "客户案例",
+        "常见问题",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "service-packages",
+        "process",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "工商服务知识",
+          "工商服务案例",
+          "工商服务常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务套餐",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "适用对象",
+        "服务周期",
+        "服务内容",
+        "价格起",
+        "服务范围"
+      ],
+      "demo_content": {
+        "hero_title": "把复杂服务讲清楚，让客户更容易选择。",
+        "hero_description": "面向工商服务企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解工商服务的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "trademark-service",
+      "name": "商标注册行业起步内容包",
+      "theme": "trademark-service",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "专业领域",
+        "典型案例",
+        "专业团队",
+        "专业观点",
+        "关于我们",
+        "预约咨询"
+      ],
+      "blocks": [
+        "home-hero",
+        "practice-areas",
+        "trust-points",
+        "consultation-cta"
+      ],
+      "categories": {
+        "articles": [
+          "商标注册知识",
+          "商标注册案例",
+          "商标注册常见问题"
+        ],
+        "primary": [
+          "专业领域",
+          "典型案例",
+          "专业团队"
+        ]
+      },
+      "custom_fields": [
+        "服务领域",
+        "负责人",
+        "服务阶段",
+        "关键词",
+        "风险提示"
+      ],
+      "demo_content": {
+        "hero_title": "专业判断，让服务更值得信赖。",
+        "hero_description": "面向商标注册企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解商标注册的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "patent-service",
+      "name": "专利服务行业起步内容包",
+      "theme": "patent-service",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "专业领域",
+        "典型案例",
+        "专业团队",
+        "专业观点",
+        "关于我们",
+        "预约咨询"
+      ],
+      "blocks": [
+        "home-hero",
+        "practice-areas",
+        "trust-points",
+        "consultation-cta"
+      ],
+      "categories": {
+        "articles": [
+          "专利服务知识",
+          "专利服务案例",
+          "专利服务常见问题"
+        ],
+        "primary": [
+          "专业领域",
+          "典型案例",
+          "专业团队"
+        ]
+      },
+      "custom_fields": [
+        "服务领域",
+        "负责人",
+        "服务阶段",
+        "关键词",
+        "风险提示"
+      ],
+      "demo_content": {
+        "hero_title": "专业判断，让服务更值得信赖。",
+        "hero_description": "面向专利服务企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解专利服务的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "financial-advisory",
+      "name": "财务顾问行业起步内容包",
+      "theme": "financial-advisory",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "专业领域",
+        "典型案例",
+        "专业团队",
+        "专业观点",
+        "关于我们",
+        "预约咨询"
+      ],
+      "blocks": [
+        "home-hero",
+        "practice-areas",
+        "trust-points",
+        "consultation-cta"
+      ],
+      "categories": {
+        "articles": [
+          "财务顾问知识",
+          "财务顾问案例",
+          "财务顾问常见问题"
+        ],
+        "primary": [
+          "专业领域",
+          "典型案例",
+          "专业团队"
+        ]
+      },
+      "custom_fields": [
+        "服务领域",
+        "负责人",
+        "服务阶段",
+        "关键词",
+        "风险提示"
+      ],
+      "demo_content": {
+        "hero_title": "专业判断，让服务更值得信赖。",
+        "hero_description": "面向财务顾问企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解财务顾问的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "qualification-service",
+      "name": "资质代办行业起步内容包",
+      "theme": "qualification-service",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务套餐",
+        "服务流程",
+        "客户案例",
+        "常见问题",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "service-packages",
+        "process",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "资质代办知识",
+          "资质代办案例",
+          "资质代办常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务套餐",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "适用对象",
+        "服务周期",
+        "服务内容",
+        "价格起",
+        "服务范围"
+      ],
+      "demo_content": {
+        "hero_title": "把复杂服务讲清楚，让客户更容易选择。",
+        "hero_description": "面向资质代办企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解资质代办的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "audit-service",
+      "name": "审计服务行业起步内容包",
+      "theme": "audit-service",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "专业领域",
+        "典型案例",
+        "专业团队",
+        "专业观点",
+        "关于我们",
+        "预约咨询"
+      ],
+      "blocks": [
+        "home-hero",
+        "practice-areas",
+        "trust-points",
+        "consultation-cta"
+      ],
+      "categories": {
+        "articles": [
+          "审计服务知识",
+          "审计服务案例",
+          "审计服务常见问题"
+        ],
+        "primary": [
+          "专业领域",
+          "典型案例",
+          "专业团队"
+        ]
+      },
+      "custom_fields": [
+        "服务领域",
+        "负责人",
+        "服务阶段",
+        "关键词",
+        "风险提示"
+      ],
+      "demo_content": {
+        "hero_title": "专业判断，让服务更值得信赖。",
+        "hero_description": "面向审计服务企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解审计服务的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "website-building",
+      "name": "网站建设行业起步内容包",
+      "theme": "website-building",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品能力",
+        "行业方案",
+        "客户案例",
+        "开发者",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "features",
+        "solutions",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "网站建设知识",
+          "网站建设案例",
+          "网站建设常见问题"
+        ],
+        "primary": [
+          "产品能力",
+          "行业方案",
+          "客户案例"
+        ]
+      },
+      "custom_fields": [
+        "版本",
+        "适用场景",
+        "部署方式",
+        "接口能力",
+        "安全能力",
+        "服务方式"
+      ],
+      "demo_content": {
+        "hero_title": "用数字技术解决真实业务问题。",
+        "hero_description": "面向网站建设企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解网站建设的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "mini-program",
+      "name": "小程序开发行业起步内容包",
+      "theme": "mini-program",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品能力",
+        "行业方案",
+        "客户案例",
+        "开发者",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "features",
+        "solutions",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "小程序开发知识",
+          "小程序开发案例",
+          "小程序开发常见问题"
+        ],
+        "primary": [
+          "产品能力",
+          "行业方案",
+          "客户案例"
+        ]
+      },
+      "custom_fields": [
+        "版本",
+        "适用场景",
+        "部署方式",
+        "接口能力",
+        "安全能力",
+        "服务方式"
+      ],
+      "demo_content": {
+        "hero_title": "用数字技术解决真实业务问题。",
+        "hero_description": "面向小程序开发企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解小程序开发的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "app-development",
+      "name": "APP开发行业起步内容包",
+      "theme": "app-development",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品能力",
+        "行业方案",
+        "客户案例",
+        "开发者",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "features",
+        "solutions",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "APP开发知识",
+          "APP开发案例",
+          "APP开发常见问题"
+        ],
+        "primary": [
+          "产品能力",
+          "行业方案",
+          "客户案例"
+        ]
+      },
+      "custom_fields": [
+        "版本",
+        "适用场景",
+        "部署方式",
+        "接口能力",
+        "安全能力",
+        "服务方式"
+      ],
+      "demo_content": {
+        "hero_title": "用数字技术解决真实业务问题。",
+        "hero_description": "面向APP开发企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解APP开发的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "crm-system",
+      "name": "CRM系统行业起步内容包",
+      "theme": "crm-system",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品能力",
+        "行业方案",
+        "客户案例",
+        "开发者",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "features",
+        "solutions",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "CRM系统知识",
+          "CRM系统案例",
+          "CRM系统常见问题"
+        ],
+        "primary": [
+          "产品能力",
+          "行业方案",
+          "客户案例"
+        ]
+      },
+      "custom_fields": [
+        "版本",
+        "适用场景",
+        "部署方式",
+        "接口能力",
+        "安全能力",
+        "服务方式"
+      ],
+      "demo_content": {
+        "hero_title": "用数字技术解决真实业务问题。",
+        "hero_description": "面向CRM系统企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解CRM系统的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "erp-system",
+      "name": "ERP系统行业起步内容包",
+      "theme": "erp-system",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品能力",
+        "行业方案",
+        "客户案例",
+        "开发者",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "features",
+        "solutions",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "ERP系统知识",
+          "ERP系统案例",
+          "ERP系统常见问题"
+        ],
+        "primary": [
+          "产品能力",
+          "行业方案",
+          "客户案例"
+        ]
+      },
+      "custom_fields": [
+        "版本",
+        "适用场景",
+        "部署方式",
+        "接口能力",
+        "安全能力",
+        "服务方式"
+      ],
+      "demo_content": {
+        "hero_title": "用数字技术解决真实业务问题。",
+        "hero_description": "面向ERP系统企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解ERP系统的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "cloud-service",
+      "name": "云计算服务行业起步内容包",
+      "theme": "cloud-service",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品能力",
+        "行业方案",
+        "客户案例",
+        "开发者",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "features",
+        "solutions",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "云计算服务知识",
+          "云计算服务案例",
+          "云计算服务常见问题"
+        ],
+        "primary": [
+          "产品能力",
+          "行业方案",
+          "客户案例"
+        ]
+      },
+      "custom_fields": [
+        "版本",
+        "适用场景",
+        "部署方式",
+        "接口能力",
+        "安全能力",
+        "服务方式"
+      ],
+      "demo_content": {
+        "hero_title": "用数字技术解决真实业务问题。",
+        "hero_description": "面向云计算服务企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解云计算服务的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "it-ops",
+      "name": "IT运维行业起步内容包",
+      "theme": "it-ops",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "IT运维知识",
+          "IT运维案例",
+          "IT运维常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向IT运维企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解IT运维的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "system-integration",
+      "name": "系统集成行业起步内容包",
+      "theme": "system-integration",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "系统集成知识",
+          "系统集成案例",
+          "系统集成常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向系统集成企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解系统集成的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "ui-design",
+      "name": "UI设计行业起步内容包",
+      "theme": "ui-design",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选作品",
+        "服务内容",
+        "创意团队",
+        "方法流程",
+        "观点资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "creative-services",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "UI设计知识",
+          "UI设计案例",
+          "UI设计常见问题"
+        ],
+        "primary": [
+          "精选作品",
+          "服务内容",
+          "创意团队"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "客户行业",
+        "交付内容",
+        "项目周期",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "让创意不止好看，更能表达品牌价值。",
+        "hero_description": "面向UI设计企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解UI设计的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "ux-design",
+      "name": "UX设计行业起步内容包",
+      "theme": "ux-design",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选作品",
+        "服务内容",
+        "创意团队",
+        "方法流程",
+        "观点资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "creative-services",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "UX设计知识",
+          "UX设计案例",
+          "UX设计常见问题"
+        ],
+        "primary": [
+          "精选作品",
+          "服务内容",
+          "创意团队"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "客户行业",
+        "交付内容",
+        "项目周期",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "让创意不止好看，更能表达品牌价值。",
+        "hero_description": "面向UX设计企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解UX设计的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "graphic-design",
+      "name": "平面设计行业起步内容包",
+      "theme": "graphic-design",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选案例",
+        "专业服务",
+        "团队介绍",
+        "观点资讯",
+        "关于我们",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "service-method",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "平面设计知识",
+          "平面设计案例",
+          "平面设计常见问题"
+        ],
+        "primary": [
+          "精选案例",
+          "专业服务",
+          "团队介绍"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "项目时间",
+        "项目地点",
+        "负责人",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "用作品和案例证明专业能力。",
+        "hero_description": "面向平面设计企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解平面设计的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "digital-marketing",
+      "name": "数字营销行业起步内容包",
+      "theme": "digital-marketing",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务套餐",
+        "服务流程",
+        "客户案例",
+        "常见问题",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "service-packages",
+        "process",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "数字营销知识",
+          "数字营销案例",
+          "数字营销常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务套餐",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "适用对象",
+        "服务周期",
+        "服务内容",
+        "价格起",
+        "服务范围"
+      ],
+      "demo_content": {
+        "hero_title": "把复杂服务讲清楚，让客户更容易选择。",
+        "hero_description": "面向数字营销企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解数字营销的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "seo-service",
+      "name": "SEO服务行业起步内容包",
+      "theme": "seo-service",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务套餐",
+        "服务流程",
+        "客户案例",
+        "常见问题",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "service-packages",
+        "process",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "SEO服务知识",
+          "SEO服务案例",
+          "SEO服务常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务套餐",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "适用对象",
+        "服务周期",
+        "服务内容",
+        "价格起",
+        "服务范围"
+      ],
+      "demo_content": {
+        "hero_title": "把复杂服务讲清楚，让客户更容易选择。",
+        "hero_description": "面向SEO服务企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解SEO服务的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "short-video",
+      "name": "短视频代运营行业起步内容包",
+      "theme": "short-video",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选作品",
+        "服务内容",
+        "创意团队",
+        "方法流程",
+        "观点资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "creative-services",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "短视频代运营知识",
+          "短视频代运营案例",
+          "短视频代运营常见问题"
+        ],
+        "primary": [
+          "精选作品",
+          "服务内容",
+          "创意团队"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "客户行业",
+        "交付内容",
+        "项目周期",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "让创意不止好看，更能表达品牌价值。",
+        "hero_description": "面向短视频代运营企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解短视频代运营的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "packaging-machinery",
+      "name": "包装机械行业起步内容包",
+      "theme": "packaging-machinery",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "包装机械知识",
+          "包装机械案例",
+          "包装机械常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向包装机械企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解包装机械的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "food-machinery",
+      "name": "食品机械行业起步内容包",
+      "theme": "food-machinery",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "食品机械知识",
+          "食品机械案例",
+          "食品机械常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向食品机械企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解食品机械的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "woodworking-machinery",
+      "name": "木工机械行业起步内容包",
+      "theme": "woodworking-machinery",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "木工机械知识",
+          "木工机械案例",
+          "木工机械常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向木工机械企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解木工机械的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "machine-tool",
+      "name": "机床设备行业起步内容包",
+      "theme": "machine-tool",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "机床设备知识",
+          "机床设备案例",
+          "机床设备常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向机床设备企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解机床设备的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "bearing",
+      "name": "轴承行业起步内容包",
+      "theme": "bearing",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "轴承知识",
+          "轴承案例",
+          "轴承常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向轴承企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解轴承的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "motor",
+      "name": "电机行业起步内容包",
+      "theme": "motor",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "电机知识",
+          "电机案例",
+          "电机常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向电机企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解电机的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "air-compressor",
+      "name": "空压机行业起步内容包",
+      "theme": "air-compressor",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "空压机知识",
+          "空压机案例",
+          "空压机常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向空压机企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解空压机的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "generator",
+      "name": "发电设备行业起步内容包",
+      "theme": "generator",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "发电设备知识",
+          "发电设备案例",
+          "发电设备常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向发电设备企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解发电设备的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "conveyor",
+      "name": "输送设备行业起步内容包",
+      "theme": "conveyor",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "输送设备知识",
+          "输送设备案例",
+          "输送设备常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向输送设备企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解输送设备的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "welding",
+      "name": "焊接设备行业起步内容包",
+      "theme": "welding",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "焊接设备知识",
+          "焊接设备案例",
+          "焊接设备常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向焊接设备企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解焊接设备的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "instrumentation",
+      "name": "仪器仪表行业起步内容包",
+      "theme": "instrumentation",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "仪器仪表知识",
+          "仪器仪表案例",
+          "仪器仪表常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向仪器仪表企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解仪器仪表的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "industrial-robot",
+      "name": "工业机器人行业起步内容包",
+      "theme": "industrial-robot",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "工业机器人知识",
+          "工业机器人案例",
+          "工业机器人常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向工业机器人企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解工业机器人的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "metal-material",
+      "name": "金属材料行业起步内容包",
+      "theme": "metal-material",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "金属材料知识",
+          "金属材料案例",
+          "金属材料常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向金属材料企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解金属材料的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "steel",
+      "name": "钢材行业起步内容包",
+      "theme": "steel",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "钢材知识",
+          "钢材案例",
+          "钢材常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向钢材企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解钢材的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "aluminum",
+      "name": "铝材行业起步内容包",
+      "theme": "aluminum",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "铝材知识",
+          "铝材案例",
+          "铝材常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向铝材企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解铝材的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "copper",
+      "name": "铜材行业起步内容包",
+      "theme": "copper",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "铜材知识",
+          "铜材案例",
+          "铜材常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向铜材企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解铜材的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "composite-material",
+      "name": "复合材料行业起步内容包",
+      "theme": "composite-material",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "复合材料知识",
+          "复合材料案例",
+          "复合材料常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向复合材料企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解复合材料的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "hydrogen-energy",
+      "name": "氢能源行业起步内容包",
+      "theme": "hydrogen-energy",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "解决方案",
+        "设备产品",
+        "技术能力",
+        "工程案例",
+        "行业资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "solutions",
+        "metrics",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "氢能源知识",
+          "氢能源案例",
+          "氢能源常见问题"
+        ],
+        "primary": [
+          "解决方案",
+          "设备产品",
+          "技术能力"
+        ]
+      },
+      "custom_fields": [
+        "处理能力",
+        "技术路线",
+        "适用场景",
+        "能耗",
+        "排放标准",
+        "运维方式"
+      ],
+      "demo_content": {
+        "hero_title": "让绿色技术进入更多真实工程场景。",
+        "hero_description": "面向氢能源企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解氢能源的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "voc-treatment",
+      "name": "废气治理行业起步内容包",
+      "theme": "voc-treatment",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "解决方案",
+        "设备产品",
+        "技术能力",
+        "工程案例",
+        "行业资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "solutions",
+        "metrics",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "废气治理知识",
+          "废气治理案例",
+          "废气治理常见问题"
+        ],
+        "primary": [
+          "解决方案",
+          "设备产品",
+          "技术能力"
+        ]
+      },
+      "custom_fields": [
+        "处理能力",
+        "技术路线",
+        "适用场景",
+        "能耗",
+        "排放标准",
+        "运维方式"
+      ],
+      "demo_content": {
+        "hero_title": "让绿色技术进入更多真实工程场景。",
+        "hero_description": "面向废气治理企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解废气治理的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "solid-waste",
+      "name": "固废处理行业起步内容包",
+      "theme": "solid-waste",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "解决方案",
+        "设备产品",
+        "技术能力",
+        "工程案例",
+        "行业资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "solutions",
+        "metrics",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "固废处理知识",
+          "固废处理案例",
+          "固废处理常见问题"
+        ],
+        "primary": [
+          "解决方案",
+          "设备产品",
+          "技术能力"
+        ]
+      },
+      "custom_fields": [
+        "处理能力",
+        "技术路线",
+        "适用场景",
+        "能耗",
+        "排放标准",
+        "运维方式"
+      ],
+      "demo_content": {
+        "hero_title": "让绿色技术进入更多真实工程场景。",
+        "hero_description": "面向固废处理企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解固废处理的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "energy-saving",
+      "name": "节能工程行业起步内容包",
+      "theme": "energy-saving",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "解决方案",
+        "设备产品",
+        "技术能力",
+        "工程案例",
+        "行业资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "solutions",
+        "metrics",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "节能工程知识",
+          "节能工程案例",
+          "节能工程常见问题"
+        ],
+        "primary": [
+          "解决方案",
+          "设备产品",
+          "技术能力"
+        ]
+      },
+      "custom_fields": [
+        "处理能力",
+        "技术路线",
+        "适用场景",
+        "能耗",
+        "排放标准",
+        "运维方式"
+      ],
+      "demo_content": {
+        "hero_title": "让绿色技术进入更多真实工程场景。",
+        "hero_description": "面向节能工程企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解节能工程的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "green-building",
+      "name": "绿色建筑行业起步内容包",
+      "theme": "green-building",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "解决方案",
+        "设备产品",
+        "技术能力",
+        "工程案例",
+        "行业资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "solutions",
+        "metrics",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "绿色建筑知识",
+          "绿色建筑案例",
+          "绿色建筑常见问题"
+        ],
+        "primary": [
+          "解决方案",
+          "设备产品",
+          "技术能力"
+        ]
+      },
+      "custom_fields": [
+        "处理能力",
+        "技术路线",
+        "适用场景",
+        "能耗",
+        "排放标准",
+        "运维方式"
+      ],
+      "demo_content": {
+        "hero_title": "让绿色技术进入更多真实工程场景。",
+        "hero_description": "面向绿色建筑企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解绿色建筑的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "environment-monitoring",
+      "name": "环境监测行业起步内容包",
+      "theme": "environment-monitoring",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "技术方案",
+        "技术资料",
+        "应用案例",
+        "技术资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "technical-specs",
+        "downloads",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "环境监测知识",
+          "环境监测案例",
+          "环境监测常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "技术方案",
+          "技术资料"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "关键参数",
+        "工作条件",
+        "认证",
+        "技术文档",
+        "应用场景"
+      ],
+      "demo_content": {
+        "hero_title": "把性能、参数与应用场景讲得更清楚。",
+        "hero_description": "面向环境监测企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解环境监测的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "interior-design",
+      "name": "室内设计行业起步内容包",
+      "theme": "interior-design",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选案例",
+        "专业服务",
+        "团队介绍",
+        "观点资讯",
+        "关于我们",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "service-method",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "室内设计知识",
+          "室内设计案例",
+          "室内设计常见问题"
+        ],
+        "primary": [
+          "精选案例",
+          "专业服务",
+          "团队介绍"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "项目时间",
+        "项目地点",
+        "负责人",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "用作品和案例证明专业能力。",
+        "hero_description": "面向室内设计企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解室内设计的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "home-decoration",
+      "name": "家装公司行业起步内容包",
+      "theme": "home-decoration",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "空间案例",
+        "定制服务",
+        "工艺材质",
+        "家居灵感",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "collections",
+        "spaces",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "家装公司知识",
+          "家装公司案例",
+          "家装公司常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "空间案例",
+          "定制服务"
+        ]
+      },
+      "custom_fields": [
+        "材质",
+        "尺寸",
+        "颜色",
+        "适用空间",
+        "定制选项",
+        "安装方式"
+      ],
+      "demo_content": {
+        "hero_title": "让空间、产品与生活方式更好地连接。",
+        "hero_description": "面向家装公司企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解家装公司的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "commercial-decoration",
+      "name": "工装公司行业起步内容包",
+      "theme": "commercial-decoration",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选案例",
+        "专业服务",
+        "团队介绍",
+        "观点资讯",
+        "关于我们",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "service-method",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "工装公司知识",
+          "工装公司案例",
+          "工装公司常见问题"
+        ],
+        "primary": [
+          "精选案例",
+          "专业服务",
+          "团队介绍"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "项目时间",
+        "项目地点",
+        "负责人",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "用作品和案例证明专业能力。",
+        "hero_description": "面向工装公司企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解工装公司的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "custom-wardrobe",
+      "name": "定制衣柜行业起步内容包",
+      "theme": "custom-wardrobe",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "空间案例",
+        "定制服务",
+        "工艺材质",
+        "家居灵感",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "collections",
+        "spaces",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "定制衣柜知识",
+          "定制衣柜案例",
+          "定制衣柜常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "空间案例",
+          "定制服务"
+        ]
+      },
+      "custom_fields": [
+        "材质",
+        "尺寸",
+        "颜色",
+        "适用空间",
+        "定制选项",
+        "安装方式"
+      ],
+      "demo_content": {
+        "hero_title": "让空间、产品与生活方式更好地连接。",
+        "hero_description": "面向定制衣柜企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解定制衣柜的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "soft-decoration",
+      "name": "软装配饰行业起步内容包",
+      "theme": "soft-decoration",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选案例",
+        "专业服务",
+        "团队介绍",
+        "观点资讯",
+        "关于我们",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "service-method",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "软装配饰知识",
+          "软装配饰案例",
+          "软装配饰常见问题"
+        ],
+        "primary": [
+          "精选案例",
+          "专业服务",
+          "团队介绍"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "项目时间",
+        "项目地点",
+        "负责人",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "用作品和案例证明专业能力。",
+        "hero_description": "面向软装配饰企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解软装配饰的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "health-check",
+      "name": "体检中心行业起步内容包",
+      "theme": "health-check",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "体检中心知识",
+          "体检中心案例",
+          "体检中心常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向体检中心企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解体检中心的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "tcm-clinic",
+      "name": "中医馆行业起步内容包",
+      "theme": "tcm-clinic",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "中医馆知识",
+          "中医馆案例",
+          "中医馆常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向中医馆企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解中医馆的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "rehab-center",
+      "name": "康复中心行业起步内容包",
+      "theme": "rehab-center",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "康复中心知识",
+          "康复中心案例",
+          "康复中心常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向康复中心企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解康复中心的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "nursing-care",
+      "name": "护理机构行业起步内容包",
+      "theme": "nursing-care",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "护理机构知识",
+          "护理机构案例",
+          "护理机构常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向护理机构企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解护理机构的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "psychological-counseling",
+      "name": "心理咨询行业起步内容包",
+      "theme": "psychological-counseling",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "专业领域",
+        "典型案例",
+        "专业团队",
+        "专业观点",
+        "关于我们",
+        "预约咨询"
+      ],
+      "blocks": [
+        "home-hero",
+        "practice-areas",
+        "trust-points",
+        "consultation-cta"
+      ],
+      "categories": {
+        "articles": [
+          "心理咨询知识",
+          "心理咨询案例",
+          "心理咨询常见问题"
+        ],
+        "primary": [
+          "专业领域",
+          "典型案例",
+          "专业团队"
+        ]
+      },
+      "custom_fields": [
+        "服务领域",
+        "负责人",
+        "服务阶段",
+        "关键词",
+        "风险提示"
+      ],
+      "demo_content": {
+        "hero_title": "专业判断，让服务更值得信赖。",
+        "hero_description": "面向心理咨询企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解心理咨询的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "skin-care",
+      "name": "皮肤管理行业起步内容包",
+      "theme": "skin-care",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "皮肤管理知识",
+          "皮肤管理案例",
+          "皮肤管理常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向皮肤管理企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解皮肤管理的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "nutrition-health",
+      "name": "营养健康行业起步内容包",
+      "theme": "nutrition-health",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "营养健康知识",
+          "营养健康案例",
+          "营养健康常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向营养健康企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解营养健康的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "yoga",
+      "name": "瑜伽馆行业起步内容包",
+      "theme": "yoga",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务区域",
+        "服务流程",
+        "客户评价",
+        "实用指南",
+        "在线预约"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "coverage",
+        "booking-cta"
+      ],
+      "categories": {
+        "articles": [
+          "瑜伽馆知识",
+          "瑜伽馆案例",
+          "瑜伽馆常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务区域",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "服务区域",
+        "服务时长",
+        "价格起",
+        "预约方式",
+        "服务标准"
+      ],
+      "demo_content": {
+        "hero_title": "让本地服务更透明、更方便预约。",
+        "hero_description": "面向瑜伽馆企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解瑜伽馆的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "sports-rehab",
+      "name": "运动康复行业起步内容包",
+      "theme": "sports-rehab",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "运动康复知识",
+          "运动康复案例",
+          "运动康复常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向运动康复企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解运动康复的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "health-products",
+      "name": "保健用品行业起步内容包",
+      "theme": "health-products",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "保健用品知识",
+          "保健用品案例",
+          "保健用品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向保健用品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解保健用品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "maternal-care",
+      "name": "母婴护理行业起步内容包",
+      "theme": "maternal-care",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "母婴护理知识",
+          "母婴护理案例",
+          "母婴护理常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向母婴护理企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解母婴护理的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "maternity-center",
+      "name": "月子中心行业起步内容包",
+      "theme": "maternity-center",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "专业团队",
+        "环境设备",
+        "健康科普",
+        "预约咨询",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "services",
+        "professionals",
+        "appointment-cta"
+      ],
+      "categories": {
+        "articles": [
+          "月子中心知识",
+          "月子中心案例",
+          "月子中心常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "专业团队",
+          "环境设备"
+        ]
+      },
+      "custom_fields": [
+        "适用人群",
+        "服务时长",
+        "服务说明",
+        "注意事项",
+        "专业人员"
+      ],
+      "demo_content": {
+        "hero_title": "专业、规范与信任，是健康服务的核心。",
+        "hero_description": "面向月子中心企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解月子中心的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "k12-training",
+      "name": "K12培训行业起步内容包",
+      "theme": "k12-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "K12培训知识",
+          "K12培训案例",
+          "K12培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向K12培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解K12培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "international-school",
+      "name": "国际学校行业起步内容包",
+      "theme": "international-school",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "国际学校知识",
+          "国际学校案例",
+          "国际学校常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向国际学校企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解国际学校的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "art-training",
+      "name": "艺术培训行业起步内容包",
+      "theme": "art-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "艺术培训知识",
+          "艺术培训案例",
+          "艺术培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向艺术培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解艺术培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "music-training",
+      "name": "音乐培训行业起步内容包",
+      "theme": "music-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "音乐培训知识",
+          "音乐培训案例",
+          "音乐培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向音乐培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解音乐培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "dance-training",
+      "name": "舞蹈培训行业起步内容包",
+      "theme": "dance-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "舞蹈培训知识",
+          "舞蹈培训案例",
+          "舞蹈培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向舞蹈培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解舞蹈培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "painting-training",
+      "name": "美术培训行业起步内容包",
+      "theme": "painting-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "美术培训知识",
+          "美术培训案例",
+          "美术培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向美术培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解美术培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "coding-training",
+      "name": "编程培训行业起步内容包",
+      "theme": "coding-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "编程培训知识",
+          "编程培训案例",
+          "编程培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向编程培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解编程培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "postgraduate-training",
+      "name": "考研培训行业起步内容包",
+      "theme": "postgraduate-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "考研培训知识",
+          "考研培训案例",
+          "考研培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向考研培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解考研培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "civil-service-training",
+      "name": "公考培训行业起步内容包",
+      "theme": "civil-service-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "公考培训知识",
+          "公考培训案例",
+          "公考培训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向公考培训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解公考培训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "enterprise-internal-training",
+      "name": "企业内训行业起步内容包",
+      "theme": "enterprise-internal-training",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "企业内训知识",
+          "企业内训案例",
+          "企业内训常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向企业内训企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解企业内训的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "online-education",
+      "name": "在线教育行业起步内容包",
+      "theme": "online-education",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "在线教育知识",
+          "在线教育案例",
+          "在线教育常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向在线教育企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解在线教育的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "parent-child-education",
+      "name": "亲子教育行业起步内容包",
+      "theme": "parent-child-education",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "亲子教育知识",
+          "亲子教育案例",
+          "亲子教育常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向亲子教育企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解亲子教育的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "study-tour",
+      "name": "研学旅行行业起步内容包",
+      "theme": "study-tour",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "目的地",
+        "精选路线",
+        "私人定制",
+        "旅行顾问",
+        "旅行灵感",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "travel-search",
+        "featured-destinations",
+        "custom-travel-cta"
+      ],
+      "categories": {
+        "articles": [
+          "研学旅行知识",
+          "研学旅行案例",
+          "研学旅行常见问题"
+        ],
+        "primary": [
+          "目的地",
+          "精选路线",
+          "私人定制"
+        ]
+      },
+      "custom_fields": [
+        "目的地",
+        "出发城市",
+        "旅行天数",
+        "团型",
+        "价格起",
+        "适合人群"
+      ],
+      "demo_content": {
+        "hero_title": "把学习、探索与真实体验连接起来。",
+        "hero_description": "面向研学旅行企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解研学旅行的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "driving-school",
+      "name": "驾校行业起步内容包",
+      "theme": "driving-school",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务套餐",
+        "服务流程",
+        "客户案例",
+        "常见问题",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "service-packages",
+        "process",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "驾校知识",
+          "驾校案例",
+          "驾校常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务套餐",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "适用对象",
+        "服务周期",
+        "服务内容",
+        "价格起",
+        "服务范围"
+      ],
+      "demo_content": {
+        "hero_title": "把复杂服务讲清楚，让客户更容易选择。",
+        "hero_description": "面向驾校企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解驾校的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "technical-school",
+      "name": "技工学校行业起步内容包",
+      "theme": "technical-school",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "课程中心",
+        "师资团队",
+        "学习成果",
+        "教学体系",
+        "学习资讯",
+        "预约试听"
+      ],
+      "blocks": [
+        "home-hero",
+        "programs",
+        "teachers",
+        "trial-cta"
+      ],
+      "categories": {
+        "articles": [
+          "技工学校知识",
+          "技工学校案例",
+          "技工学校常见问题"
+        ],
+        "primary": [
+          "课程中心",
+          "师资团队",
+          "学习成果"
+        ]
+      },
+      "custom_fields": [
+        "适合人群",
+        "课程周期",
+        "班型",
+        "授课方式",
+        "课程目标"
+      ],
+      "demo_content": {
+        "hero_title": "把课程、师资与学习路径讲清楚。",
+        "hero_description": "面向技工学校企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解技工学校的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "chain-restaurant",
+      "name": "连锁餐饮行业起步内容包",
+      "theme": "chain-restaurant",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "核心体验",
+        "服务项目",
+        "空间环境",
+        "预订信息",
+        "体验指南",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "experiences",
+        "gallery",
+        "booking-cta"
+      ],
+      "categories": {
+        "articles": [
+          "连锁餐饮知识",
+          "连锁餐饮案例",
+          "连锁餐饮常见问题"
+        ],
+        "primary": [
+          "核心体验",
+          "服务项目",
+          "空间环境"
+        ]
+      },
+      "custom_fields": [
+        "适用人数",
+        "营业时间",
+        "价格起",
+        "预订方式",
+        "特色服务"
+      ],
+      "demo_content": {
+        "hero_title": "从到店之前，就建立体验期待。",
+        "hero_description": "面向连锁餐饮企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解连锁餐饮的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "bakery",
+      "name": "烘焙甜品行业起步内容包",
+      "theme": "bakery",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "品牌故事",
+        "原料工艺",
+        "门店渠道",
+        "品牌资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "products",
+        "origin-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "烘焙甜品知识",
+          "烘焙甜品案例",
+          "烘焙甜品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "品牌故事",
+          "原料工艺"
+        ]
+      },
+      "custom_fields": [
+        "规格",
+        "口味",
+        "原料",
+        "保质期",
+        "储存方式",
+        "销售渠道"
+      ],
+      "demo_content": {
+        "hero_title": "把原料、工艺和风味讲成品牌故事。",
+        "hero_description": "面向烘焙甜品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解烘焙甜品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "hotel-catering",
+      "name": "酒店餐饮行业起步内容包",
+      "theme": "hotel-catering",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "核心体验",
+        "服务项目",
+        "空间环境",
+        "预订信息",
+        "体验指南",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "experiences",
+        "gallery",
+        "booking-cta"
+      ],
+      "categories": {
+        "articles": [
+          "酒店餐饮知识",
+          "酒店餐饮案例",
+          "酒店餐饮常见问题"
+        ],
+        "primary": [
+          "核心体验",
+          "服务项目",
+          "空间环境"
+        ]
+      },
+      "custom_fields": [
+        "适用人数",
+        "营业时间",
+        "价格起",
+        "预订方式",
+        "特色服务"
+      ],
+      "demo_content": {
+        "hero_title": "从到店之前，就建立体验期待。",
+        "hero_description": "面向酒店餐饮企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解酒店餐饮的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "cold-chain-food",
+      "name": "冷链食品行业起步内容包",
+      "theme": "cold-chain-food",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "冷链食品知识",
+          "冷链食品案例",
+          "冷链食品常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向冷链食品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解冷链食品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "organic-agriculture",
+      "name": "有机农业行业起步内容包",
+      "theme": "organic-agriculture",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "品牌故事",
+        "原料工艺",
+        "门店渠道",
+        "品牌资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "products",
+        "origin-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "有机农业知识",
+          "有机农业案例",
+          "有机农业常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "品牌故事",
+          "原料工艺"
+        ]
+      },
+      "custom_fields": [
+        "规格",
+        "口味",
+        "原料",
+        "保质期",
+        "储存方式",
+        "销售渠道"
+      ],
+      "demo_content": {
+        "hero_title": "把原料、工艺和风味讲成品牌故事。",
+        "hero_description": "面向有机农业企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解有机农业的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "aquaculture",
+      "name": "水产养殖行业起步内容包",
+      "theme": "aquaculture",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "品牌故事",
+        "原料工艺",
+        "门店渠道",
+        "品牌资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "products",
+        "origin-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "水产养殖知识",
+          "水产养殖案例",
+          "水产养殖常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "品牌故事",
+          "原料工艺"
+        ]
+      },
+      "custom_fields": [
+        "规格",
+        "口味",
+        "原料",
+        "保质期",
+        "储存方式",
+        "销售渠道"
+      ],
+      "demo_content": {
+        "hero_title": "把原料、工艺和风味讲成品牌故事。",
+        "hero_description": "面向水产养殖企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解水产养殖的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "livestock",
+      "name": "畜牧养殖行业起步内容包",
+      "theme": "livestock",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "品牌故事",
+        "原料工艺",
+        "门店渠道",
+        "品牌资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "products",
+        "origin-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "畜牧养殖知识",
+          "畜牧养殖案例",
+          "畜牧养殖常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "品牌故事",
+          "原料工艺"
+        ]
+      },
+      "custom_fields": [
+        "规格",
+        "口味",
+        "原料",
+        "保质期",
+        "储存方式",
+        "销售渠道"
+      ],
+      "demo_content": {
+        "hero_title": "把原料、工艺和风味讲成品牌故事。",
+        "hero_description": "面向畜牧养殖企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解畜牧养殖的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "snack-food",
+      "name": "休闲零食行业起步内容包",
+      "theme": "snack-food",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "休闲零食知识",
+          "休闲零食案例",
+          "休闲零食常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向休闲零食企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解休闲零食的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "prepared-food",
+      "name": "预制菜行业起步内容包",
+      "theme": "prepared-food",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "品牌故事",
+        "原料工艺",
+        "门店渠道",
+        "品牌资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "products",
+        "origin-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "预制菜知识",
+          "预制菜案例",
+          "预制菜常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "品牌故事",
+          "原料工艺"
+        ]
+      },
+      "custom_fields": [
+        "规格",
+        "口味",
+        "原料",
+        "保质期",
+        "储存方式",
+        "销售渠道"
+      ],
+      "demo_content": {
+        "hero_title": "把原料、工艺和风味讲成品牌故事。",
+        "hero_description": "面向预制菜企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解预制菜的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "food-packaging",
+      "name": "食品包装行业起步内容包",
+      "theme": "food-packaging",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品中心",
+        "应用行业",
+        "制造能力",
+        "工程案例",
+        "新闻资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "manufacturing-capability",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "食品包装知识",
+          "食品包装案例",
+          "食品包装常见问题"
+        ],
+        "primary": [
+          "产品中心",
+          "应用行业",
+          "制造能力"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "材质",
+        "应用行业",
+        "交期",
+        "是否支持定制"
+      ],
+      "demo_content": {
+        "hero_title": "稳定产品与交付，是工业客户最看重的基础。",
+        "hero_description": "面向食品包装企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解食品包装的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "liquor-brand",
+      "name": "酒类品牌行业起步内容包",
+      "theme": "liquor-brand",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "品牌故事",
+        "原料工艺",
+        "门店渠道",
+        "品牌资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "products",
+        "origin-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "酒类品牌知识",
+          "酒类品牌案例",
+          "酒类品牌常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "品牌故事",
+          "原料工艺"
+        ]
+      },
+      "custom_fields": [
+        "规格",
+        "口味",
+        "原料",
+        "保质期",
+        "储存方式",
+        "销售渠道"
+      ],
+      "demo_content": {
+        "hero_title": "把原料、工艺和风味讲成品牌故事。",
+        "hero_description": "面向酒类品牌企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解酒类品牌的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "condiment",
+      "name": "调味品行业起步内容包",
+      "theme": "condiment",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "品牌故事",
+        "原料工艺",
+        "门店渠道",
+        "品牌资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "products",
+        "origin-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "调味品知识",
+          "调味品案例",
+          "调味品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "品牌故事",
+          "原料工艺"
+        ]
+      },
+      "custom_fields": [
+        "规格",
+        "口味",
+        "原料",
+        "保质期",
+        "储存方式",
+        "销售渠道"
+      ],
+      "demo_content": {
+        "hero_title": "把原料、工艺和风味讲成品牌故事。",
+        "hero_description": "面向调味品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解调味品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "restaurant-design",
+      "name": "餐厅装修行业起步内容包",
+      "theme": "restaurant-design",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "精选案例",
+        "专业服务",
+        "团队介绍",
+        "观点资讯",
+        "关于我们",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-work",
+        "service-method",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "餐厅装修知识",
+          "餐厅装修案例",
+          "餐厅装修常见问题"
+        ],
+        "primary": [
+          "精选案例",
+          "专业服务",
+          "团队介绍"
+        ]
+      },
+      "custom_fields": [
+        "项目类型",
+        "项目时间",
+        "项目地点",
+        "负责人",
+        "项目成果"
+      ],
+      "demo_content": {
+        "hero_title": "用作品和案例证明专业能力。",
+        "hero_description": "面向餐厅装修企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解餐厅装修的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "group-meal",
+      "name": "团餐服务行业起步内容包",
+      "theme": "group-meal",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "服务项目",
+        "服务套餐",
+        "服务流程",
+        "客户案例",
+        "常见问题",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "service-packages",
+        "process",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "团餐服务知识",
+          "团餐服务案例",
+          "团餐服务常见问题"
+        ],
+        "primary": [
+          "服务项目",
+          "服务套餐",
+          "服务流程"
+        ]
+      },
+      "custom_fields": [
+        "适用对象",
+        "服务周期",
+        "服务内容",
+        "价格起",
+        "服务范围"
+      ],
+      "demo_content": {
+        "hero_title": "把复杂服务讲清楚，让客户更容易选择。",
+        "hero_description": "面向团餐服务企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解团餐服务的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "department-store",
+      "name": "百货零售行业起步内容包",
+      "theme": "department-store",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "百货零售知识",
+          "百货零售案例",
+          "百货零售常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向百货零售企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解百货零售的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "fashion-brand",
+      "name": "服装品牌行业起步内容包",
+      "theme": "fashion-brand",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "服装品牌知识",
+          "服装品牌案例",
+          "服装品牌常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向服装品牌企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解服装品牌的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "cosmetics",
+      "name": "美妆护肤行业起步内容包",
+      "theme": "cosmetics",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "美妆护肤知识",
+          "美妆护肤案例",
+          "美妆护肤常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向美妆护肤企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解美妆护肤的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "jewelry",
+      "name": "珠宝饰品行业起步内容包",
+      "theme": "jewelry",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "珠宝饰品知识",
+          "珠宝饰品案例",
+          "珠宝饰品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向珠宝饰品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解珠宝饰品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "digital-products",
+      "name": "数码产品行业起步内容包",
+      "theme": "digital-products",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "数码产品知识",
+          "数码产品案例",
+          "数码产品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向数码产品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解数码产品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "office-supplies",
+      "name": "办公用品行业起步内容包",
+      "theme": "office-supplies",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "办公用品知识",
+          "办公用品案例",
+          "办公用品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向办公用品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解办公用品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "pet-products",
+      "name": "宠物用品行业起步内容包",
+      "theme": "pet-products",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "宠物用品知识",
+          "宠物用品案例",
+          "宠物用品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向宠物用品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解宠物用品的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "gift-customization",
+      "name": "礼品定制行业起步内容包",
+      "theme": "gift-customization",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "礼品定制知识",
+          "礼品定制案例",
+          "礼品定制常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向礼品定制企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解礼品定制的具体方案"
+      },
+      "import_modes": {
+        "theme_only": "仅安装模板，不导入内容",
+        "fill_blanks": "只填充空白菜单、区块、分类与字段",
+        "full_demo": "创建备份后导入完整行业演示内容"
+      }
+    },
+    {
+      "slug": "cultural-creative",
+      "name": "文创产品行业起步内容包",
+      "theme": "cultural-creative",
+      "version": "1.0.0",
+      "menus": [
+        "首页",
+        "产品系列",
+        "新品推荐",
+        "品牌故事",
+        "购买指南",
+        "内容资讯",
+        "联系我们"
+      ],
+      "blocks": [
+        "home-hero",
+        "featured-products",
+        "brand-story",
+        "global-cta"
+      ],
+      "categories": {
+        "articles": [
+          "文创产品知识",
+          "文创产品案例",
+          "文创产品常见问题"
+        ],
+        "primary": [
+          "产品系列",
+          "新品推荐",
+          "品牌故事"
+        ]
+      },
+      "custom_fields": [
+        "型号",
+        "规格",
+        "颜色",
+        "适用场景",
+        "价格区间",
+        "库存状态"
+      ],
+      "demo_content": {
+        "hero_title": "让产品更容易被发现和选择。",
+        "hero_description": "面向文创产品企业的行业化官网起步内容，可按真实业务替换。",
+        "cta_title": "了解文创产品的具体方案"
       },
       "import_modes": {
         "theme_only": "仅安装模板，不导入内容",
