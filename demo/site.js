@@ -77,6 +77,9 @@ function colorMix(hex,percent){
 function route(file,extra=''){return './'+file+'?industry='+encodeURIComponent(industry.slug)+(extra?'&'+extra:'')}
 function label(){return familyLabels[industry.family]||familyLabels['service-conversion']}
 function safe(s){return String(s||'').replace(/[<>&"]/g,'')}
+function ensureImage(url,label='MAKEFU'){return url||((window.fallbackImageData&&fallbackImageData(label,industry?.accent||'#f97316'))||'')}
+function fillToMin(list,min,factory){const arr=[...(list||[])];let i=0;while(arr.length<min)arr.push(factory(arr.length,i++));return arr}
+
 
 function renderShell(){
   const l=label(),brand=document.querySelector('#brand');
@@ -114,7 +117,7 @@ function renderPage(){
 
 function motionAttr(i=0){return ' data-motion="'+preset.motion+'" style="--delay:'+i*80+'ms"'}
 function heroVisual(){
-  return '<div class="visual"'+motionAttr(1)+'>'+imageTag(images.hero,industry.name+'主视觉','heroPhoto',industry.accent)+'</div>';
+  return '<div class="visual"'+motionAttr(1)+'>'+imageTag(ensureImage(images.hero,industry.name+'主视觉'),industry.name+'主视觉','heroPhoto',industry.accent)+'</div>';
 }
 function homeHero(){
   const l=label();
@@ -127,16 +130,16 @@ function statsSection(){
 }
 function productNames(){
   const m={travel:['京都慢旅 6 日','云南秋色 8 日','欧洲私家团'],renovation:['全案设计','旧房翻新','软装搭配'],accounting:['小规模代理记账','一般纳税人服务','财税顾问'],lawyer:['公司商事','劳动用工','婚姻家事']};
-  return m[industry.slug]||[industry.name+'核心产品 A',industry.name+'解决方案 B',industry.name+'定制服务 C'];
+  return fillToMin(m[industry.slug]||[industry.name+'核心产品 A',industry.name+'解决方案 B',industry.name+'定制服务 C'],6,(idx)=>industry.name+'扩展服务 '+(idx+1));
 }
 function caseNames(){
   const m={travel:['日本关西亲子私家团','川西摄影小团','欧洲蜜月定制'],renovation:['170㎡改善型住宅','98㎡旧房翻新','商业空间改造'],accounting:['科技企业财税规范项目','电商公司历史账务梳理','外贸企业税务顾问'],lawyer:['股权回购争议专项','高级管理人员竞业限制争议','复杂家事财产梳理']};
-  return m[industry.slug]||[industry.name+'代表项目一',industry.name+'客户案例二',industry.name+'交付案例三'];
+  return fillToMin(m[industry.slug]||[industry.name+'代表项目一',industry.name+'客户案例二',industry.name+'交付案例三'],6,(idx)=>industry.name+'项目案例 '+(idx+1));
 }
-function newsTitles(){return [industry.name+'客户最常关心的 6 个问题','选择'+industry.name+'服务商时要看什么？',industry.name+'网站内容应该怎样持续更新？','2026 年'+industry.name+'行业趋势与注意事项','一个真实'+industry.name+'项目是怎么落地的？']}
+function newsTitles(){return fillToMin([industry.name+'客户最常关心的 6 个问题','选择'+industry.name+'服务商时要看什么？',industry.name+'网站内容应该怎样持续更新？','2026 年'+industry.name+'行业趋势与注意事项','一个真实'+industry.name+'项目是怎么落地的？'],7,(idx)=>industry.name+'行业观察与实战经验 '+(idx+1))}
 
 function card(name,type,i){
-  const urls=type==='product'?images.products:images.cases,img=(urls&&urls.length?urls[i%urls.length]:images.hero);
+  const urls=type==='product'?images.products:images.cases,img=ensureImage((urls&&urls.length?urls[i%urls.length]:images.hero),name);
   const href=type==='product'?route('site-product.html','item='+i):route('site-case.html','item='+i);
   return '<a class="card hover-lift"'+motionAttr(i)+' href="'+href+'"><div class="media">'+imageTag(img,name,'',industry.accent)+'</div><div class="body"><small>'+industry.category+'</small><h3>'+safe(name)+'</h3><p>'+['清晰展示核心信息、适用场景和服务边界。','通过真实内容帮助客户理解差异与价值。','支持后台独立维护、SEO 与前台 API 调用。'][i%3]+'</p><div class="tags"><span class="tag">'+styleLabel(preset.style)+'</span><span class="tag">'+layoutLabel(preset.layout)+'</span></div></div></a>';
 }
@@ -159,35 +162,60 @@ function proofSection(){
   const fields=(pack.custom_fields||[]).slice(0,4);
   return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>这个行业真正需要展示什么？</h2><p>模板字段和前台模块都围绕真实业务内容设计。</p></div></div><div class="grid4 stagger">'+fields.map((v,i)=>'<div class="feature"'+motionAttr(i)+'><b>'+String(i+1).padStart(2,'0')+' · '+safe(v)+'</b><p>后台独立维护“'+safe(v)+'”，前台可按当前模板风格展示。</p></div>').join('')+'</div></div></section>';
 }
+
+function gallerySection(){
+  const picks=[
+    ensureImage(images.hero,industry.name+'主视觉'),
+    ensureImage(images.products?.[0],industry.name+'产品场景'),
+    ensureImage(images.cases?.[0],industry.name+'案例场景'),
+    ensureImage(images.news?.[0],industry.name+'资讯场景'),
+    ensureImage(images.about,industry.name+'团队场景')
+  ];
+  const caps=['品牌主视觉','核心产品 / 服务','真实项目案例','新闻与行业知识','团队与企业实力'];
+  return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>行业场景与真实内容</h2><p>用更多真实图片承载产品、案例、团队和内容，而不是只靠文字撑页面。</p></div></div><div class="imageMosaic">'+picks.map((u,i)=>'<figure class="reveal">'+imageTag(u,caps[i],'',industry.accent)+'<figcaption>'+caps[i]+'</figcaption></figure>').join('')+'</div></div></section>';
+}
+function processSection(){
+  const steps=['需求沟通','方案确认','内容整理','页面搭建','上线测试','持续维护'];
+  return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>服务流程</h2><p>把合作过程拆成清晰步骤，让客户快速理解下一步做什么。</p></div></div><div class="grid6 stagger">'+steps.map((v,i)=>'<div class="feature"'+motionAttr(i)+'><b>'+String(i+1).padStart(2,'0')+' · '+v+'</b><p>围绕'+safe(industry.name)+'项目进行标准化推进，每一步都有明确交付内容。</p></div>').join('')+'</div></div></section>';
+}
+function faqSection(){
+  const faqs=[
+    '你们在'+industry.name+'领域主要提供哪些服务？',
+    '网站上线后内容是否支持后台独立维护？',
+    '切换模板后，原有文章、产品和案例会不会丢失？',
+    '是否支持 SEO、新闻发布和独立详情页？'
+  ];
+  return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>常见问题</h2><p>补齐客户决策过程中最常见的问题，避免页面只有展示没有解释。</p></div></div><div class="grid2 stagger">'+faqs.map((q,i)=>'<div class="feature"'+motionAttr(i)+'><b>'+safe(q)+'</b><p>支持根据实际业务替换成真实内容，后台统一维护，前台按当前模板的风格、布局和动效展示。</p></div>').join('')+'</div></div></section>';
+}
 function ctaSection(){
   return '<section class="section"><div class="wrap"><div class="quote reveal"><div><h2>准备进一步了解'+safe(industry.name)+'方案？</h2><p>进入独立联系页面提交需求，首页只保留必要的转化入口。</p></div><a class="btn" style="background:#fff;color:#111827" href="'+route('site-contact.html')+'">联系我们</a></div></div></section>';
 }
 function renderHome(){
   const pieces={
-    hero:homeHero(),stats:statsSection(),products:productsSection(),cases:casesSection(),news:newsSection(),story:storySection(),proof:proofSection(),cta:ctaSection()
+    hero:homeHero(),stats:statsSection(),products:productsSection(),cases:casesSection(),news:newsSection(),story:storySection(),proof:proofSection(),gallery:gallerySection(),process:processSection(),faq:faqSection(),cta:ctaSection()
   };
   const orders={
-    split:['hero','stats','products','cases','news','cta'],
-    fullscreen:['hero','story','cases','products','news','cta'],
-    centered:['hero','stats','products','proof','news','cta'],
-    editorial:['hero','cases','story','products','news','cta'],
-    catalog:['hero','products','proof','cases','news','cta'],
-    conversion:['hero','stats','products','cta','proof','news'],
-    authority:['hero','products','proof','cases','news','cta'],
-    portfolio:['hero','cases','products','story','news','cta'],
-    commerce:['hero','products','cases','news','story','cta'],
-    property:['hero','story','cases','stats','news','cta']
+    split:['hero','stats','products','gallery','cases','process','news','faq','cta'],
+    fullscreen:['hero','story','gallery','cases','products','process','news','faq','cta'],
+    centered:['hero','stats','products','proof','gallery','process','news','faq','cta'],
+    editorial:['hero','cases','gallery','story','products','process','news','faq','cta'],
+    catalog:['hero','products','proof','gallery','cases','process','news','faq','cta'],
+    conversion:['hero','stats','products','process','faq','gallery','news','cta'],
+    authority:['hero','products','proof','cases','gallery','process','news','faq','cta'],
+    portfolio:['hero','cases','gallery','products','story','process','news','faq','cta'],
+    commerce:['hero','products','gallery','cases','news','process','faq','cta'],
+    property:['hero','story','gallery','cases','stats','process','news','faq','cta']
   };
   app.innerHTML=(orders[preset.layout]||orders.split).map(k=>pieces[k]).join('');
 }
 
 function hero(title,desc,img){
-  const use=img||images.hero;
-  return '<section class="pageHero has-image" style="--page-image:url(\''+use+'\')"><div class="wrap"><div class="crumb"><a href="'+route('site-home.html')+'">首页</a> / '+safe(title)+'</div><span class="eyebrow">'+industry.category+'</span><h1>'+safe(title)+'</h1><p>'+safe(desc)+'</p></div></section>';
+  const use=ensureImage(img||images.hero,title);
+  return '<section class="pageHero has-image">'+imageTag(use,title+'背景','pageHeroImage',industry.accent)+'<div class="wrap"><div class="crumb"><a href="'+route('site-home.html')+'">首页</a> / '+safe(title)+'</div><span class="eyebrow">'+industry.category+'</span><h1>'+safe(title)+'</h1><p>'+safe(desc)+'</p></div></section>';
 }
 function pager(){return '<div class="pager"><a class="on">1</a><a>2</a><a>3</a><a>→</a></div>'}
 function renderProducts(){
-  const l=label(),names=productNames().concat([industry.name+'专业服务 D',industry.name+'行业方案 E',industry.name+'长期支持 F']);
+  const l=label(),names=productNames();
   app.innerHTML=hero(l.nav2,'集中展示'+industry.name+'的产品、服务、路线或专业领域。每一项都有独立详情页。',images.products[0])+
     '<section class="section"><div class="wrap"><div class="filterbar"><input class="input" placeholder="搜索'+l.nav2+'…"><select class="input"><option>全部分类</option><option>'+safe((pack.categories&&pack.categories.primary&&pack.categories.primary[0])||'核心分类')+'</option><option>'+safe((pack.categories&&pack.categories.primary&&pack.categories.primary[1])||'解决方案')+'</option></select></div><div class="grid3 stagger">'+names.map((n,i)=>card(n,'product',i)).join('')+'</div>'+pager()+'</div></section>';
 }
@@ -197,7 +225,7 @@ function renderProduct(){
     '<section class="section"><div class="wrap detailGrid"><article class="prose"><div class="cover reveal">'+imageTag(images.products[idx%images.products.length],name,'',industry.accent)+'</div><h2>核心特点</h2><p>'+safe(name)+'围绕真实业务场景组织内容，后台可以维护图集、富文本、自定义字段、SEO、发布时间和相关内容。</p><blockquote>内容是资产，模板负责展示。切换设计风格不应该修改客户真实数据。</blockquote><h2>适用场景</h2><p>页面根据行业字段自动输出更合适的信息结构，同时保持 Core、Theme 和 Plugin 相互独立。</p><h2>相关内容</h2><p>详情页可关联案例、文章、下载资料与表单，提高内部链接和转化效率。</p></article><aside class="sidebox"><h3>详细信息</h3>'+fields.map((v,i)=>'<div class="row"><span>'+safe(v)+'</span><b>'+['标准配置','可定制','全国服务','7-15 天','专业支持','按需'][i%6]+'</b></div>').join('')+'<a class="btn" style="width:100%;margin-top:18px" href="'+route('site-contact.html')+'">咨询 / 获取报价</a></aside></div></section>';
 }
 function renderCases(){
-  const l=label(),names=caseNames().concat([industry.name+'项目四',industry.name+'项目五',industry.name+'项目六']);
+  const l=label(),names=caseNames();
   app.innerHTML=hero(l.nav3,'案例列表单独成页，用项目类型、场景和结果证明真实能力。',images.cases[0])+
     '<section class="section"><div class="wrap"><div class="filterbar"><select class="input"><option>全部案例</option><option>重点项目</option><option>最新案例</option></select></div><div class="grid3 stagger">'+names.map((n,i)=>card(n,'case',i)).join('')+'</div>'+pager()+'</div></section>';
 }
@@ -212,16 +240,26 @@ function renderNews(){
     '<section class="section"><div class="wrap"><div class="filterbar"><input class="input" placeholder="搜索新闻…"><select class="input"><option>全部分类</option><option>'+safe(industry.name)+'知识</option><option>公司动态</option><option>行业资讯</option></select></div><div class="newsList">'+nn.map((n,i)=>'<a class="newsItem reveal" href="'+route('site-news-detail.html','article='+i)+'"><div class="newsThumb">'+imageTag(images.news[i%images.news.length],n,'',industry.accent)+'</div><div><time>2026.09.'+String(21-i*2).padStart(2,'0')+'</time><h3>'+safe(n)+'</h3><p>文章摘要用于新闻列表、搜索结果和分享卡片展示，后台可单独维护。</p></div><span style="font-weight:900;color:var(--accent)">阅读 →</span></a>').join('')+'</div>'+pager()+'</div></section>';
 }
 function renderArticle(){
-  const nn=newsTitles(),idx=Number(qs.get('article')||0),title=nn[idx%nn.length]||nn[0],img=images.news[idx%images.news.length];
+  const nn=newsTitles(),idx=Number(qs.get('article')||0),title=nn[idx%nn.length]||nn[0],img=ensureImage(images.news[idx%images.news.length],title);
+  const related=nn.filter((_,i)=>i!==idx%nn.length).slice(0,3);
   app.innerHTML=hero(title,'2026-09-21 · '+industry.name+'知识 · 阅读约 6 分钟',img)+
-    '<section class="section"><div class="wrap detailGrid"><article class="prose"><div class="cover reveal">'+imageTag(img,title,'',industry.accent)+'</div><p>这是标准新闻详情页。正文来自后台富文本编辑器，不需要把所有文章内容塞到首页。</p><h2>为什么这个问题重要？</h2><p>企业官网中的新闻与知识内容不仅用于展示，还承担客户教育、搜索引擎收录、内部链接和长期品牌积累。</p><h2>实际应该怎么做？</h2><p>后台维护标题、摘要、正文、封面、分类、标签、SEO、发布时间和下线时间；前台通过统一内容服务输出。</p><h3>保持内容和模板分离</h3><p>切换模板不会修改文章正文，新的模板只改变文章详情的呈现方式。</p><blockquote>内容是资产，模板是展示方式，两者必须独立。</blockquote></article><aside class="sidebox"><h3>文章信息</h3><div class="row"><span>分类</span><b>'+safe(industry.name)+'知识</b></div><div class="row"><span>发布时间</span><b>2026-09-21</b></div><div class="row"><span>作者</span><b>内容团队</b></div><div class="row"><span>阅读</span><b>1,286</b></div><a class="btn ghost" style="width:100%;margin-top:18px" href="'+route('site-news.html')+'">返回新闻列表</a></aside></div></section>';
+    '<section class="section"><div class="wrap detailGrid"><article class="prose"><div class="cover reveal">'+imageTag(img,title,'',industry.accent)+'</div>'+
+    '<p>这是'+safe(industry.name)+'行业的标准新闻详情页。正文来自后台富文本编辑器，文章本身拥有独立地址、封面、分类、SEO 和发布时间，而不是把所有内容塞在首页。</p>'+
+    '<h2>为什么这个问题值得企业认真处理？</h2><p>很多企业网站只把精力放在首页，导致真正从搜索引擎进入的新闻页和内容页非常单薄。用户进入详情页后，如果只有两三段文字、没有图片、没有层次，也没有下一步入口，就很难建立专业信任。</p>'+
+    '<h2>一个完整的内容详情页应该包含什么？</h2><ul><li>清晰的标题、摘要与发布时间</li><li>高质量封面和正文配图</li><li>H2 / H3 分层的正文结构</li><li>分类、标签、作者等基础信息</li><li>相关文章和相关案例推荐</li><li>底部咨询、联系或下一步行动入口</li></ul>'+
+    '<h2>'+safe(industry.name)+'企业实际应该怎么做？</h2><p>后台维护标题、摘要、正文、封面、分类、标签、SEO、发布时间和上下线状态；前台通过统一内容服务输出。这样模板换掉之后，文章数据仍然保留，只是视觉呈现发生变化。</p>'+
+    '<h3>让内容资产和模板彻底分开</h3><p>产品、案例、文章这些都属于企业长期积累的数据资产。模板应该负责页面风格、排版、图片比例和动效，而不应该把真实业务内容写死在代码里。</p>'+
+    '<blockquote>内容是资产，模板是展示方式。两者分离，网站才有长期维护价值。</blockquote>'+
+    '<h2>内容持续更新还能带来什么？</h2><p>稳定更新行业知识、项目经验、客户问题和企业动态，可以不断增加网站可被搜索引擎理解的页面，也能让潜在客户在正式咨询之前先完成一部分信任建立。</p>'+
+    '<div class="articleRelated">'+related.map((n,i)=>'<a class="card hover-lift" href="'+route('site-news-detail.html','article='+(i+1))+'"><div class="media">'+imageTag(images.news[(i+1)%images.news.length],n,'',industry.accent)+'</div><div class="body"><small>相关文章</small><h3>'+safe(n)+'</h3><p>继续了解'+safe(industry.name)+'相关知识与实际经验。</p></div></a>').join('')+'</div>'+
+    '</article><aside class="sidebox"><h3>文章信息</h3><div class="row"><span>分类</span><b>'+safe(industry.name)+'知识</b></div><div class="row"><span>发布时间</span><b>2026-09-21</b></div><div class="row"><span>作者</span><b>内容团队</b></div><div class="row"><span>阅读</span><b>1,286</b></div><div class="row"><span>预计阅读</span><b>6 分钟</b></div><a class="btn ghost" style="width:100%;margin-top:18px" href="'+route('site-news.html')+'">返回新闻列表</a></aside></div></section>'+ctaSection();
 }
 function renderAbout(){
   app.innerHTML=hero('关于我们','用独立页面介绍企业、团队、发展历程、资质与服务理念。',images.about)+
-    '<section class="section"><div class="wrap aboutGrid"><div class="aboutVisual reveal">'+imageTag(images.about,industry.name+'团队与环境','',industry.accent)+'</div><div class="reveal"><span class="eyebrow">ABOUT '+safe(industry.name).toUpperCase()+'</span><h2 style="font-size:40px;line-height:1.18">长期服务'+safe(industry.name)+'客户，<br>把专业能力变成可理解的信息。</h2><p style="color:var(--muted);font-size:17px">关于我们不应该只是几句公司简介，而应该包含企业定位、核心能力、团队与真实服务边界。</p><div class="featureList"><div class="feature"><b>专业团队</b><span>持续积累行业经验。</span></div><div class="feature"><b>标准流程</b><span>交付过程透明可追踪。</span></div><div class="feature"><b>长期维护</b><span>内容、系统和安全持续更新。</span></div><div class="feature"><b>客户优先</b><span>从真实需求出发设计方案。</span></div></div></div></div></section>'+statsSection();
+    '<section class="section"><div class="wrap aboutGrid"><div class="aboutVisual reveal">'+imageTag(ensureImage(images.about,industry.name+'团队与环境'),industry.name+'团队与环境','',industry.accent)+'</div><div class="reveal"><span class="eyebrow">ABOUT '+safe(industry.name).toUpperCase()+'</span><h2 style="font-size:40px;line-height:1.18">长期服务'+safe(industry.name)+'客户，<br>把专业能力变成可理解的信息。</h2><p style="color:var(--muted);font-size:17px">关于我们不应该只是几句公司简介，而应该包含企业定位、核心能力、团队与真实服务边界。</p><div class="featureList"><div class="feature"><b>专业团队</b><span>持续积累行业经验。</span></div><div class="feature"><b>标准流程</b><span>交付过程透明可追踪。</span></div><div class="feature"><b>长期维护</b><span>内容、系统和安全持续更新。</span></div><div class="feature"><b>客户优先</b><span>从真实需求出发设计方案。</span></div></div></div></div></section>'+statsSection();
 }
 function renderContact(){
   app.innerHTML=hero('联系我们','联系页面单独存在，承载表单、电话、邮箱、地址和服务时间。',images.contact)+
-    '<section class="section"><div class="wrap contactGrid"><div><div class="contactCards"><div class="contactCard"><b>联系电话</b><p>400-000-2026</p></div><div class="contactCard"><b>企业邮箱</b><p>hello@example.com</p></div><div class="contactCard"><b>服务地址</b><p>杭州市 · 支持全国项目</p></div><div class="contactCard"><b>服务时间</b><p>工作日 09:00–18:00</p></div></div><div class="contactImage reveal" style="margin-top:14px;height:260px;border-radius:var(--radius);overflow:hidden">'+imageTag(images.contact,industry.name+'联系场景','',industry.accent)+'</div></div><form class="form" onsubmit="event.preventDefault();alert(\'演示环境：需求已提交\')"><label class="field"><span>姓名</span><input required></label><label class="field"><span>联系电话</span><input required></label><label class="field"><span>公司名称</span><input></label><label class="field"><span>邮箱</span><input type="email"></label><label class="field full"><span>需求类型</span><select><option>'+safe(label().service)+'</option><option>'+safe(label().case)+'</option><option>其他咨询</option></select></label><label class="field full"><span>需求说明</span><textarea required></textarea></label><div class="field full"><button class="btn">提交需求</button></div></form></div></section>';
+    '<section class="section"><div class="wrap contactGrid"><div><div class="contactCards"><div class="contactCard"><b>联系电话</b><p>400-000-2026</p></div><div class="contactCard"><b>企业邮箱</b><p>hello@example.com</p></div><div class="contactCard"><b>服务地址</b><p>杭州市 · 支持全国项目</p></div><div class="contactCard"><b>服务时间</b><p>工作日 09:00–18:00</p></div></div><div class="contactImage reveal" style="margin-top:14px;height:260px;border-radius:var(--radius);overflow:hidden">'+imageTag(ensureImage(images.contact,industry.name+'联系场景'),industry.name+'联系场景','',industry.accent)+'</div></div><form class="form" onsubmit="event.preventDefault();alert(\'演示环境：需求已提交\')"><label class="field"><span>姓名</span><input required></label><label class="field"><span>联系电话</span><input required></label><label class="field"><span>公司名称</span><input></label><label class="field"><span>邮箱</span><input type="email"></label><label class="field full"><span>需求类型</span><select><option>'+safe(label().service)+'</option><option>'+safe(label().case)+'</option><option>其他咨询</option></select></label><label class="field full"><span>需求说明</span><textarea required></textarea></label><div class="field full"><button class="btn">提交需求</button></div></form></div></section>';
 }
 boot();
