@@ -1,7 +1,17 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "count": 200,
   "unique_fingerprints": 200,
+  "nav_variants": [
+    "light",
+    "glass",
+    "dark",
+    "line",
+    "pill",
+    "stacked",
+    "brand-center",
+    "minimal"
+  ],
   "templates": [
     {
       "slug": "travel",
@@ -26,12 +36,12 @@
       "motion": "fade-up",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "airy",
       "imageShape": "landscape",
       "radius": 20,
       "hueShift": 2,
-      "fingerprint": "home-editorial|portfolio|fade-up|mesh|outline|glass|airy|landscape|20|2"
+      "fingerprint": "home-editorial|portfolio|fade-up|mesh|outline|stacked|airy|landscape|20|2"
     },
     {
       "slug": "accounting",
@@ -71,12 +81,12 @@
       "motion": "parallax-light",
       "heroVariant": "editorial",
       "cardVariant": "glass",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "airy",
       "imageShape": "landscape",
       "radius": 4,
       "hueShift": -3,
-      "fingerprint": "tech-minimal|property|parallax-light|editorial|glass|line|airy|landscape|4|-3"
+      "fingerprint": "tech-minimal|property|parallax-light|editorial|glass|minimal|airy|landscape|4|-3"
     },
     {
       "slug": "laser",
@@ -86,12 +96,12 @@
       "motion": "fade-up",
       "heroVariant": "minimal",
       "cardVariant": "glass",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": 8,
-      "fingerprint": "industrial-pro|centered|fade-up|minimal|glass|glass|compact|portrait|8|8"
+      "fingerprint": "industrial-pro|centered|fade-up|minimal|glass|stacked|compact|portrait|8|8"
     },
     {
       "slug": "automation",
@@ -101,12 +111,12 @@
       "motion": "mask-reveal",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "compact",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": -2,
-      "fingerprint": "tech-minimal|split|mask-reveal|mesh|outline|dark|compact|offset|8|-2"
+      "fingerprint": "tech-minimal|split|mask-reveal|mesh|outline|brand-center|compact|offset|8|-2"
     },
     {
       "slug": "hardware",
@@ -116,12 +126,12 @@
       "motion": "counter-up",
       "heroVariant": "mesh",
       "cardVariant": "sharp",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "compact",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": 7,
-      "fingerprint": "industrial-pro|split|counter-up|mesh|sharp|dark|compact|offset|20|7"
+      "fingerprint": "industrial-pro|split|counter-up|mesh|sharp|brand-center|compact|offset|20|7"
     },
     {
       "slug": "electronics",
@@ -131,12 +141,12 @@
       "motion": "fade-up",
       "heroVariant": "editorial",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "wide",
       "radius": 4,
       "hueShift": 4,
-      "fingerprint": "industrial-pro|split|fade-up|editorial|soft|glass|balanced|wide|4|4"
+      "fingerprint": "industrial-pro|split|fade-up|editorial|soft|stacked|balanced|wide|4|4"
     },
     {
       "slug": "pcb",
@@ -191,12 +201,12 @@
       "motion": "stagger",
       "heroVariant": "editorial",
       "cardVariant": "sharp",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "square",
       "radius": 14,
       "hueShift": 3,
-      "fingerprint": "industrial-pro|catalog|stagger|editorial|sharp|dark|airy|square|14|3"
+      "fingerprint": "industrial-pro|catalog|stagger|editorial|sharp|brand-center|airy|square|14|3"
     },
     {
       "slug": "storage",
@@ -221,12 +231,12 @@
       "motion": "counter-up",
       "heroVariant": "minimal",
       "cardVariant": "outline",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "compact",
       "imageShape": "wide",
       "radius": 8,
       "hueShift": 8,
-      "fingerprint": "industrial-pro|split|counter-up|minimal|outline|dark|compact|wide|8|8"
+      "fingerprint": "industrial-pro|split|counter-up|minimal|outline|brand-center|compact|wide|8|8"
     },
     {
       "slug": "environment",
@@ -266,12 +276,12 @@
       "motion": "image-zoom",
       "heroVariant": "overlay",
       "cardVariant": "glass",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 3,
-      "fingerprint": "creative-studio|editorial|image-zoom|overlay|glass|dark|balanced|portrait|4|3"
+      "fingerprint": "creative-studio|editorial|image-zoom|overlay|glass|brand-center|balanced|portrait|4|3"
     },
     {
       "slug": "air-purification",
@@ -311,12 +321,12 @@
       "motion": "fade-left",
       "heroVariant": "mesh",
       "cardVariant": "image-first",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "wide",
       "radius": 20,
       "hueShift": 6,
-      "fingerprint": "realestate-premium|split|fade-left|mesh|image-first|line|balanced|wide|20|6"
+      "fingerprint": "realestate-premium|split|fade-left|mesh|image-first|minimal|balanced|wide|20|6"
     },
     {
       "slug": "packaging",
@@ -341,12 +351,12 @@
       "motion": "counter-up",
       "heroVariant": "overlay",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "wide",
       "radius": 14,
       "hueShift": -6,
-      "fingerprint": "industrial-pro|catalog|counter-up|overlay|soft|glass|balanced|wide|14|-6"
+      "fingerprint": "industrial-pro|catalog|counter-up|overlay|soft|stacked|balanced|wide|14|-6"
     },
     {
       "slug": "textile",
@@ -356,12 +366,12 @@
       "motion": "mask-reveal",
       "heroVariant": "overlay",
       "cardVariant": "outline",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 14,
       "hueShift": -6,
-      "fingerprint": "home-editorial|centered|mask-reveal|overlay|outline|line|balanced|offset|14|-6"
+      "fingerprint": "home-editorial|centered|mask-reveal|overlay|outline|minimal|balanced|offset|14|-6"
     },
     {
       "slug": "bags",
@@ -401,12 +411,12 @@
       "motion": "mask-reveal",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "airy",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": -1,
-      "fingerprint": "creative-studio|editorial|mask-reveal|mesh|outline|line|airy|offset|8|-1"
+      "fingerprint": "creative-studio|editorial|mask-reveal|mesh|outline|minimal|airy|offset|8|-1"
     },
     {
       "slug": "building-materials",
@@ -416,12 +426,12 @@
       "motion": "fade-up",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": 0,
-      "fingerprint": "tech-minimal|catalog|fade-up|mesh|outline|line|balanced|offset|20|0"
+      "fingerprint": "tech-minimal|catalog|fade-up|mesh|outline|minimal|balanced|offset|20|0"
     },
     {
       "slug": "stone",
@@ -431,12 +441,12 @@
       "motion": "counter-up",
       "heroVariant": "minimal",
       "cardVariant": "outline",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": 7,
-      "fingerprint": "creative-studio|fullscreen|counter-up|minimal|outline|light|balanced|portrait|8|7"
+      "fingerprint": "creative-studio|fullscreen|counter-up|minimal|outline|pill|balanced|portrait|8|7"
     },
     {
       "slug": "flooring",
@@ -461,12 +471,12 @@
       "motion": "image-zoom",
       "heroVariant": "minimal",
       "cardVariant": "image-first",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "compact",
       "imageShape": "square",
       "radius": 20,
       "hueShift": -4,
-      "fingerprint": "creative-studio|portfolio|image-zoom|minimal|image-first|line|compact|square|20|-4"
+      "fingerprint": "creative-studio|portfolio|image-zoom|minimal|image-first|minimal|compact|square|20|-4"
     },
     {
       "slug": "lighting",
@@ -491,12 +501,12 @@
       "motion": "counter-up",
       "heroVariant": "framed",
       "cardVariant": "soft",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": 4,
-      "fingerprint": "creative-studio|commerce|counter-up|framed|soft|light|airy|portrait|8|4"
+      "fingerprint": "creative-studio|commerce|counter-up|framed|soft|pill|airy|portrait|8|4"
     },
     {
       "slug": "smart-home",
@@ -521,12 +531,12 @@
       "motion": "arrow-shift",
       "heroVariant": "overlay",
       "cardVariant": "glass",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 5,
-      "fingerprint": "industrial-pro|catalog|arrow-shift|overlay|glass|light|airy|portrait|4|5"
+      "fingerprint": "industrial-pro|catalog|arrow-shift|overlay|glass|pill|airy|portrait|4|5"
     },
     {
       "slug": "fire-protection",
@@ -536,12 +546,12 @@
       "motion": "mask-reveal",
       "heroVariant": "photo",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "landscape",
       "radius": 14,
       "hueShift": 2,
-      "fingerprint": "medical-clean|split|mask-reveal|photo|soft|glass|balanced|landscape|14|2"
+      "fingerprint": "medical-clean|split|mask-reveal|photo|soft|stacked|balanced|landscape|14|2"
     },
     {
       "slug": "elevator",
@@ -551,12 +561,12 @@
       "motion": "image-zoom",
       "heroVariant": "framed",
       "cardVariant": "sharp",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "landscape",
       "radius": 8,
       "hueShift": 6,
-      "fingerprint": "industrial-pro|catalog|image-zoom|framed|sharp|glass|compact|landscape|8|6"
+      "fingerprint": "industrial-pro|catalog|image-zoom|framed|sharp|stacked|compact|landscape|8|6"
     },
     {
       "slug": "hvac",
@@ -566,12 +576,12 @@
       "motion": "counter-up",
       "heroVariant": "framed",
       "cardVariant": "soft",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 20,
       "hueShift": 1,
-      "fingerprint": "medical-clean|centered|counter-up|framed|soft|dark|airy|portrait|20|1"
+      "fingerprint": "medical-clean|centered|counter-up|framed|soft|brand-center|airy|portrait|20|1"
     },
     {
       "slug": "refrigeration",
@@ -641,12 +651,12 @@
       "motion": "image-zoom",
       "heroVariant": "framed",
       "cardVariant": "outline",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": 8,
-      "fingerprint": "food-brand|fullscreen|image-zoom|framed|outline|line|balanced|offset|20|8"
+      "fingerprint": "food-brand|fullscreen|image-zoom|framed|outline|minimal|balanced|offset|20|8"
     },
     {
       "slug": "food-processing",
@@ -671,12 +681,12 @@
       "motion": "hover-lift",
       "heroVariant": "editorial",
       "cardVariant": "soft",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "wide",
       "radius": 14,
       "hueShift": -4,
-      "fingerprint": "food-brand|editorial|hover-lift|editorial|soft|light|compact|wide|14|-4"
+      "fingerprint": "food-brand|editorial|hover-lift|editorial|soft|pill|compact|wide|14|-4"
     },
     {
       "slug": "fresh-delivery",
@@ -716,12 +726,12 @@
       "motion": "hover-lift",
       "heroVariant": "framed",
       "cardVariant": "sharp",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": 2,
-      "fingerprint": "tech-minimal|split|hover-lift|framed|sharp|glass|balanced|offset|20|2"
+      "fingerprint": "tech-minimal|split|hover-lift|framed|sharp|stacked|balanced|offset|20|2"
     },
     {
       "slug": "dental",
@@ -731,12 +741,12 @@
       "motion": "stagger",
       "heroVariant": "editorial",
       "cardVariant": "sharp",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "square",
       "radius": 4,
       "hueShift": 8,
-      "fingerprint": "home-editorial|authority|stagger|editorial|sharp|glass|compact|square|4|8"
+      "fingerprint": "home-editorial|authority|stagger|editorial|sharp|stacked|compact|square|4|8"
     },
     {
       "slug": "medical-beauty",
@@ -746,12 +756,12 @@
       "motion": "fade-left",
       "heroVariant": "minimal",
       "cardVariant": "soft",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "landscape",
       "radius": 8,
       "hueShift": 1,
-      "fingerprint": "tech-minimal|authority|fade-left|minimal|soft|line|balanced|landscape|8|1"
+      "fingerprint": "tech-minimal|authority|fade-left|minimal|soft|minimal|balanced|landscape|8|1"
     },
     {
       "slug": "pharma",
@@ -776,12 +786,12 @@
       "motion": "parallax-light",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "balanced",
       "imageShape": "wide",
       "radius": 20,
       "hueShift": 3,
-      "fingerprint": "tech-minimal|authority|parallax-light|mesh|outline|light|balanced|wide|20|3"
+      "fingerprint": "tech-minimal|authority|parallax-light|mesh|outline|pill|balanced|wide|20|3"
     },
     {
       "slug": "maternal",
@@ -806,12 +816,12 @@
       "motion": "fade-left",
       "heroVariant": "mesh",
       "cardVariant": "soft",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 20,
       "hueShift": -3,
-      "fingerprint": "creative-studio|conversion|fade-left|mesh|soft|light|balanced|portrait|20|-3"
+      "fingerprint": "creative-studio|conversion|fade-left|mesh|soft|pill|balanced|portrait|20|-3"
     },
     {
       "slug": "study-abroad",
@@ -881,12 +891,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": 3,
-      "fingerprint": "education-friendly|centered|zoom-reveal|mesh|outline|line|balanced|offset|8|3"
+      "fingerprint": "education-friendly|centered|zoom-reveal|mesh|outline|minimal|balanced|offset|8|3"
     },
     {
       "slug": "hr",
@@ -911,12 +921,12 @@
       "motion": "parallax-light",
       "heroVariant": "framed",
       "cardVariant": "sharp",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 20,
       "hueShift": 4,
-      "fingerprint": "local-conversion|centered|parallax-light|framed|sharp|light|airy|portrait|20|4"
+      "fingerprint": "local-conversion|centered|parallax-light|framed|sharp|pill|airy|portrait|20|4"
     },
     {
       "slug": "corporate-training",
@@ -926,12 +936,12 @@
       "motion": "arrow-shift",
       "heroVariant": "minimal",
       "cardVariant": "glass",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "square",
       "radius": 20,
       "hueShift": 6,
-      "fingerprint": "tech-minimal|split|arrow-shift|minimal|glass|light|airy|square|20|6"
+      "fingerprint": "tech-minimal|split|arrow-shift|minimal|glass|pill|airy|square|20|6"
     },
     {
       "slug": "management-consulting",
@@ -986,12 +996,12 @@
       "motion": "arrow-shift",
       "heroVariant": "mesh",
       "cardVariant": "image-first",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "compact",
       "imageShape": "portrait",
       "radius": 20,
       "hueShift": 4,
-      "fingerprint": "legal-luxury|conversion|arrow-shift|mesh|image-first|line|compact|portrait|20|4"
+      "fingerprint": "legal-luxury|conversion|arrow-shift|mesh|image-first|minimal|compact|portrait|20|4"
     },
     {
       "slug": "advertising",
@@ -1001,12 +1011,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "photo",
       "cardVariant": "soft",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "square",
       "radius": 14,
       "hueShift": 6,
-      "fingerprint": "creative-studio|fullscreen|zoom-reveal|photo|soft|light|compact|square|14|6"
+      "fingerprint": "creative-studio|fullscreen|zoom-reveal|photo|soft|pill|compact|square|14|6"
     },
     {
       "slug": "branding",
@@ -1016,12 +1026,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "framed",
       "cardVariant": "sharp",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": 5,
-      "fingerprint": "home-editorial|editorial|zoom-reveal|framed|sharp|light|balanced|offset|8|5"
+      "fingerprint": "home-editorial|editorial|zoom-reveal|framed|sharp|pill|balanced|offset|8|5"
     },
     {
       "slug": "photography",
@@ -1076,12 +1086,12 @@
       "motion": "stagger",
       "heroVariant": "framed",
       "cardVariant": "glass",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": 5,
-      "fingerprint": "ecommerce-modern|fullscreen|stagger|framed|glass|glass|balanced|offset|8|5"
+      "fingerprint": "ecommerce-modern|fullscreen|stagger|framed|glass|stacked|balanced|offset|8|5"
     },
     {
       "slug": "software",
@@ -1181,12 +1191,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "overlay",
       "cardVariant": "image-first",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "offset",
       "radius": 4,
       "hueShift": 5,
-      "fingerprint": "creative-studio|commerce|zoom-reveal|overlay|image-first|dark|airy|offset|4|5"
+      "fingerprint": "creative-studio|commerce|zoom-reveal|overlay|image-first|brand-center|airy|offset|4|5"
     },
     {
       "slug": "foreign-trade",
@@ -1196,12 +1206,12 @@
       "motion": "stagger",
       "heroVariant": "minimal",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": -1,
-      "fingerprint": "creative-studio|conversion|stagger|minimal|image-first|light|compact|portrait|8|-1"
+      "fingerprint": "creative-studio|conversion|stagger|minimal|image-first|pill|compact|portrait|8|-1"
     },
     {
       "slug": "logistics",
@@ -1211,12 +1221,12 @@
       "motion": "mask-reveal",
       "heroVariant": "minimal",
       "cardVariant": "sharp",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 20,
       "hueShift": -5,
-      "fingerprint": "industrial-pro|conversion|mask-reveal|minimal|sharp|dark|balanced|portrait|20|-5"
+      "fingerprint": "industrial-pro|conversion|mask-reveal|minimal|sharp|brand-center|balanced|portrait|20|-5"
     },
     {
       "slug": "freight-forwarding",
@@ -1241,12 +1251,12 @@
       "motion": "mask-reveal",
       "heroVariant": "framed",
       "cardVariant": "glass",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "airy",
       "imageShape": "wide",
       "radius": 20,
       "hueShift": -5,
-      "fingerprint": "local-conversion|split|mask-reveal|framed|glass|line|airy|wide|20|-5"
+      "fingerprint": "local-conversion|split|mask-reveal|framed|glass|minimal|airy|wide|20|-5"
     },
     {
       "slug": "auto-sales",
@@ -1271,12 +1281,12 @@
       "motion": "image-zoom",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": -7,
-      "fingerprint": "education-friendly|split|image-zoom|mesh|outline|line|airy|portrait|8|-7"
+      "fingerprint": "education-friendly|split|image-zoom|mesh|outline|minimal|airy|portrait|8|-7"
     },
     {
       "slug": "car-rental",
@@ -1301,12 +1311,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "mesh",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "wide",
       "radius": 20,
       "hueShift": 7,
-      "fingerprint": "industrial-pro|split|zoom-reveal|mesh|image-first|light|compact|wide|20|7"
+      "fingerprint": "industrial-pro|split|zoom-reveal|mesh|image-first|pill|compact|wide|20|7"
     },
     {
       "slug": "real-estate",
@@ -1346,12 +1356,12 @@
       "motion": "mask-reveal",
       "heroVariant": "overlay",
       "cardVariant": "glass",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "landscape",
       "radius": 4,
       "hueShift": -3,
-      "fingerprint": "realestate-premium|editorial|mask-reveal|overlay|glass|line|balanced|landscape|4|-3"
+      "fingerprint": "realestate-premium|editorial|mask-reveal|overlay|glass|minimal|balanced|landscape|4|-3"
     },
     {
       "slug": "construction",
@@ -1421,12 +1431,12 @@
       "motion": "counter-up",
       "heroVariant": "framed",
       "cardVariant": "image-first",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": -4,
-      "fingerprint": "tech-minimal|split|counter-up|framed|image-first|glass|balanced|offset|8|-4"
+      "fingerprint": "tech-minimal|split|counter-up|framed|image-first|stacked|balanced|offset|8|-4"
     },
     {
       "slug": "beauty",
@@ -1466,12 +1476,12 @@
       "motion": "parallax-light",
       "heroVariant": "overlay",
       "cardVariant": "outline",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "balanced",
       "imageShape": "landscape",
       "radius": 14,
       "hueShift": -3,
-      "fingerprint": "legal-luxury|authority|parallax-light|overlay|outline|light|balanced|landscape|14|-3"
+      "fingerprint": "legal-luxury|authority|parallax-light|overlay|outline|pill|balanced|landscape|14|-3"
     },
     {
       "slug": "pump-valve",
@@ -1481,12 +1491,12 @@
       "motion": "image-zoom",
       "heroVariant": "overlay",
       "cardVariant": "sharp",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "compact",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 7,
-      "fingerprint": "realestate-premium|catalog|image-zoom|overlay|sharp|dark|compact|portrait|4|7"
+      "fingerprint": "realestate-premium|catalog|image-zoom|overlay|sharp|brand-center|compact|portrait|4|7"
     },
     {
       "slug": "mold",
@@ -1526,12 +1536,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "minimal",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "airy",
       "imageShape": "wide",
       "radius": 20,
       "hueShift": -6,
-      "fingerprint": "local-conversion|split|zoom-reveal|minimal|soft|glass|airy|wide|20|-6"
+      "fingerprint": "local-conversion|split|zoom-reveal|minimal|soft|stacked|airy|wide|20|-6"
     },
     {
       "slug": "business-services",
@@ -1541,12 +1551,12 @@
       "motion": "arrow-shift",
       "heroVariant": "framed",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "landscape",
       "radius": 8,
       "hueShift": -8,
-      "fingerprint": "local-conversion|centered|arrow-shift|framed|image-first|light|airy|landscape|8|-8"
+      "fingerprint": "local-conversion|centered|arrow-shift|framed|image-first|pill|airy|landscape|8|-8"
     },
     {
       "slug": "trademark-service",
@@ -1556,12 +1566,12 @@
       "motion": "parallax-light",
       "heroVariant": "overlay",
       "cardVariant": "sharp",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "square",
       "radius": 4,
       "hueShift": 6,
-      "fingerprint": "legal-luxury|authority|parallax-light|overlay|sharp|line|balanced|square|4|6"
+      "fingerprint": "legal-luxury|authority|parallax-light|overlay|sharp|minimal|balanced|square|4|6"
     },
     {
       "slug": "patent-service",
@@ -1571,12 +1581,12 @@
       "motion": "fade-up",
       "heroVariant": "framed",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "landscape",
       "radius": 8,
       "hueShift": -8,
-      "fingerprint": "medical-clean|authority|fade-up|framed|image-first|light|airy|landscape|8|-8"
+      "fingerprint": "medical-clean|authority|fade-up|framed|image-first|pill|airy|landscape|8|-8"
     },
     {
       "slug": "financial-advisory",
@@ -1616,12 +1626,12 @@
       "motion": "image-zoom",
       "heroVariant": "minimal",
       "cardVariant": "image-first",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "wide",
       "radius": 8,
       "hueShift": -8,
-      "fingerprint": "legal-luxury|split|image-zoom|minimal|image-first|dark|balanced|wide|8|-8"
+      "fingerprint": "legal-luxury|split|image-zoom|minimal|image-first|brand-center|balanced|wide|8|-8"
     },
     {
       "slug": "website-building",
@@ -1631,12 +1641,12 @@
       "motion": "image-zoom",
       "heroVariant": "minimal",
       "cardVariant": "soft",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "compact",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": -4,
-      "fingerprint": "industrial-pro|portfolio|image-zoom|minimal|soft|line|compact|offset|8|-4"
+      "fingerprint": "industrial-pro|portfolio|image-zoom|minimal|soft|minimal|compact|offset|8|-4"
     },
     {
       "slug": "mini-program",
@@ -1646,12 +1656,12 @@
       "motion": "fade-left",
       "heroVariant": "photo",
       "cardVariant": "soft",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 5,
-      "fingerprint": "industrial-pro|portfolio|fade-left|photo|soft|dark|balanced|portrait|4|5"
+      "fingerprint": "industrial-pro|portfolio|fade-left|photo|soft|brand-center|balanced|portrait|4|5"
     },
     {
       "slug": "app-development",
@@ -1676,12 +1686,12 @@
       "motion": "counter-up",
       "heroVariant": "overlay",
       "cardVariant": "outline",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "wide",
       "radius": 4,
       "hueShift": 4,
-      "fingerprint": "creative-studio|split|counter-up|overlay|outline|light|compact|wide|4|4"
+      "fingerprint": "creative-studio|split|counter-up|overlay|outline|pill|compact|wide|4|4"
     },
     {
       "slug": "erp-system",
@@ -1706,12 +1716,12 @@
       "motion": "hover-lift",
       "heroVariant": "overlay",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "square",
       "radius": 14,
       "hueShift": -6,
-      "fingerprint": "industrial-pro|portfolio|hover-lift|overlay|soft|glass|balanced|square|14|-6"
+      "fingerprint": "industrial-pro|portfolio|hover-lift|overlay|soft|stacked|balanced|square|14|-6"
     },
     {
       "slug": "it-ops",
@@ -1721,12 +1731,12 @@
       "motion": "counter-up",
       "heroVariant": "editorial",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": -3,
-      "fingerprint": "medical-clean|catalog|counter-up|editorial|image-first|light|airy|portrait|4|-3"
+      "fingerprint": "medical-clean|catalog|counter-up|editorial|image-first|pill|airy|portrait|4|-3"
     },
     {
       "slug": "system-integration",
@@ -1736,12 +1746,12 @@
       "motion": "hover-lift",
       "heroVariant": "editorial",
       "cardVariant": "soft",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 1,
-      "fingerprint": "tech-minimal|split|hover-lift|editorial|soft|dark|balanced|portrait|4|1"
+      "fingerprint": "tech-minimal|split|hover-lift|editorial|soft|brand-center|balanced|portrait|4|1"
     },
     {
       "slug": "ui-design",
@@ -1751,12 +1761,12 @@
       "motion": "parallax-light",
       "heroVariant": "framed",
       "cardVariant": "outline",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "square",
       "radius": 20,
       "hueShift": -2,
-      "fingerprint": "ecommerce-modern|editorial|parallax-light|framed|outline|dark|airy|square|20|-2"
+      "fingerprint": "ecommerce-modern|editorial|parallax-light|framed|outline|brand-center|airy|square|20|-2"
     },
     {
       "slug": "ux-design",
@@ -1766,12 +1776,12 @@
       "motion": "arrow-shift",
       "heroVariant": "overlay",
       "cardVariant": "image-first",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "landscape",
       "radius": 4,
       "hueShift": -3,
-      "fingerprint": "ecommerce-modern|editorial|arrow-shift|overlay|image-first|glass|balanced|landscape|4|-3"
+      "fingerprint": "ecommerce-modern|editorial|arrow-shift|overlay|image-first|stacked|balanced|landscape|4|-3"
     },
     {
       "slug": "graphic-design",
@@ -1781,12 +1791,12 @@
       "motion": "mask-reveal",
       "heroVariant": "photo",
       "cardVariant": "outline",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 14,
       "hueShift": 7,
-      "fingerprint": "realestate-premium|fullscreen|mask-reveal|photo|outline|dark|airy|portrait|14|7"
+      "fingerprint": "realestate-premium|fullscreen|mask-reveal|photo|outline|brand-center|airy|portrait|14|7"
     },
     {
       "slug": "digital-marketing",
@@ -1856,12 +1866,12 @@
       "motion": "parallax-light",
       "heroVariant": "mesh",
       "cardVariant": "image-first",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "compact",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": 7,
-      "fingerprint": "tech-minimal|catalog|parallax-light|mesh|image-first|dark|compact|portrait|8|7"
+      "fingerprint": "tech-minimal|catalog|parallax-light|mesh|image-first|brand-center|compact|portrait|8|7"
     },
     {
       "slug": "woodworking-machinery",
@@ -1901,12 +1911,12 @@
       "motion": "stagger",
       "heroVariant": "overlay",
       "cardVariant": "soft",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 4,
       "hueShift": 0,
-      "fingerprint": "tech-minimal|catalog|stagger|overlay|soft|dark|balanced|offset|4|0"
+      "fingerprint": "tech-minimal|catalog|stagger|overlay|soft|brand-center|balanced|offset|4|0"
     },
     {
       "slug": "motor",
@@ -1931,12 +1941,12 @@
       "motion": "parallax-light",
       "heroVariant": "photo",
       "cardVariant": "outline",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "wide",
       "radius": 4,
       "hueShift": -3,
-      "fingerprint": "tech-minimal|property|parallax-light|photo|outline|glass|compact|wide|4|-3"
+      "fingerprint": "tech-minimal|property|parallax-light|photo|outline|stacked|compact|wide|4|-3"
     },
     {
       "slug": "generator",
@@ -1946,12 +1956,12 @@
       "motion": "stagger",
       "heroVariant": "photo",
       "cardVariant": "glass",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 1,
-      "fingerprint": "industrial-pro|catalog|stagger|photo|glass|light|airy|portrait|4|1"
+      "fingerprint": "industrial-pro|catalog|stagger|photo|glass|pill|airy|portrait|4|1"
     },
     {
       "slug": "conveyor",
@@ -1961,12 +1971,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "framed",
       "cardVariant": "sharp",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": 5,
-      "fingerprint": "realestate-premium|property|zoom-reveal|framed|sharp|line|balanced|offset|8|5"
+      "fingerprint": "realestate-premium|property|zoom-reveal|framed|sharp|minimal|balanced|offset|8|5"
     },
     {
       "slug": "welding",
@@ -1976,12 +1986,12 @@
       "motion": "stagger",
       "heroVariant": "overlay",
       "cardVariant": "soft",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "wide",
       "radius": 14,
       "hueShift": -2,
-      "fingerprint": "medical-clean|split|stagger|overlay|soft|light|compact|wide|14|-2"
+      "fingerprint": "medical-clean|split|stagger|overlay|soft|pill|compact|wide|14|-2"
     },
     {
       "slug": "instrumentation",
@@ -1991,12 +2001,12 @@
       "motion": "image-zoom",
       "heroVariant": "mesh",
       "cardVariant": "glass",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "compact",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": 1,
-      "fingerprint": "tech-minimal|centered|image-zoom|mesh|glass|line|compact|offset|20|1"
+      "fingerprint": "tech-minimal|centered|image-zoom|mesh|glass|minimal|compact|offset|20|1"
     },
     {
       "slug": "industrial-robot",
@@ -2006,12 +2016,12 @@
       "motion": "counter-up",
       "heroVariant": "framed",
       "cardVariant": "glass",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "square",
       "radius": 20,
       "hueShift": 1,
-      "fingerprint": "medical-clean|split|counter-up|framed|glass|light|airy|square|20|1"
+      "fingerprint": "medical-clean|split|counter-up|framed|glass|pill|airy|square|20|1"
     },
     {
       "slug": "metal-material",
@@ -2021,12 +2031,12 @@
       "motion": "fade-left",
       "heroVariant": "photo",
       "cardVariant": "outline",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "offset",
       "radius": 4,
       "hueShift": -5,
-      "fingerprint": "tech-minimal|catalog|fade-left|photo|outline|light|airy|offset|4|-5"
+      "fingerprint": "tech-minimal|catalog|fade-left|photo|outline|pill|airy|offset|4|-5"
     },
     {
       "slug": "steel",
@@ -2051,12 +2061,12 @@
       "motion": "fade-up",
       "heroVariant": "photo",
       "cardVariant": "outline",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 4,
       "hueShift": 5,
-      "fingerprint": "realestate-premium|catalog|fade-up|photo|outline|dark|balanced|offset|4|5"
+      "fingerprint": "realestate-premium|catalog|fade-up|photo|outline|brand-center|balanced|offset|4|5"
     },
     {
       "slug": "copper",
@@ -2111,12 +2121,12 @@
       "motion": "zoom-reveal",
       "heroVariant": "editorial",
       "cardVariant": "outline",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 3,
-      "fingerprint": "tech-minimal|split|zoom-reveal|editorial|outline|glass|airy|portrait|4|3"
+      "fingerprint": "tech-minimal|split|zoom-reveal|editorial|outline|stacked|airy|portrait|4|3"
     },
     {
       "slug": "solid-waste",
@@ -2141,12 +2151,12 @@
       "motion": "mask-reveal",
       "heroVariant": "mesh",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": -3,
-      "fingerprint": "tech-minimal|catalog|mask-reveal|mesh|soft|glass|balanced|portrait|8|-3"
+      "fingerprint": "tech-minimal|catalog|mask-reveal|mesh|soft|stacked|balanced|portrait|8|-3"
     },
     {
       "slug": "green-building",
@@ -2171,12 +2181,12 @@
       "motion": "counter-up",
       "heroVariant": "framed",
       "cardVariant": "outline",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "wide",
       "radius": 20,
       "hueShift": 2,
-      "fingerprint": "industrial-pro|split|counter-up|framed|outline|line|balanced|wide|20|2"
+      "fingerprint": "industrial-pro|split|counter-up|framed|outline|minimal|balanced|wide|20|2"
     },
     {
       "slug": "interior-design",
@@ -2201,12 +2211,12 @@
       "motion": "mask-reveal",
       "heroVariant": "overlay",
       "cardVariant": "outline",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 14,
       "hueShift": -7,
-      "fingerprint": "creative-studio|portfolio|mask-reveal|overlay|outline|dark|airy|portrait|14|-7"
+      "fingerprint": "creative-studio|portfolio|mask-reveal|overlay|outline|brand-center|airy|portrait|14|-7"
     },
     {
       "slug": "commercial-decoration",
@@ -2246,12 +2256,12 @@
       "motion": "stagger",
       "heroVariant": "editorial",
       "cardVariant": "image-first",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 4,
       "hueShift": -2,
-      "fingerprint": "home-editorial|editorial|stagger|editorial|image-first|line|balanced|offset|4|-2"
+      "fingerprint": "home-editorial|editorial|stagger|editorial|image-first|minimal|balanced|offset|4|-2"
     },
     {
       "slug": "health-check",
@@ -2261,12 +2271,12 @@
       "motion": "mask-reveal",
       "heroVariant": "framed",
       "cardVariant": "image-first",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": 2,
-      "fingerprint": "medical-clean|authority|mask-reveal|framed|image-first|dark|balanced|offset|20|2"
+      "fingerprint": "medical-clean|authority|mask-reveal|framed|image-first|brand-center|balanced|offset|20|2"
     },
     {
       "slug": "tcm-clinic",
@@ -2321,12 +2331,12 @@
       "motion": "hover-lift",
       "heroVariant": "framed",
       "cardVariant": "glass",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "balanced",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": 2,
-      "fingerprint": "home-editorial|editorial|hover-lift|framed|glass|light|balanced|offset|20|2"
+      "fingerprint": "home-editorial|editorial|hover-lift|framed|glass|pill|balanced|offset|20|2"
     },
     {
       "slug": "skin-care",
@@ -2351,12 +2361,12 @@
       "motion": "hover-lift",
       "heroVariant": "overlay",
       "cardVariant": "sharp",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "airy",
       "imageShape": "square",
       "radius": 4,
       "hueShift": -4,
-      "fingerprint": "tech-minimal|centered|hover-lift|overlay|sharp|glass|airy|square|4|-4"
+      "fingerprint": "tech-minimal|centered|hover-lift|overlay|sharp|stacked|airy|square|4|-4"
     },
     {
       "slug": "yoga",
@@ -2426,12 +2436,12 @@
       "motion": "parallax-light",
       "heroVariant": "minimal",
       "cardVariant": "soft",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "compact",
       "imageShape": "offset",
       "radius": 20,
       "hueShift": -7,
-      "fingerprint": "medical-clean|authority|parallax-light|minimal|soft|line|compact|offset|20|-7"
+      "fingerprint": "medical-clean|authority|parallax-light|minimal|soft|minimal|compact|offset|20|-7"
     },
     {
       "slug": "k12-training",
@@ -2441,12 +2451,12 @@
       "motion": "hover-lift",
       "heroVariant": "overlay",
       "cardVariant": "image-first",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "balanced",
       "imageShape": "landscape",
       "radius": 4,
       "hueShift": 3,
-      "fingerprint": "tech-minimal|centered|hover-lift|overlay|image-first|glass|balanced|landscape|4|3"
+      "fingerprint": "tech-minimal|centered|hover-lift|overlay|image-first|stacked|balanced|landscape|4|3"
     },
     {
       "slug": "international-school",
@@ -2456,12 +2466,12 @@
       "motion": "fade-up",
       "heroVariant": "overlay",
       "cardVariant": "sharp",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "airy",
       "imageShape": "landscape",
       "radius": 4,
       "hueShift": -7,
-      "fingerprint": "education-friendly|conversion|fade-up|overlay|sharp|line|airy|landscape|4|-7"
+      "fingerprint": "education-friendly|conversion|fade-up|overlay|sharp|minimal|airy|landscape|4|-7"
     },
     {
       "slug": "art-training",
@@ -2471,12 +2481,12 @@
       "motion": "mask-reveal",
       "heroVariant": "photo",
       "cardVariant": "sharp",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "wide",
       "radius": 4,
       "hueShift": -3,
-      "fingerprint": "tech-minimal|centered|mask-reveal|photo|sharp|glass|compact|wide|4|-3"
+      "fingerprint": "tech-minimal|centered|mask-reveal|photo|sharp|stacked|compact|wide|4|-3"
     },
     {
       "slug": "music-training",
@@ -2516,12 +2526,12 @@
       "motion": "arrow-shift",
       "heroVariant": "photo",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "offset",
       "radius": 14,
       "hueShift": 0,
-      "fingerprint": "tech-minimal|split|arrow-shift|photo|soft|glass|compact|offset|14|0"
+      "fingerprint": "tech-minimal|split|arrow-shift|photo|soft|stacked|compact|offset|14|0"
     },
     {
       "slug": "coding-training",
@@ -2576,12 +2586,12 @@
       "motion": "fade-left",
       "heroVariant": "mesh",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "square",
       "radius": 8,
       "hueShift": 4,
-      "fingerprint": "tech-minimal|split|fade-left|mesh|image-first|light|compact|square|8|4"
+      "fingerprint": "tech-minimal|split|fade-left|mesh|image-first|pill|compact|square|8|4"
     },
     {
       "slug": "online-education",
@@ -2591,12 +2601,12 @@
       "motion": "mask-reveal",
       "heroVariant": "minimal",
       "cardVariant": "soft",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "offset",
       "radius": 8,
       "hueShift": 6,
-      "fingerprint": "tech-minimal|split|mask-reveal|minimal|soft|dark|airy|offset|8|6"
+      "fingerprint": "tech-minimal|split|mask-reveal|minimal|soft|brand-center|airy|offset|8|6"
     },
     {
       "slug": "parent-child-education",
@@ -2606,12 +2616,12 @@
       "motion": "hover-lift",
       "heroVariant": "mesh",
       "cardVariant": "outline",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "portrait",
       "radius": 20,
       "hueShift": 1,
-      "fingerprint": "creative-studio|conversion|hover-lift|mesh|outline|light|compact|portrait|20|1"
+      "fingerprint": "creative-studio|conversion|hover-lift|mesh|outline|pill|compact|portrait|20|1"
     },
     {
       "slug": "study-tour",
@@ -2666,12 +2676,12 @@
       "motion": "fade-left",
       "heroVariant": "photo",
       "cardVariant": "glass",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 14,
       "hueShift": -4,
-      "fingerprint": "travel-immersive|property|fade-left|photo|glass|dark|balanced|portrait|14|-4"
+      "fingerprint": "travel-immersive|property|fade-left|photo|glass|brand-center|balanced|portrait|14|-4"
     },
     {
       "slug": "bakery",
@@ -2681,12 +2691,12 @@
       "motion": "counter-up",
       "heroVariant": "minimal",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "balanced",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": -2,
-      "fingerprint": "creative-studio|editorial|counter-up|minimal|image-first|light|balanced|portrait|8|-2"
+      "fingerprint": "creative-studio|editorial|counter-up|minimal|image-first|pill|balanced|portrait|8|-2"
     },
     {
       "slug": "hotel-catering",
@@ -2696,12 +2706,12 @@
       "motion": "image-zoom",
       "heroVariant": "minimal",
       "cardVariant": "sharp",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "airy",
       "imageShape": "landscape",
       "radius": 8,
       "hueShift": 3,
-      "fingerprint": "travel-immersive|editorial|image-zoom|minimal|sharp|glass|airy|landscape|8|3"
+      "fingerprint": "travel-immersive|editorial|image-zoom|minimal|sharp|stacked|airy|landscape|8|3"
     },
     {
       "slug": "cold-chain-food",
@@ -2726,12 +2736,12 @@
       "motion": "fade-left",
       "heroVariant": "overlay",
       "cardVariant": "image-first",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "balanced",
       "imageShape": "square",
       "radius": 4,
       "hueShift": -6,
-      "fingerprint": "food-brand|editorial|fade-left|overlay|image-first|line|balanced|square|4|-6"
+      "fingerprint": "food-brand|editorial|fade-left|overlay|image-first|minimal|balanced|square|4|-6"
     },
     {
       "slug": "aquaculture",
@@ -2741,12 +2751,12 @@
       "motion": "stagger",
       "heroVariant": "minimal",
       "cardVariant": "glass",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 8,
       "hueShift": 0,
-      "fingerprint": "food-brand|fullscreen|stagger|minimal|glass|glass|airy|portrait|8|0"
+      "fingerprint": "food-brand|fullscreen|stagger|minimal|glass|stacked|airy|portrait|8|0"
     },
     {
       "slug": "livestock",
@@ -2771,12 +2781,12 @@
       "motion": "hover-lift",
       "heroVariant": "overlay",
       "cardVariant": "image-first",
-      "navVariant": "line",
+      "navVariant": "minimal",
       "density": "airy",
       "imageShape": "portrait",
       "radius": 4,
       "hueShift": 8,
-      "fingerprint": "ecommerce-modern|centered|hover-lift|overlay|image-first|line|airy|portrait|4|8"
+      "fingerprint": "ecommerce-modern|centered|hover-lift|overlay|image-first|minimal|airy|portrait|4|8"
     },
     {
       "slug": "prepared-food",
@@ -2786,12 +2796,12 @@
       "motion": "parallax-light",
       "heroVariant": "photo",
       "cardVariant": "sharp",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "portrait",
       "radius": 14,
       "hueShift": -6,
-      "fingerprint": "creative-studio|editorial|parallax-light|photo|sharp|glass|compact|portrait|14|-6"
+      "fingerprint": "creative-studio|editorial|parallax-light|photo|sharp|stacked|compact|portrait|14|-6"
     },
     {
       "slug": "food-packaging",
@@ -2831,12 +2841,12 @@
       "motion": "stagger",
       "heroVariant": "minimal",
       "cardVariant": "image-first",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "compact",
       "imageShape": "wide",
       "radius": 8,
       "hueShift": 5,
-      "fingerprint": "food-brand|editorial|stagger|minimal|image-first|light|compact|wide|8|5"
+      "fingerprint": "food-brand|editorial|stagger|minimal|image-first|pill|compact|wide|8|5"
     },
     {
       "slug": "restaurant-design",
@@ -2846,12 +2856,12 @@
       "motion": "fade-up",
       "heroVariant": "photo",
       "cardVariant": "soft",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "balanced",
       "imageShape": "square",
       "radius": 14,
       "hueShift": 5,
-      "fingerprint": "home-editorial|editorial|fade-up|photo|soft|dark|balanced|square|14|5"
+      "fingerprint": "home-editorial|editorial|fade-up|photo|soft|brand-center|balanced|square|14|5"
     },
     {
       "slug": "group-meal",
@@ -2951,12 +2961,12 @@
       "motion": "fade-left",
       "heroVariant": "overlay",
       "cardVariant": "glass",
-      "navVariant": "light",
+      "navVariant": "pill",
       "density": "airy",
       "imageShape": "landscape",
       "radius": 4,
       "hueShift": 8,
-      "fingerprint": "ecommerce-modern|centered|fade-left|overlay|glass|light|airy|landscape|4|8"
+      "fingerprint": "ecommerce-modern|centered|fade-left|overlay|glass|pill|airy|landscape|4|8"
     },
     {
       "slug": "pet-products",
@@ -2966,12 +2976,12 @@
       "motion": "image-zoom",
       "heroVariant": "photo",
       "cardVariant": "soft",
-      "navVariant": "glass",
+      "navVariant": "stacked",
       "density": "compact",
       "imageShape": "square",
       "radius": 4,
       "hueShift": -3,
-      "fingerprint": "creative-studio|commerce|image-zoom|photo|soft|glass|compact|square|4|-3"
+      "fingerprint": "creative-studio|commerce|image-zoom|photo|soft|stacked|compact|square|4|-3"
     },
     {
       "slug": "gift-customization",
@@ -2981,12 +2991,12 @@
       "motion": "fade-left",
       "heroVariant": "photo",
       "cardVariant": "sharp",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "wide",
       "radius": 4,
       "hueShift": -5,
-      "fingerprint": "ecommerce-modern|commerce|fade-left|photo|sharp|dark|airy|wide|4|-5"
+      "fingerprint": "ecommerce-modern|commerce|fade-left|photo|sharp|brand-center|airy|wide|4|-5"
     },
     {
       "slug": "cultural-creative",
@@ -2996,12 +3006,12 @@
       "motion": "fade-up",
       "heroVariant": "editorial",
       "cardVariant": "sharp",
-      "navVariant": "dark",
+      "navVariant": "brand-center",
       "density": "airy",
       "imageShape": "offset",
       "radius": 14,
       "hueShift": -3,
-      "fingerprint": "creative-studio|portfolio|fade-up|editorial|sharp|dark|airy|offset|14|-3"
+      "fingerprint": "creative-studio|portfolio|fade-up|editorial|sharp|brand-center|airy|offset|14|-3"
     }
   ]
 }
