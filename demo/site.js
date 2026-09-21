@@ -44,7 +44,7 @@ async function boot(){
 }
 function renderShell(){
   const l=label();
-  document.querySelector('#brand').innerHTML='<img alt="'+industry.name+' Logo" src="'+makeIndustryLogo(industry.name,industry.accent,industry.family)+'">';
+  document.querySelector('#brand').innerHTML='<img alt="'+industry.name+' Logo" src="'+makeIndustryLogo(industry.name,industry.accent,industry.family)+'">';document.querySelector('#brand').href=route('site-home.html');
   document.querySelector('#topText').textContent=industry.category+' · 行业官网模板';
   document.querySelector('#navLinks').innerHTML=[
     ['site-home.html','首页','home'],
