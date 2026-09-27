@@ -248,11 +248,38 @@ const DEEP_PROFILES={
   ['services','team','cases','process','articles','cta'],['保险','财务','保障','顾问'],[['2k+','服务家庭'],['80+','顾问'],['20+','方案类型'],['95%','续约率']])
 };
 
+Object.assign(DEEP_PROFILES,{
+ translation_service:dp('翻译/语言服务','翻译服务','获取报价',['国际商务','专业语言','本地化服务','行业翻译','内容型官网','快速询价'],
+  [['services','翻译服务'],['team','译员团队'],['cases','翻译案例'],['process','服务流程'],['articles','语言知识'],['forms','获取报价']],
+  [['home','首页'],['services','翻译服务'],['team','译员团队'],['cases','翻译案例'],['process','服务流程'],['articles','语言知识'],['contact','获取报价']],
+  ['services','team','cases','process','articles','cta'],['翻译','本地化','语言','国际'],[['80+','语言覆盖'],['200+','译员资源'],['12年','服务经验'],['24h','快速响应']]),
+ property_management:dp('物业管理','物业服务','项目咨询',['社区服务','高端物业','智慧物业','园区管理','业主服务','企业物业'],
+  [['services','物业服务'],['locations','管理项目'],['team','服务团队'],['process','服务标准'],['reviews','业主评价'],['forms','项目咨询']],
+  [['home','首页'],['services','物业服务'],['locations','管理项目'],['team','服务团队'],['process','服务标准'],['reviews','业主评价'],['contact','项目咨询']],
+  ['services','locations','team','process','reviews','cta'],['物业','社区','园区','服务'],[['60+','管理项目'],['8M㎡','管理面积'],['800+','服务人员'],['96%','业主满意']]),
+ psychology:dp('心理咨询','咨询服务','预约咨询',['温暖疗愈','专业可信','私密咨询','家庭关系','青少年心理','内容科普'],
+  [['services','咨询方向'],['team','咨询师'],['cases','匿名案例'],['articles','心理科普'],['process','咨询流程'],['forms','预约咨询']],
+  [['home','首页'],['services','咨询方向'],['team','咨询师'],['process','咨询流程'],['articles','心理科普'],['about','机构介绍'],['contact','预约咨询']],
+  ['services','team','process','articles','cta'],['心理','咨询','疗愈','隐私'],[['20+','咨询师'],['12','咨询方向'],['8k+','服务时数'],['严格','隐私保护']]),
+ driving_school_profile:dp('驾校培训','驾驶课程','预约学车',['年轻学车','正规驾校','透明班型','教练团队','考试成果','本地招生'],
+  [['programs','驾驶课程'],['teachers','教练团队'],['pricing','班型价格'],['outcomes','考试成果'],['locations','训练场地'],['forms','预约学车']],
+  [['home','首页'],['programs','驾驶课程'],['teachers','教练团队'],['pricing','班型价格'],['locations','训练场地'],['outcomes','考试成果'],['contact','预约学车']],
+  ['programs','pricing','teachers','locations','outcomes','cta'],['驾校','教练','班型','考试'],[['30+','教练'],['8','训练场'],['92%','通过率'],['20k+','毕业学员']]),
+ seo_marketing:dp('SEO/数字营销','营销服务','获取诊断',['增长营销','SEO 专业','数据驱动','内容增长','B2B 获客','品牌传播'],
+  [['services','营销服务'],['solutions','增长方案'],['cases','增长案例'],['articles','营销知识'],['downloads','报告工具'],['forms','获取诊断']],
+  [['home','首页'],['services','营销服务'],['solutions','增长方案'],['cases','增长案例'],['articles','营销知识'],['downloads','报告工具'],['contact','获取诊断']],
+  ['services','solutions','cases','articles','downloads','cta'],['SEO','营销','增长','获客'],[['300+','服务项目'],['60%+','自然流量增长'],['30+','行业覆盖'],['24h','诊断响应']]),
+ pet_service_profile:dp('宠物服务','宠物服务','预约服务',['宠物友好','专业护理','年轻萌宠','会员套餐','本地门店','口碑社区'],
+  [['services','宠物服务'],['pricing','服务套餐'],['team','服务团队'],['cases','萌宠案例'],['stores','门店地址'],['forms','预约服务']],
+  [['home','首页'],['services','宠物服务'],['pricing','服务套餐'],['team','服务团队'],['cases','萌宠案例'],['stores','门店地址'],['contact','预约服务']],
+  ['services','pricing','team','cases','stores','cta'],['宠物','护理','门店','预约'],[['18','服务项目'],['12','宠物护理师'],['3k+','服务宠物'],['4.9/5','客户评分']])
+});
+
 const INDUSTRY_DEEP_MAP={
  travel:'travel_agency',study-tour:'study_tour',
  renovation:'renovation_company','restaurant-design':'commercial_decoration','interior-design':'interior_design','home-decoration':'home_decoration','commercial-decoration':'commercial_decoration',
  accounting:'accounting_tax','tax-planning':'accounting_tax','financial-advisory':'accounting_tax','audit-service':'accounting_tax','company-registration':'company_services','business-services':'company_services','qualification-service':'company_services',
- lawyer:'lawyer','ip-service':'ip_patent','trademark-service':'ip_patent','patent-service':'ip_patent','testing-certification':'testing_cert','management-consulting':'consulting_hr',hr:'consulting_hr',headhunting:'consulting_hr',translation:'consulting_hr',
+ lawyer:'lawyer','ip-service':'ip_patent','trademark-service':'ip_patent','patent-service':'ip_patent','testing-certification':'testing_cert','management-consulting':'consulting_hr',hr:'consulting_hr',headhunting:'consulting_hr',translation:'translation_service',
  machinery:'machinery','pump-valve':'machinery',hardware:'machinery','packaging-machinery':'machinery','food-machinery':'machinery','woodworking-machinery':'machinery','air-compressor':'machinery',generator:'machinery',conveyor:'machinery','kitchen-equipment':'machinery',elevator:'machinery',
  laser:'precision_equipment',automation:'precision_equipment',pcb:'precision_equipment',storage:'precision_equipment',battery:'precision_equipment',security:'security_fire','fire-protection':'security_fire',hvac:'hvac_refrigeration',refrigeration:'hvac_refrigeration',mold:'precision_equipment','machine-tool':'precision_equipment',bearing:'precision_equipment',motor:'precision_equipment',welding:'precision_equipment',instrumentation:'precision_equipment','industrial-robot':'precision_equipment','system-integration':'precision_equipment','it-ops':'precision_equipment',cybersecurity:'cyber_ai_data',
  electronics:'components',led:'lighting_electronics',lighting:'lighting_electronics',appliance:'smart_home_appliance','smart-home':'smart_home_appliance','digital-products':'lighting_electronics',
@@ -263,16 +290,16 @@ const INDUSTRY_DEEP_MAP={
  furniture:'furniture_home','custom-wardrobe':'furniture_home','soft-decoration':'interior_design','doors-windows':'building_material','building-materials':'building_material',stone:'building_material',flooring:'building_material','ceramic-bath':'building_material',
  restaurant:'restaurant','chain-restaurant':'restaurant','hotel-catering':'restaurant','group-meal':'restaurant',hotel:'hotel','tea-coffee':'cafe_bakery',bakery:'cafe_bakery',
  'food-processing':'food_manufacturing','cold-chain-food':'food_manufacturing','prepared-food':'food_manufacturing','snack-food':'food_manufacturing',condiment:'food_manufacturing','liquor-brand':'food_manufacturing',agriculture:'agriculture','organic-agriculture':'agriculture',aquaculture:'agriculture',livestock:'agriculture','fresh-delivery':'fresh_delivery',
- 'medical-device':'medical_device',clinic:'clinic_general','health-check':'clinic_general','tcm-clinic':'clinic_general','rehab-center':'clinic_general','sports-rehab':'clinic_general','nutrition-health':'clinic_general','psychological-counseling':'clinic_general',dental:'dental','medical-beauty':'aesthetic','skin-care':'aesthetic',pharma:'pharma',eldercare:'eldercare_maternal','nursing-care':'eldercare_maternal','maternal-care':'eldercare_maternal','maternity-center':'eldercare_maternal',maternal:'eldercare_maternal','health-products':'ecommerce_retail',
+ 'medical-device':'medical_device',clinic:'clinic_general','health-check':'clinic_general','tcm-clinic':'clinic_general','rehab-center':'clinic_general','sports-rehab':'clinic_general','nutrition-health':'clinic_general','psychological-counseling':'psychology',dental:'dental','medical-beauty':'aesthetic','skin-care':'aesthetic',pharma:'pharma',eldercare:'eldercare_maternal','nursing-care':'eldercare_maternal','maternal-care':'eldercare_maternal','maternity-center':'eldercare_maternal',maternal:'eldercare_maternal','health-products':'ecommerce_retail',
  school:'education_school','international-school':'education_school',kindergarten:'education_school','technical-school':'education_school',
- education:'training',language:'training',vocational:'training','k12-training':'training','art-training':'training','music-training':'training','dance-training':'training','painting-training':'training','coding-training':'training','postgraduate-training':'training','civil-service-training':'training','online-education':'training','parent-child-education':'training','driving-school':'training','study-abroad':'study_abroad','corporate-training':'corporate_training','enterprise-internal-training':'corporate_training',
+ education:'training',language:'training',vocational:'training','k12-training':'training','art-training':'training','music-training':'training','dance-training':'training','painting-training':'training','coding-training':'training','postgraduate-training':'training','civil-service-training':'training','online-education':'training','parent-child-education':'training','driving-school':'driving_school_profile','study-abroad':'study_abroad','corporate-training':'corporate_training','enterprise-internal-training':'corporate_training',
  advertising:'creative_agency',branding:'creative_agency','ui-design':'creative_agency','ux-design':'creative_agency','graphic-design':'creative_agency','digital-marketing':'creative_agency','short-video':'creative_agency',exhibition:'creative_agency',photography:'photo_film_wedding',film:'photo_film_wedding',wedding:'photo_film_wedding',
- software:'software_saas',saas:'software_saas','website-building':'software_saas','mini-program':'software_saas','app-development':'software_saas','crm-system':'software_saas','erp-system':'software_saas','cloud-service':'software_saas','ai-tech':'cyber_ai_data','data-service':'cyber_ai_data','seo-service':'creative_agency',
+ software:'software_saas',saas:'software_saas','website-building':'software_saas','mini-program':'software_saas','app-development':'software_saas','crm-system':'software_saas','erp-system':'software_saas','cloud-service':'software_saas','ai-tech':'cyber_ai_data','data-service':'cyber_ai_data','seo-service':'seo_marketing',
  ecommerce:'ecommerce_retail','department-store':'ecommerce_retail','office-supplies':'ecommerce_retail','pet-products':'ecommerce_retail','gift-customization':'ecommerce_retail','cultural-creative':'ecommerce_retail','cross-border':'foreign_crossborder','foreign-trade':'foreign_crossborder',
  logistics:'logistics','freight-forwarding':'logistics',warehousing:'logistics',
  'auto-sales':'auto_showroom','car-rental':'auto_showroom','auto-repair':'auto_service',
- 'real-estate':'real_estate',property:'property_construction',landscape:'property_construction',construction:'property_construction','engineering-design':'property_construction',
- cleaning:'local_service',moving:'local_service',pet:'fitness_beauty_pet',beauty:'fitness_beauty_pet',fitness:'fitness_beauty_pet',yoga:'fitness_beauty_pet',
+ 'real-estate':'real_estate',property:'property_management',landscape:'property_construction',construction:'property_construction','engineering-design':'property_construction',
+ cleaning:'local_service',moving:'local_service',pet:'pet_service_profile',beauty:'fitness_beauty_pet',fitness:'fitness_beauty_pet',yoga:'fitness_beauty_pet',
  insurance:'insurance_finance'
 };
 function getDeepIndustryProfile(industry){
