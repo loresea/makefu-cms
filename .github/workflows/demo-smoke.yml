@@ -55,6 +55,8 @@ jobs:
           test -f demo/image-library.js
           test -f demo/motion.js
           test -f demo/template-preview.js
+          test -f demo/template-market-data.js
+          test -f demo/template-detail.html
           test -f demo/logo.js
           test -f demo/site-home.html
           test -f demo/site-products.html
@@ -93,6 +95,10 @@ jobs:
           grep -q 'nav_variants' demo/template-matrix.json
           grep -q 'makeTemplatePreview' demo/industry-market.html
           grep -q 'makeTemplatePreview' demo/cms.html
+          grep -q 'templateMarketSort' demo/cms.html
+          grep -q 'data-market-tab="mine"' demo/cms.html
+          grep -q 'MARKET_COLLECTIONS' demo/template-market-data.js
+          grep -q 'template-detail.html' demo/industry-market.html
           grep -q 'renovation-variants.json' demo/cms.html
           grep -q '"count": 6' demo/renovation-variants.json
           grep -q 'case-detail' demo/renovation-showcase.js
@@ -251,4 +257,5 @@ jobs:
           node --check demo/image-library.js
           node --check demo/motion.js
           node --check demo/template-preview.js
+          node --check demo/template-market-data.js
           node --check demo/renovation-showcase.js
