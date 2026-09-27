@@ -259,10 +259,30 @@ function openTemplateDetail(slug){
   openModal('模板详情：'+(x.display_name||x.name),'<div style="display:grid;gap:14px"><img src="'+makeTemplatePreview(x,p)+'" alt="模板预览" style="width:100%;height:260px;object-fit:cover;border-radius:12px"><div class="chips"><span class="chip">'+x.category+'</span><span class="chip">'+(marketStyleNames[p.style]||p.style)+'</span><span class="chip">'+(marketLayoutNames[p.layout]||p.layout)+'</span>'+v.badges.map(b=>'<span class="chip">'+b+'</span>').join('')+'</div><p>'+x.headline+'</p><div class="settings"><div class="field"><label>适合客户</label><div>'+v.position+'<br>'+v.uses.join(' / ')+'</div></div><div class="field"><label>包含能力</label><div>'+v.features.join(' / ')+'</div></div><div class="field"><label>模板数据</label><div>★ '+v.stats.rating.toFixed(1)+' · 安装 '+marketNum(v.stats.installs)+' · 收藏 '+marketNum(v.stats.favorites)+' · 浏览 '+marketNum(v.stats.views)+'</div></div><div class="field"><label>Logo</label><img src="'+makeIndustryLogo(x.name,x.accent,x.family)+'" style="height:46px;max-width:260px"></div><div class="field full"><label>安装模式</label><div>仅安装模板 / 只补空白内容 / 导入完整演示数据</div></div></div><div><a class="btn" target="_blank" rel="noopener" href="'+x.preview+'">在线预览 ↗</a> <button class="btn" onclick="toggleMarketFavorite(\''+slug+'\')">'+(marketIsFavorite(slug)?'取消收藏':'收藏模板')+'</button> <button class="btn dark" onclick="closeModal();installMarketTemplate(\''+slug+'\')">安装模板</button></div></div>');
   document.getElementById('modalSaveBtn').style.display='none'
 }
-function installMarketTemplate(slug){
+async function installMarketTemplate(slug){
   const x=marketBySlug[slug];if(!x)return;
-  openModal('启用模板：'+(x.display_name||x.name),'<p>选择启用方式。模板文件和网站真实内容分开管理。</p><div class="themeChoice"><label class="themeOption"><input type="radio" name="marketMode" value="keep" checked><div><b>仅安装模板 / 切换外观</b><span>不修改现有文章、产品、案例和 SEO 数据。</span></div></label><label class="themeOption"><input type="radio" name="marketMode" value="fill"><div><b>安装模板 + 只补空白行业内容</b><span>补充缺失菜单、分类、区块和字段，不覆盖已有内容。</span></div></label><label class="themeOption"><input type="radio" name="marketMode" value="replace"><div><b>安装模板 + 完整行业演示数据</b><span>适合新站 / 测试站；执行前自动创建备份与恢复点。</span></div></label></div>');
-  const b=document.getElementById('modalSaveBtn');b.textContent='确认启用';b.onclick=()=>{const mode=document.querySelector('input[name=marketMode]:checked')?.value||'keep';if(mode==='replace'&&!confirm('将先自动备份，再导入完整行业演示数据。继续吗？'))return;localStorage.setItem('makefu-demo-theme',slug);localStorage.setItem('makefu-demo-content-mode',mode);marketMarkInstalled(slug);closeModal();refreshTheme();updateMarketSummary();pop('已启用 '+(x.display_name||x.name)+' · '+({keep:'仅模板',fill:'补空白内容',replace:'完整演示数据'}[mode]))}
+  const industry=x.industry_slug||x.slug;
+  const manifest=await getIndustryManifest(industry);
+  const isIndustry=!!manifest;
+  const deps=isIndustry?(manifest.required_modules||[]).map(id=>moduleById(id)).filter(Boolean):[];
+  const menuPreview=isIndustry?(manifest.backend_menu||[]).flatMap(g=>g.items.map(i=>i.label)):[];
+  const tables=[...new Set(deps.flatMap(m=>m.tables||[]))];
+  const extra=isIndustry?'<div class="notice" style="margin:12px 0"><b>该模板支持行业结构联动</b><br><small>启用行业结构后，将自动启用 '+deps.length+' 个模块、应用后台菜单预设，并准备 '+tables.length+' 个共享/专用数据表结构。模板切换不会删除数据。</small></div><div class="split"><div><b>后台菜单</b><p style="color:var(--muted);font-size:12px">'+menuPreview.join(' / ')+'</p></div><div><b>模块依赖</b><p style="color:var(--muted);font-size:12px">'+deps.map(m=>m.name).join(' / ')+'</p></div></div>':'';
+  openModal('启用模板：'+(x.display_name||x.name),extra+'<p>选择安装方式：</p><div class="themeChoice">'+
+    '<label class="themeOption"><input type="radio" name="marketMode" value="theme_only" checked><div><b>仅安装模板</b><span>只切换前台视觉，不改变后台菜单、模块和数据库结构。</span></div></label>'+
+    (isIndustry?'<label class="themeOption"><input type="radio" name="marketMode" value="structure"><div><b>模板 + 行业结构</b><span>启用所需模块、替换后台菜单预设、创建缺失字段；不覆盖真实数据。</span></div></label><label class="themeOption"><input type="radio" name="marketMode" value="demo"><div><b>模板 + 完整演示数据</b><span>自动备份后，启用行业结构并导入演示案例、服务、团队和文章。</span></div></label>':'')+
+    '</div>');
+  const b=document.getElementById('modalSaveBtn');b.textContent='确认启用';
+  b.onclick=()=>{
+    const mode=document.querySelector('input[name=marketMode]:checked')?.value||'theme_only';
+    if(mode==='demo'&&!confirm('将先自动备份，再启用行业结构并导入完整演示数据。继续吗？'))return;
+    localStorage.setItem('makefu-demo-theme',slug);
+    localStorage.setItem('makefu-demo-content-mode',mode);
+    if(isIndustry&&mode!=='theme_only') applyIndustryPack(manifest,{demo:mode==='demo'});
+    marketMarkInstalled(slug);
+    closeModal();refreshTheme();updateMarketSummary();renderIndustryBackendMenu();renderModuleCenter();
+    pop('已启用 '+(x.display_name||x.name)+' · '+({theme_only:'仅模板',structure:'行业结构',demo:'完整演示数据'}[mode]));
+  }
 }
 const themeNames={default:'企业商务 Pro',industrial:'工业智造',export:'外贸独立站',minimal:'极简品牌',travel:'旅行发现',renovation:'筑家设计',accounting:'企财管家',lawyer:'衡正律师'};const industryThemeUrls={travel:'./travel.html',renovation:'./renovation.html',accounting:'./accounting.html',lawyer:'./lawyer.html'};
 function refreshTheme(){const t=currentTheme();document.querySelectorAll('[data-theme]').forEach(c=>{const on=c.dataset.theme===t;const m=c.querySelector('.activeMark'),b=c.querySelector('.activate');if(m){m.className='badge '+(on?'':'gray')+' activeMark';m.textContent=on?'当前模板':'未启用'}if(b)b.style.display=on?'none':'inline-flex'});const m=marketBySlug[t];document.getElementById('frontLink').href=industryThemeUrls[t]||(m?.preview||('./template.html?theme='+encodeURIComponent(t)+'&page=home'));const ts=document.getElementById('themeSelect');if(ts&&[...ts.options].some(o=>o.value===t))ts.value=t;document.getElementById('dashTheme').textContent=themeNames[t]||m?.name||t}
@@ -340,5 +360,5 @@ function confirmAction(msg){openModal('确认操作','<p>'+msg+'</p><p style="co
 function runBackup(){pop('备份完成：database-20260921-1055.sqlite')}
 function runMigration(){let w=0,el=document.getElementById('migProgress');const id=setInterval(()=>{w+=10;el.style.width=w+'%';if(w>=100){clearInterval(id);pop('迁移完成：已校验表与记录数量')}} ,110)}
 function runUpdate(){let w=0,el=document.getElementById('updProgress'),log=document.getElementById('updLog');const steps=['创建代码备份…','创建数据库备份…','验证 SHA256…','验证 Ed25519 签名…','进入维护模式…','替换核心文件…','执行 migration…','清理缓存…','健康检查…','升级完成。'];log.textContent='';const id=setInterval(()=>{if(w>=100){clearInterval(id);pop('升级流程模拟完成');return}w+=10;el.style.width=w+'%';log.textContent+=steps[w/10-1]+'\n';log.scrollTop=log.scrollHeight},180)}
-addEventListener('load',()=>{showPage(location.hash.slice(1)||'dashboard');loadTemplateMarket();refreshTheme();document.querySelectorAll('[data-market-tab]').forEach(b=>b.addEventListener('click',()=>setMarketTab(b.dataset.marketTab)));['templateMarketSearch','templateMarketCategory','templateMarketStyle','templateMarketUse','templateMarketMy','templateMarketSort'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener(el.tagName==='INPUT'?'input':'change',()=>{marketPage=1;renderTemplateMarket()})})});addEventListener('hashchange',()=>showPage(location.hash.slice(1)||'dashboard'));
+addEventListener('load',async()=>{await loadArchitecture();showPage(location.hash.slice(1)||'dashboard');loadTemplateMarket();refreshTheme();document.querySelectorAll('[data-market-tab]').forEach(b=>b.addEventListener('click',()=>setMarketTab(b.dataset.marketTab)));['templateMarketSearch','templateMarketCategory','templateMarketStyle','templateMarketUse','templateMarketMy','templateMarketSort'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener(el.tagName==='INPUT'?'input':'change',()=>{marketPage=1;renderTemplateMarket()})})});addEventListener('hashchange',()=>showPage(location.hash.slice(1)||'dashboard'));
 </script></body></html>
