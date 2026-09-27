@@ -192,7 +192,7 @@ jobs:
           const vm = require('vm');
           const source = fs.readFileSync('demo/renovation-showcase.js', 'utf8');
           const sandbox = {
-            document: { addEventListener() {}, querySelector() { return null; } },
+            document: { body: { dataset: {} }, addEventListener() {}, querySelector() { return null; } },
             location: { search: '' },
             URLSearchParams,
             console,
