@@ -279,6 +279,7 @@ function getDeepIndustryProfile(industry){
  const key=INDUSTRY_DEEP_MAP[industry.slug];
  return key?DEEP_PROFILES[key]:null;
 }
+window.DEEP_VISUAL_MATRIX=DEEP_VISUAL_MATRIX;
 window.DEEP_PROFILES=DEEP_PROFILES;
 window.INDUSTRY_DEEP_MAP=INDUSTRY_DEEP_MAP;
 window.getDeepIndustryProfile=getDeepIndustryProfile;
