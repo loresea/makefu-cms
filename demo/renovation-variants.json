@@ -1,0 +1,108 @@
+{
+  "version": "1.0.0",
+  "industry": "renovation",
+  "industry_name": "装修装饰",
+  "count": 5,
+  "templates": [
+    {
+      "slug": "renovation-modern",
+      "industry_slug": "renovation",
+      "name": "筑家 DESIGN",
+      "display_name": "装修 · 现代极简",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#a16207",
+      "style": "home-editorial",
+      "layout": "portfolio",
+      "motion": "fade-up",
+      "preview": "./renovation-modern.html",
+      "headline": "大留白、原木、真实案例主导的现代极简全案装修官网。",
+      "brand": "筑家 DESIGN",
+      "tags": [
+        "现代极简",
+        "原木",
+        "全案设计"
+      ]
+    },
+    {
+      "slug": "renovation-natural",
+      "industry_slug": "renovation",
+      "name": "木舍空间",
+      "display_name": "装修 · 自然小清新",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#73895c",
+      "style": "education-friendly",
+      "layout": "editorial",
+      "motion": "stagger",
+      "preview": "./renovation-natural.html",
+      "headline": "明亮、自然、年轻家庭导向的小清新住宅设计官网。",
+      "brand": "木舍空间",
+      "tags": [
+        "小清新",
+        "自然系",
+        "年轻家庭"
+      ]
+    },
+    {
+      "slug": "renovation-luxury",
+      "industry_slug": "renovation",
+      "name": "MAISON AUREA",
+      "display_name": "装修 · 欧式轻奢",
+      "category": "家居建材",
+      "family": "professional-trust",
+      "accent": "#c39a5b",
+      "style": "legal-luxury",
+      "layout": "fullscreen",
+      "motion": "mask-reveal",
+      "preview": "./renovation-luxury.html",
+      "headline": "黑金、香槟金与高端私宅摄影构成的欧式轻奢模板。",
+      "brand": "MAISON AUREA",
+      "tags": [
+        "欧式",
+        "轻奢",
+        "高端私宅"
+      ]
+    },
+    {
+      "slug": "renovation-retro",
+      "industry_slug": "renovation",
+      "name": "拾光设计事务所",
+      "display_name": "装修 · 复古事务所",
+      "category": "家居建材",
+      "family": "portfolio-editorial",
+      "accent": "#9b3f2f",
+      "style": "creative-studio",
+      "layout": "editorial",
+      "motion": "zoom-reveal",
+      "preview": "./renovation-retro.html",
+      "headline": "杂志感、不对称排版和复古材质语言的设计事务所模板。",
+      "brand": "拾光设计事务所",
+      "tags": [
+        "复古",
+        "杂志风",
+        "中古"
+      ]
+    },
+    {
+      "slug": "renovation-oriental",
+      "industry_slug": "renovation",
+      "name": "观堂空间",
+      "display_name": "装修 · 东方现代",
+      "category": "家居建材",
+      "family": "portfolio-editorial",
+      "accent": "#8b6b4c",
+      "style": "realestate-premium",
+      "layout": "authority",
+      "motion": "fade-left",
+      "preview": "./renovation-oriental.html",
+      "headline": "留白、木石、宋式审美与现代东方空间秩序的高端模板。",
+      "brand": "观堂空间",
+      "tags": [
+        "东方现代",
+        "新中式",
+        "留白"
+      ]
+    }
+  ]
+}
