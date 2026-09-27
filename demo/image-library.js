@@ -105,6 +105,24 @@ function getIndustryImages(industry){
   const rotate=(n)=>pool[(h+n)%pool.length];
   return {hero:rotate(0),products:[rotate(1),rotate(2),rotate(3)],cases:[rotate(2),rotate(3),rotate(1)],news:[rotate(3),rotate(1),rotate(2)],about:rotate(1),contact:rotate(2)};
 }
+function generatedIndustryVisual(label='MAKEFU',accent='#f97316',index=0){
+  const safe=String(label).replace(/[&<>"]/g,'');
+  const angle=(index*37)%360;
+  const svg='<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900"><defs><linearGradient id="g" x1="0" x2="1" gradientTransform="rotate('+angle+' .5 .5)"><stop stop-color="'+accent+'"/><stop offset="1" stop-color="#0f172a"/></linearGradient><pattern id="p" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M0 64L64 0" stroke="#fff" stroke-opacity=".055"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/><rect width="100%" height="100%" fill="url(#p)"/><circle cx="'+(220+(index%5)*210)+'" cy="'+(180+(index%3)*130)+'" r="'+(120+(index%4)*34)+'" fill="#fff" fill-opacity=".08"/><rect x="'+(760-(index%3)*90)+'" y="'+(130+(index%4)*70)+'" width="420" height="240" rx="28" fill="#fff" fill-opacity=".07"/><text x="72" y="760" font-size="58" font-family="Arial,sans-serif" font-weight="800" fill="white">'+safe+'</text><text x="74" y="815" font-size="22" font-family="Arial,sans-serif" fill="#ffffffb5">MAKEFU CMS · VISUAL '+String(index+1).padStart(2,'0')+'</text></svg>';
+  return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
+}
+function getIndustryVisuals(industry,count=12){
+  const key=FAMILY_IMAGE_MAP[industry.family]||'professional';
+  const pool=IMAGE_POOLS[key]||IMAGE_POOLS.professional;
+  const h=imageHash(industry.slug);
+  const out=[];
+  for(let i=0;i<count;i++){
+    if(i<pool.length)out.push(pool[(h+i)%pool.length]);
+    else out.push(generatedIndustryVisual(industry.name,industry.accent||'#f97316',i));
+  }
+  return out;
+}
+
 function fallbackImageData(label='MAKEFU',accent='#f97316'){
   const safe=String(label).replace(/[&<>"]/g,'');
   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="'+accent+'"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><circle cx="980" cy="130" r="220" fill="#ffffff12"/><circle cx="180" cy="650" r="300" fill="#ffffff0d"/><text x="70" y="650" font-size="54" font-family="Arial,sans-serif" font-weight="800" fill="white">'+safe+'</text><text x="72" y="700" font-size="20" font-family="Arial,sans-serif" fill="#ffffffb0">MAKEFU CMS INDUSTRY VISUAL</text></svg>';
@@ -116,5 +134,7 @@ function imageTag(url,alt,cls='',accent='#f97316'){
   return '<img class="'+cls+'" src="'+url+'" alt="'+String(alt).replace(/"/g,'')+'" loading="'+(critical?'eager':'lazy')+'" decoding="async" '+(critical?'fetchpriority="high" ':'')+'onerror="this.onerror=null;this.src=\''+fb+'\'">';
 }
 window.getIndustryImages=getIndustryImages;
+window.getIndustryVisuals=getIndustryVisuals;
+window.generatedIndustryVisual=generatedIndustryVisual;
 window.fallbackImageData=fallbackImageData;
 window.imageTag=imageTag;
