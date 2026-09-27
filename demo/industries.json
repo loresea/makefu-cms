@@ -46,14 +46,15 @@
       "category": "家居建材",
       "family": "portfolio-editorial",
       "accent": "#292524",
-      "headline": "把房子，变成真正适合生活的家。",
-      "preview": "./renovation.html",
+      "headline": "装修行业提供 5 套不同审美与定位的成品模板，可直接预览与安装。",
+      "preview": "./renovation-market.html",
       "install_modes": [
         "theme_only",
         "fill_blanks",
         "full_demo"
       ],
-      "status": "preview-ready"
+      "status": "preview-ready",
+      "template_count": 5
     },
     {
       "id": 3,
