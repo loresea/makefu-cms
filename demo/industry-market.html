@@ -14,7 +14,7 @@
 </style></head>
 <body><header class="top"><div class="wrap topin"><div class="brand"><div class="logo">M</div><div>码科服 CMS<br><small style="font-weight:600;color:#64748b">行业模板中心</small></div></div><a class="back" href="./cms.html#theme-market">进入后台模板市场</a></div></header>
 <main class="wrap">
-<section class="hero"><h1>找到和客户想法匹配的网站模板</h1><p>覆盖 200 个行业，并逐步为每个行业提供 6 套不同定位的成品网站。支持按行业、风格、用途、热度、评分、安装量和最近更新筛选。</p></section>
+<section class="hero"><h1>找到和客户想法匹配的网站模板</h1><p>覆盖 200 个行业，每个行业提供 6 套不同定位的成品网站，共 1200 套行业模板。支持按行业、风格、用途、热度、评分、安装量和最近更新筛选。</p></section>
 <div class="tabs" id="tabs"><button class="on" data-tab="recommended">推荐</button><button data-tab="industry">行业</button><button data-tab="style">风格</button><button data-tab="mine">我的模板</button></div>
 <div class="collections" id="collections"></div>
 <div class="summary"><div><b id="total">0</b><span>当前模板</span></div><div><b>200</b><span>行业分类</span></div><div><b id="hotCount">0</b><span>热门模板</span></div><div><b id="favCount">0</b><span>我的收藏</span></div></div>
@@ -22,12 +22,12 @@
 <div class="sectionHead"><div><h2 id="sectionTitle">精选推荐</h2><p id="sectionDesc">综合匹配度、安装、收藏、评分和近期热度推荐。</p></div></div>
 <section id="grid" class="grid"></section><div id="pager" class="pager"></div>
 </main>
-<script src="./logo.js"></script><script src="./template-presets.js"></script><script src="./template-preview.js"></script><script src="./template-market-data.js"></script>
+<script src="./logo.js"></script><script src="./template-presets.js"></script><script src="./template-preview.js"></script><script src="./industry-template-system.js"></script><script src="./template-market-data.js"></script>
 <script>
 let all=[],meta=[],page=1,tab='recommended',collection='recommended';
 async function load(){
- const [j,rv]=await Promise.all([fetch('./industries.json').then(r=>r.json()),fetch('./renovation-variants.json').then(r=>r.json()).catch(()=>({templates:[]}))]);
- all=(j.industries||[]).filter(x=>x.slug!=='renovation').concat(rv.templates||[]);
+ const j=await fetch('./industries.json').then(r=>r.json());
+ all=buildIndustryTemplates(j.industries||[]);
  meta=all.map((x,i)=>{const auto=getTemplatePreset(x,i),p=x.style?{...auto,style:x.style,layout:x.layout||auto.layout,motion:x.motion||auto.motion}:auto;return enrichMarketTemplate(x,p,i)});
  fill();renderCollections();summary();render();
 }
