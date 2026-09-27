@@ -184,22 +184,32 @@ let tt;
 function pop(s){const x=document.getElementById('toast');if(!x)return;x.textContent=s;x.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>x.classList.remove('show'),1900)}
 function currentTheme(){return localStorage.getItem('makefu-demo-theme')||'default'}
 
-let moduleRegistry={modules:[]},activeIndustryManifest=null;
+let moduleRegistry={modules:[]},activeIndustryManifest=null,industryRegistry=[];
 function activePackId(){return localStorage.getItem('makefu-active-industry-pack')||''}
 function enabledModuleIds(){try{return JSON.parse(localStorage.getItem('makefu-enabled-modules')||'["pages","articles","media","forms"]')}catch{return ['pages','articles','media','forms']}}
 function setEnabledModuleIds(ids){localStorage.setItem('makefu-enabled-modules',JSON.stringify([...new Set(ids)]))}
 function moduleById(id){return (moduleRegistry.modules||[]).find(x=>x.id===id)}
 async function loadArchitecture(){
   try{
-    moduleRegistry=await fetch('./module-registry.json').then(r=>r.json());
-    if(activePackId()==='renovation')activeIndustryManifest=await fetch('./industry-manifests/renovation.json').then(r=>r.json());
+    const [mr,j]=await Promise.all([fetch('./module-registry.json').then(r=>r.json()),fetch('./industries.json').then(r=>r.json())]);
+    moduleRegistry=mr;industryRegistry=j.industries||[];
+    const active=activePackId();
+    if(active){
+      if(active==='renovation') activeIndustryManifest=await fetch('./industry-manifests/renovation.json').then(r=>r.json()).catch(()=>null);
+      if(!activeIndustryManifest){const ind=industryRegistry.find(x=>x.slug===active);if(ind)activeIndustryManifest=buildIndustryManifest(ind)}
+    }
     renderIndustryBackendMenu();renderModuleCenter();
   }catch(e){console.error('architecture load failed',e)}
 }
 async function getIndustryManifest(industry){
-  if(industry!=='renovation')return null;
-  if(activeIndustryManifest?.industry==='renovation')return activeIndustryManifest;
-  try{return await fetch('./industry-manifests/renovation.json').then(r=>r.json())}catch{return null}
+  if(activeIndustryManifest?.industry===industry)return activeIndustryManifest;
+  if(industry==='renovation'){
+    const custom=await fetch('./industry-manifests/renovation.json').then(r=>r.json()).catch(()=>null);
+    if(custom)return custom;
+  }
+  if(!industryRegistry.length){const j=await fetch('./industries.json').then(r=>r.json());industryRegistry=j.industries||[]}
+  const ind=industryRegistry.find(x=>x.slug===industry);
+  return ind?buildIndustryManifest(ind):null;
 }
 function applyIndustryPack(manifest,{demo=false}={}){
   if(!manifest)return;
