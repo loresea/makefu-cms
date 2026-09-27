@@ -83,7 +83,7 @@ jobs:
           grep -q 'industryLogoMarkup' demo/site.js
           grep -q '浙ICP备2026XXXX号-1' demo/site.js
           grep -q 'https://www.makefu.com/' demo/site.js
-          grep -q '200 个常用行业模板' demo/industry-market.html
+          grep -q '找到和客户想法匹配的网站模板' demo/industry-market.html
           grep -q 'templateMarketSearch' demo/cms.html
           grep -q 'templateMarketStyle' demo/cms.html
           grep -q 'text-align:center' demo/design-system.css
