@@ -173,6 +173,86 @@ GET /api/v1/search?q=keyword</div><p style="color:var(--muted)">列表支持分�
 <div class="modal" id="modal"><div class="dialog"><div class="dialogHd"><b id="modalTitle">编辑</b><button class="btn" onclick="closeModal()">×</button></div><div class="dialogBody" id="modalBody"></div><div class="dialogFt"><span></span><div><button class="btn" onclick="closeModal()">取消</button> <button id="modalSaveBtn" class="btn dark" onclick="saveModal()">保存</button></div></div></div></div>
 <div class="toast" id="toast"></div>
 <script src="./logo.js"></script><script src="./template-presets.js"></script><script src="./image-library.js"></script><script src="./template-preview.js"></script><script src="./template-market-data.js"></script><script>
+const titles={dashboard:'工作台',pages:'页面管理',articles:'文章管理',products:'产品管理',cases:'案例管理',media:'媒体库',blocks:'内容区块',revisions:'版本历史',forms:'表单线索',menus:'菜单管理',themes:'模板管理','theme-market':'模板市场',plugins:'插件中心','plugin-market':'插件市场',seo:'SEO 中心',redirects:'301 跳转',settings:'网站设置',modules:'模块中心','module-data':'模块数据',users:'用户与权限',backup:'备份与迁移',delivery:'交付中心',update:'系统更新',health:'系统状态',developer:'API / 开发者',webhooks:'Webhooks',audit:'操作日志'};
+function showPage(name){
+  if(!titles[name])name='dashboard';
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('[data-page]').forEach(x=>x.classList.remove('on'));
+  const page=document.getElementById('p-'+name);if(page)page.classList.add('on');
+  const nav=document.querySelector('[data-page="'+name+'"]');if(nav)nav.classList.add('on');
+  const crumb=document.getElementById('crumb');if(crumb)crumb.textContent=titles[name]||name;
+  history.replaceState(null,'','#'+name);
+}
+document.querySelectorAll('[data-page]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();showPage(a.dataset.page)}));
+let tt;
+function pop(s){const x=document.getElementById('toast');if(!x)return;x.textContent=s;x.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>x.classList.remove('show'),1900)}
+function currentTheme(){return localStorage.getItem('makefu-demo-theme')||'default'}
+
+let moduleRegistry={modules:[]},activeIndustryManifest=null;
+function activePackId(){return localStorage.getItem('makefu-active-industry-pack')||''}
+function enabledModuleIds(){try{return JSON.parse(localStorage.getItem('makefu-enabled-modules')||'["pages","articles","media","forms"]')}catch{return ['pages','articles','media','forms']}}
+function setEnabledModuleIds(ids){localStorage.setItem('makefu-enabled-modules',JSON.stringify([...new Set(ids)]))}
+function moduleById(id){return (moduleRegistry.modules||[]).find(x=>x.id===id)}
+async function loadArchitecture(){
+  try{
+    moduleRegistry=await fetch('./module-registry.json').then(r=>r.json());
+    if(activePackId()==='renovation')activeIndustryManifest=await fetch('./industry-manifests/renovation.json').then(r=>r.json());
+    renderIndustryBackendMenu();renderModuleCenter();
+  }catch(e){console.error('architecture load failed',e)}
+}
+async function getIndustryManifest(industry){
+  if(industry!=='renovation')return null;
+  if(activeIndustryManifest?.industry==='renovation')return activeIndustryManifest;
+  try{return await fetch('./industry-manifests/renovation.json').then(r=>r.json())}catch{return null}
+}
+function applyIndustryPack(manifest,{demo=false}={}){
+  if(!manifest)return;
+  activeIndustryManifest=manifest;
+  localStorage.setItem('makefu-active-industry-pack',manifest.industry);
+  setEnabledModuleIds(manifest.required_modules||[]);
+  localStorage.setItem('makefu-industry-menu-preset',JSON.stringify(manifest.backend_menu||[]));
+  localStorage.setItem('makefu-industry-schema',JSON.stringify(manifest.content_types||{}));
+  if(demo)localStorage.setItem('makefu-demo-data-imported',manifest.industry);
+  renderIndustryBackendMenu();renderModuleCenter();
+}
+function resetIndustryPack(){
+  if(!confirm('恢复通用后台只会停用行业菜单与模块，不会删除已有数据。继续吗？'))return;
+  localStorage.removeItem('makefu-active-industry-pack');
+  localStorage.removeItem('makefu-industry-menu-preset');
+  localStorage.removeItem('makefu-industry-schema');
+  setEnabledModuleIds(['pages','articles','media','forms']);
+  activeIndustryManifest=null;renderIndustryBackendMenu();renderModuleCenter();pop('已恢复通用后台，数据保留');
+}
+function renderIndustryBackendMenu(){
+  const mount=document.getElementById('industryNavMount');if(!mount)return;
+  const active=activePackId();
+  ['coreArticlesNav','coreProductsNav','coreCasesNav','coreFormsNav'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display=active?'none':''});
+  if(!active||!activeIndustryManifest){mount.innerHTML='';return}
+  mount.innerHTML=(activeIndustryManifest.backend_menu||[]).map(group=>'<div class="industryMenuGroup"><div class="group">'+group.group+'</div>'+group.items.map(item=>'<a href="javascript:void(0)" onclick="openModuleData(\''+item.module+'\',\''+item.label+'\')"><i class="dot"></i><span class="txt">'+item.label+'</span></a>').join('')+'</div>').join('');
+}
+function renderModuleCenter(){
+  const cards=document.getElementById('moduleCards');if(!cards)return;
+  const enabled=enabledModuleIds(),manifest=activeIndustryManifest;
+  const count=document.getElementById('moduleEnabledCount');if(count)count.textContent=enabled.length;
+  const pack=document.getElementById('modulePackName');if(pack)pack.textContent=manifest?.pack_name||'通用';
+  const tables=[...new Set(enabled.flatMap(id=>moduleById(id)?.tables||[]))];
+  const tableCount=document.getElementById('moduleTableCount');if(tableCount)tableCount.textContent=tables.length;
+  cards.innerHTML=enabled.length?enabled.map(id=>{const m=moduleById(id);if(!m)return'';return '<div class="card box"><div class="boxhead"><h3>'+m.name+'</h3><span class="badge">'+m.type+'</span></div><p style="color:var(--muted)">'+m.description+'</p><div class="chips"><span class="chip">'+m.data_mode+'</span><span class="chip">'+(m.retention==='always'?'核心数据':'停用保留数据')+'</span></div><p style="font-size:12px;color:var(--muted)">表：'+m.tables.join(' / ')+'</p><button class="btn" onclick="openModuleData(\''+m.id+'\',\''+m.menu_label+'\')">管理数据</button></div>'}).join(''):'<div style="padding:20px;color:var(--muted)">尚未启用业务模块。</div>';
+  const plan=document.getElementById('databasePlan');if(!plan)return;
+  plan.innerHTML=tables.length?'<table><tr><th>数据表</th><th>来源模块</th><th>策略</th></tr>'+tables.map(t=>{const owners=enabled.map(moduleById).filter(m=>m?.tables.includes(t));return '<tr><td><code>'+t+'</code></td><td>'+owners.map(m=>m.name).join('、')+'</td><td>'+(owners.some(m=>m.data_mode==='dedicated_table')?'专用业务表':'共享/核心表')+'</td></tr>'}).join('')+'</table>':'<p style="color:var(--muted)">无额外行业表。</p>';
+}
+function openModuleData(id,label){
+  const m=moduleById(id);if(!m)return;
+  showPage('module-data');
+  document.getElementById('moduleDataTitle').textContent=label||m.menu_label||m.name;
+  document.getElementById('moduleDataDesc').textContent=m.description+' · 数据默认在模板切换/模块停用后继续保留。';
+  document.getElementById('moduleDataCreateBtn').onclick=()=>pop('新增 '+(label||m.name)+'（演示）');
+  const schema=(activeIndustryManifest?.content_types||{})[m.content_type||id],fields=schema?.fields||[];
+  const rows=['示例内容 A','示例内容 B','示例内容 C'];
+  document.getElementById('moduleDataTable').innerHTML='<table><tr><th>标题</th><th>状态</th><th>更新时间</th><th>操作</th></tr>'+rows.map((x,i)=>'<tr><td>'+x+'</td><td><span class="badge">'+(i===2?'草稿':'已发布')+'</span></td><td>2026-09-'+(27-i)+'</td><td><button class="btn">编辑</button></td></tr>').join('')+'</table>';
+  document.getElementById('moduleFieldList').innerHTML='<div class="health"><span>存储模式</span><b>'+m.data_mode+'</b></div><div class="health"><span>数据库表</span><b>'+m.tables.join(', ')+'</b></div><div class="health"><span>停用策略</span><b>'+(m.retention==='always'?'核心数据永久保留':'停用不删数据')+'</b></div>'+(fields.length?'<h4>行业字段</h4>'+fields.map(f=>'<div class="health"><span>'+f.label+'</span><small>'+f.type+(f.unit?' · '+f.unit:'')+'</small></div>').join(''):'');
+}
+
 let marketTemplates=[],marketBySlug={},marketMeta=[],marketPage=1,marketTab='recommended',marketCollection='recommended';
 const marketStyleNames=window.MARKET_STYLE_NAMES||{};
 const marketLayoutNames=window.MARKET_LAYOUT_NAMES||{};
