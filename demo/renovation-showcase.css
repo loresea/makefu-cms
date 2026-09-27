@@ -35,3 +35,88 @@ body[data-theme="oriental"]{--accent:#8b6b4c;--ink:#24231f;--muted:#77736b;--bg:
   body[data-theme="modern"] .hero>.wrap{z-index:3;min-height:580px}
   body[data-theme="modern"] .heroContent{width:100%;min-height:580px;padding:70px 24px!important;max-width:720px}
 }
+
+/* 2026-09-27: hard fix for modern theme hero at tablet/mobile widths */
+body[data-theme="modern"] .heroContent h1{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif!important;
+  font-weight:800!important;
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  white-space:normal!important;
+}
+@media(max-width:760px){
+  body[data-theme="modern"] .hero{
+    min-height:620px!important;
+    background:#292524!important;
+  }
+  body[data-theme="modern"] .hero>.wrap{
+    width:calc(100% - 32px)!important;
+    min-height:620px!important;
+    margin:0 auto!important;
+    position:relative!important;
+    z-index:4!important;
+  }
+  body[data-theme="modern"] .heroContent{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    min-height:620px!important;
+    padding:72px 0 56px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+  }
+  body[data-theme="modern"] .heroContent .eyebrow{
+    align-self:flex-start!important;
+  }
+  body[data-theme="modern"] .heroContent h1{
+    display:block!important;
+    width:100%!important;
+    max-width:430px!important;
+    margin:16px 0 18px!important;
+    font-size:clamp(36px,10vw,46px)!important;
+    line-height:1.12!important;
+    letter-spacing:-.04em!important;
+  }
+  body[data-theme="modern"] .heroContent p{
+    display:block!important;
+    width:100%!important;
+    max-width:430px!important;
+    font-size:16px!important;
+    line-height:1.75!important;
+    margin:0!important;
+  }
+  body[data-theme="modern"] .heroBtns,
+  body[data-theme="modern"] .actions{
+    display:flex!important;
+    width:100%!important;
+    max-width:430px!important;
+    gap:10px!important;
+    flex-wrap:wrap!important;
+  }
+  body[data-theme="modern"] .actions .btn{
+    writing-mode:horizontal-tb!important;
+    white-space:nowrap!important;
+    min-width:0!important;
+  }
+  body[data-theme="modern"] .hero .heroImg{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    z-index:1!important;
+  }
+  body[data-theme="modern"] .hero:before{
+    display:block!important;
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:2!important;
+    background:linear-gradient(90deg,rgba(28,24,21,.92) 0%,rgba(28,24,21,.82) 52%,rgba(28,24,21,.45) 100%)!important;
+  }
+}
