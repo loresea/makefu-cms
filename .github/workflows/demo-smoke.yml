@@ -21,249 +21,172 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify required demo pages
+      - name: Verify V2 template system files
         run: |
           test -f demo/index.html
           test -f demo/cms.html
-          test -f demo/template.html
           test -f demo/login.html
           test -f demo/install.html
-          test -f demo/travel.html
-          test -f demo/renovation.html
+          test -f demo/industry-market.html
+          test -f demo/template-detail.html
+          test -f demo/industry-template.html
+          test -f demo/industry-template.css
+          test -f demo/industry-template.js
+          test -f demo/industry-template-system.js
+          test -f demo/industries.json
+          test -f demo/module-registry.json
+          test -f demo/template-presets.js
+          test -f demo/template-preview.js
+          test -f demo/template-market-data.js
+          test -f demo/image-library.js
+          test -f demo/logo.js
+          test -f demo/article-editor.html
           test -f demo/renovation-modern.html
           test -f demo/renovation-natural.html
           test -f demo/renovation-luxury.html
           test -f demo/renovation-retro.html
           test -f demo/renovation-oriental.html
           test -f demo/renovation-urban.html
-          test -f demo/renovation-market.html
-          test -f demo/renovation-page.html
           test -f demo/renovation-showcase.css
           test -f demo/renovation-showcase.js
-          test -f demo/renovation-variants.json
-          test -f demo/accounting.html
-          test -f demo/lawyer.html
-          test -f demo/industry-market.html
-          test -f demo/industry.html
-          test -f demo/industries.json
-          test -f demo/industry-packs.json
-          test -f demo/template-matrix.json
-          test -f demo/site.css
-          test -f demo/site.js
-          test -f demo/design-system.css
-          test -f demo/template-presets.js
-          test -f demo/image-library.js
-          test -f demo/motion.js
-          test -f demo/template-preview.js
-          test -f demo/template-market-data.js
-          test -f demo/template-detail.html
-          test -f demo/module-registry.json
-          test -f demo/industry-manifests/renovation.json
-          test -f demo/logo.js
-          test -f demo/site-home.html
-          test -f demo/site-products.html
-          test -f demo/site-product.html
-          test -f demo/site-cases.html
-          test -f demo/site-case.html
-          test -f demo/site-news.html
-          test -f demo/site-news-detail.html
-          test -f demo/site-about.html
-          test -f demo/site-contact.html
-          test -f demo/editor.html
-          test -f demo/article-editor.html
 
-      - name: Verify admin and multi-page behavior
+      - name: Verify admin and marketplace behavior
         run: |
           grep -q 'id="frontLink".*target="_blank"' demo/cms.html
           grep -q 'position:fixed;left:0;top:0;bottom:0;width:184px' demo/cms.html
           grep -q "location.href='./article-editor.html'" demo/cms.html
-          grep -q 'site-news-detail.html' demo/site.js
-          grep -q 'site-products.html' demo/site.js
-          grep -q 'site-cases.html' demo/site.js
-          grep -q 'site-about.html' demo/site.js
-          grep -q 'site-contact.html' demo/site.js
-          grep -q 'industryLogoMarkup' demo/site.js
-          grep -q '浙ICP备2026XXXX号-1' demo/site.js
-          grep -q 'https://www.makefu.com/' demo/site.js
-          grep -q '找到和客户想法匹配的网站模板' demo/industry-market.html
           grep -q 'templateMarketSearch' demo/cms.html
+          grep -q 'templateMarketIndustry' demo/cms.html
           grep -q 'templateMarketStyle' demo/cms.html
-          grep -q 'text-align:center' demo/design-system.css
-          grep -q 'data-layout' demo/design-system.css
-          grep -q 'IMAGE_POOLS' demo/image-library.js
-          grep -q 'contentGridColumns' demo/site.js
-          grep -q 'brand-center' demo/template-presets.js
-          grep -q 'stacked' demo/design-system.css
-          grep -q 'nav_variants' demo/template-matrix.json
-          grep -q 'makeTemplatePreview' demo/industry-market.html
-          grep -q 'makeTemplatePreview' demo/cms.html
           grep -q 'templateMarketSort' demo/cms.html
           grep -q 'data-market-tab="mine"' demo/cms.html
-          grep -q 'MARKET_COLLECTIONS' demo/template-market-data.js
-          grep -q 'template-detail.html' demo/industry-market.html
+          grep -q 'buildIndustryTemplates' demo/cms.html
+          grep -q 'buildIndustryManifest' demo/cms.html
           grep -q 'makefu-active-industry-pack' demo/cms.html
           grep -q 'applyIndustryPack' demo/cms.html
           grep -q 'module-registry.json' demo/cms.html
-          grep -q 'industry-manifests/renovation.json' demo/cms.html
-          grep -q '"required_modules"' demo/industry-manifests/renovation.json
-          grep -q '"backend_menu"' demo/industry-manifests/renovation.json
-          grep -q 'renovation-variants.json' demo/cms.html
-          grep -q '"count": 6' demo/renovation-variants.json
-          grep -q 'case-detail' demo/renovation-showcase.js
-          grep -q 'service-detail' demo/renovation-showcase.js
-          grep -q 'style-detail' demo/renovation-showcase.js
-          grep -q 'designer-detail' demo/renovation-showcase.js
-          grep -q 'article-detail' demo/renovation-showcase.js
-          grep -q 'materials' demo/renovation-showcase.js
+          grep -q '旧版单模板已退役' demo/cms.html
+          grep -q '找到和客户想法匹配的网站模板' demo/industry-market.html
+          grep -q '1200 套行业模板' demo/industry-market.html
+          grep -q 'id="industry"' demo/industry-market.html
+          grep -q 'template-detail.html' demo/industry-market.html
+          grep -q 'MARKET_COLLECTIONS' demo/template-market-data.js
+          grep -q 'getIndustryVisuals' demo/image-library.js
+          grep -q 'industry-template.html' demo/industry-template-system.js
 
       - name: Check internal demo links
         run: |
           python3 - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
-          from urllib.parse import urlparse
 
           root = Path("demo")
-
           class Parser(HTMLParser):
               def __init__(self):
-                  super().__init__()
-                  self.links = []
+                  super().__init__(); self.links=[]
               def handle_starttag(self, tag, attrs):
-                  if tag == "a":
-                      d = dict(attrs)
-                      if "href" in d:
-                          self.links.append(d["href"])
-
-          errors = []
+                  if tag=="a":
+                      d=dict(attrs)
+                      if "href" in d:self.links.append(d["href"])
+          errors=[]
           for html in root.glob("*.html"):
-              p = Parser()
-              p.feed(html.read_text(encoding="utf-8"))
+              p=Parser(); p.feed(html.read_text(encoding="utf-8"))
               for href in p.links:
-                  if not href or href.startswith(("#","http://","https://","mailto:","tel:","javascript:")):
-                      continue
-                  target = href.split("#",1)[0].split("?",1)[0]
-                  if not target:
-                      continue
-                  path = (html.parent / target).resolve()
-                  if not path.exists():
-                      errors.append(f"{html}: missing {href}")
-          if errors:
-              raise SystemExit("\n".join(errors))
+                  if not href or href.startswith(("#","http://","https://","mailto:","tel:","javascript:")): continue
+                  target=href.split("#",1)[0].split("?",1)[0]
+                  if not target: continue
+                  if not (html.parent/target).resolve().exists(): errors.append(f"{html}: missing {href}")
+          if errors: raise SystemExit("\n".join(errors))
           print("Internal links OK")
           PY
 
-      - name: Validate industry content packs
-        run: |
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          required = ["travel","renovation","accounting","lawyer"]
-          for slug in required:
-              p = Path("demo/content-packs") / f"{slug}.json"
-              assert p.exists(), f"missing {p}"
-              data = json.loads(p.read_text(encoding="utf-8"))
-              assert data.get("theme") == slug
-              assert data.get("menus")
-              assert data.get("blocks")
-          print("Industry content packs OK")
-          PY
-
-      - name: Validate 200-industry registry
-        run: |
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          reg = json.loads(Path("demo/industries.json").read_text(encoding="utf-8"))
-          packs = json.loads(Path("demo/industry-packs.json").read_text(encoding="utf-8"))
-          assert reg["count"] == 200, reg["count"]
-          assert len(reg["industries"]) == 200
-          assert packs["count"] == 200, packs["count"]
-          assert len(packs["packs"]) == 200
-          slugs = {x["slug"] for x in reg["industries"]}
-          pack_slugs = {x["slug"] for x in packs["packs"]}
-          assert slugs == pack_slugs
-          matrix = json.loads(Path("demo/template-matrix.json").read_text(encoding="utf-8"))
-          assert matrix["count"] == 200
-          assert matrix["unique_fingerprints"] == 200
-          assert len(matrix.get("nav_variants", [])) == 8
-          fingerprints = [x["fingerprint"] for x in matrix["templates"]]
-          assert len(fingerprints) == len(set(fingerprints)) == 200
-          assert {x["slug"] for x in matrix["templates"]} == slugs
-          print("200-industry registry, content packs and unique design matrix OK")
-          PY
-
-      - name: Audit renovation grid completeness
+      - name: Validate 200 industries and 1200 templates
         run: |
           node <<'NODE'
-          const fs = require('fs');
-          const vm = require('vm');
-          const source = fs.readFileSync('demo/renovation-showcase.js', 'utf8');
-          const sandbox = {
-            document: { body: { dataset: {} }, addEventListener() {}, querySelector() { return null; } },
-            location: { search: '' },
-            URLSearchParams,
-            console,
-          };
+          const fs=require('fs'),vm=require('vm');
+          const industries=JSON.parse(fs.readFileSync('demo/industries.json','utf8')).industries;
+          if(industries.length!==200)throw new Error('Expected 200 industries');
+          const src=fs.readFileSync('demo/industry-template-system.js','utf8');
+          const sandbox={window:{},console,encodeURIComponent};
           vm.createContext(sandbox);
-          vm.runInContext(source + '\n;globalThis.__THEMES=THEMES;', sandbox);
-          const themes = sandbox.__THEMES;
-          const names = Object.keys(themes);
-          if (names.length !== 6) throw new Error('Expected 6 renovation themes, got ' + names.length);
-          for (const name of names) {
-            const t = themes[name];
-            if (!t.caseCols || t.caseTitles.length % t.caseCols !== 0) {
-              throw new Error(name + ': case grid has orphan items: ' + t.caseTitles.length + ' / ' + t.caseCols);
-            }
-            if (!t.styleCols || t.styles.length % t.styleCols !== 0) {
-              throw new Error(name + ': style grid has orphan items: ' + t.styles.length + ' / ' + t.styleCols);
-            }
-          }
-          console.log('Renovation grids close cleanly for all 6 themes');
+          vm.runInContext(src+'\n;globalThis.__build=buildIndustryTemplates;globalThis.__bp=INDUSTRY_FAMILY_BLUEPRINTS;globalThis.__manifest=buildIndustryManifest;',sandbox);
+          const catalog=sandbox.__build(industries);
+          if(catalog.length!==1200)throw new Error('Expected 1200 templates, got '+catalog.length);
+          const slugs=new Set(catalog.map(x=>x.slug));
+          if(slugs.size!==1200)throw new Error('Template slugs are not unique');
+          const groups=new Map();
+          for(const t of catalog)groups.set(t.industry_slug,(groups.get(t.industry_slug)||0)+1);
+          if(groups.size!==200)throw new Error('Expected 200 industry groups');
+          for(const [slug,count] of groups)if(count!==6)throw new Error(slug+' has '+count+' templates');
+          for(const [family,bp] of Object.entries(sandbox.__bp))if(bp.variants.length!==6)throw new Error(family+' does not have 6 design variants');
+          for(const t of catalog.filter(x=>x.industry_slug!=='renovation'))if(!t.preview.includes('industry-template.html'))throw new Error('Legacy preview leaked into V2 catalog: '+t.slug);
+          console.log('V2 catalog OK: 200 industries × 6 = 1200');
           NODE
 
-      - name: Check inline JavaScript syntax
+      - name: Validate all industry manifests against module registry
+        run: |
+          node <<'NODE'
+          const fs=require('fs'),vm=require('vm');
+          const industries=JSON.parse(fs.readFileSync('demo/industries.json','utf8')).industries;
+          const registry=JSON.parse(fs.readFileSync('demo/module-registry.json','utf8')).modules;
+          const ids=new Set(registry.map(x=>x.id));
+          if(ids.size!==registry.length)throw new Error('Duplicate module ids');
+          const src=fs.readFileSync('demo/industry-template-system.js','utf8');
+          const sandbox={window:{},console,encodeURIComponent};vm.createContext(sandbox);
+          vm.runInContext(src+'\n;globalThis.__manifest=buildIndustryManifest;',sandbox);
+          for(const industry of industries){
+            const m=sandbox.__manifest(industry);
+            for(const id of m.required_modules)if(!ids.has(id))throw new Error(industry.slug+' requires unknown module '+id);
+            for(const g of m.backend_menu)for(const item of g.items)if(!ids.has(item.module))throw new Error(industry.slug+' menu uses unknown module '+item.module);
+            if(!m.install_modes.theme_only||!m.install_modes.structure||!m.install_modes.demo)throw new Error(industry.slug+' missing install modes');
+          }
+          console.log('All 200 industry manifests resolve to registered modules');
+          NODE
+
+      - name: Audit renovation full-row grids
+        run: |
+          node <<'NODE'
+          const fs=require('fs'),vm=require('vm');
+          const source=fs.readFileSync('demo/renovation-showcase.js','utf8');
+          const sandbox={document:{body:{dataset:{}},addEventListener(){},querySelector(){return null}},location:{search:''},URLSearchParams,console};
+          vm.createContext(sandbox);vm.runInContext(source+'\n;globalThis.__THEMES=THEMES;',sandbox);
+          const themes=sandbox.__THEMES,names=Object.keys(themes);
+          if(names.length!==6)throw new Error('Expected 6 renovation themes');
+          for(const name of names){
+            const t=themes[name];
+            if(t.caseTitles.length%t.caseCols!==0)throw new Error(name+' case grid orphan');
+            if(t.styles.length%t.styleCols!==0)throw new Error(name+' style grid orphan');
+          }
+          console.log('Renovation grids close cleanly');
+          NODE
+
+      - name: Check JavaScript syntax
         run: |
           python3 - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
-
           class Scripts(HTMLParser):
-              def __init__(self):
-                  super().__init__()
-                  self.in_script = False
-                  self.buf = []
-                  self.scripts = []
-              def handle_starttag(self, tag, attrs):
-                  if tag == "script":
-                      self.in_script = True
-                      self.buf = []
-              def handle_endtag(self, tag):
-                  if tag == "script" and self.in_script:
-                      self.scripts.append("".join(self.buf))
-                      self.in_script = False
-              def handle_data(self, data):
-                  if self.in_script:
-                      self.buf.append(data)
-
-          out = Path("/tmp/demo-js")
-          out.mkdir(exist_ok=True)
-          n = 0
+              def __init__(self): super().__init__(); self.ins=False; self.buf=[]; self.scripts=[]
+              def handle_starttag(self,tag,attrs):
+                  if tag=="script" and not dict(attrs).get("src"): self.ins=True; self.buf=[]
+              def handle_endtag(self,tag):
+                  if tag=="script" and self.ins:self.scripts.append("".join(self.buf));self.ins=False
+              def handle_data(self,data):
+                  if self.ins:self.buf.append(data)
+          out=Path("/tmp/demo-js");out.mkdir(exist_ok=True);n=0
           for html in Path("demo").glob("*.html"):
-              p = Scripts()
-              p.feed(html.read_text(encoding="utf-8"))
+              p=Scripts();p.feed(html.read_text(encoding="utf-8"))
               for script in p.scripts:
                   if script.strip():
-                      n += 1
-                      (out / f"{n}.js").write_text(script, encoding="utf-8")
-          print(f"Extracted {n} scripts")
+                      n+=1;(out/f"{n}.js").write_text(script,encoding="utf-8")
+          print("Extracted",n,"inline scripts")
           PY
           for f in /tmp/demo-js/*.js; do node --check "$f"; done
-          node --check demo/site.js
           node --check demo/logo.js
-          node --check demo/template-presets.js
           node --check demo/image-library.js
-          node --check demo/motion.js
+          node --check demo/template-presets.js
           node --check demo/template-preview.js
           node --check demo/template-market-data.js
+          node --check demo/industry-template-system.js
+          node --check demo/industry-template.js
           node --check demo/renovation-showcase.js
