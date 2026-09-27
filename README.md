@@ -9,12 +9,9 @@
 - 后台演示：https://loresea.github.io/makefu-cms/cms.html
 - 安装向导：https://loresea.github.io/makefu-cms/install.html
 - 登录页：https://loresea.github.io/makefu-cms/login.html
-- 200 行业模板库：https://loresea.github.io/makefu-cms/industry-market.html
-- 通用模板预览：https://loresea.github.io/makefu-cms/template.html?theme=default&page=home
-- 旅游行业：https://loresea.github.io/makefu-cms/travel.html
-- 装修行业：https://loresea.github.io/makefu-cms/renovation.html
-- 代理记账：https://loresea.github.io/makefu-cms/accounting.html
-- 律师行业：https://loresea.github.io/makefu-cms/lawyer.html
+- 1200 套行业模板中心：https://loresea.github.io/makefu-cms/industry-market.html
+- 通用行业模板渲染器：https://loresea.github.io/makefu-cms/industry-template.html?industry=machinery&variant=0&page=home
+- 装修行业 6 套精品模板仍保留为专项样板；其他旧版单模板已从模板市场退役。
 
 后台演示中的“查看前台”和模板预览均使用新窗口打开，不会覆盖后台。
 
@@ -72,19 +69,18 @@
 - 模板更新
 - 模板市场接口
 
-内置方向：
-1. 企业商务 Pro
-2. 工业智造
-3. 外贸独立站
-4. 极简品牌
-5. 旅行发现（旅游行业）
-6. 筑家设计（装修行业）
-7. 企财管家（代理记账）
-8. 衡正律师（律师行业）
+当前模板系统采用 **200 个行业 × 每行业 6 套 = 1200 套行业模板** 的统一架构。每个行业先按业务模型拆解栏目、模块、详情页和后台字段，再提供 6 种不同商业定位与视觉方向。
 
-当前行业注册表已扩展到 **200 个常用行业模板**，后台模板市场支持分类、搜索、无需安装预览和三种启用方式。所有行业模板使用图片型 SVG Logo，前台统一带主站版权链接与演示备案信息。
+模板市场支持：
+- 具体行业 / 行业分类筛选
+- 风格 / 用途筛选
+- 搜索
+- 热门 / 安装最多 / 收藏最多 / 评分最高 / 最新 / 最近更新 / 上升最快排序
+- 收藏、最近浏览、已安装状态
+- 统一模板详情页
+- 仅安装模板 / 模板 + 行业结构 / 模板 + 完整演示数据三种模式
 
-行业模板采用“Theme + 可选 Starter Content Pack”模式。切换模板默认不会覆盖真实内容；可选择仅换外观、只填空白行业内容、或在新站中完整导入演示数据。
+行业模板采用 “Theme + Industry Manifest + Module Registry” 模式。安装行业结构时，后台菜单、业务模块和字段会跟随行业变化；停用模板或模块默认不会删除已有数据。
 
 ### 插件
 - 安装 / 启用 / 停用 / 卸载 / 更新
