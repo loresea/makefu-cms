@@ -179,6 +179,35 @@ jobs:
           print("200-industry registry, content packs and unique design matrix OK")
           PY
 
+      - name: Audit renovation grid completeness
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const vm = require('vm');
+          const source = fs.readFileSync('demo/renovation-showcase.js', 'utf8');
+          const sandbox = {
+            document: { addEventListener() {}, querySelector() { return null; } },
+            location: { search: '' },
+            URLSearchParams,
+            console,
+          };
+          vm.createContext(sandbox);
+          vm.runInContext(source + '\n;globalThis.__THEMES=THEMES;', sandbox);
+          const themes = sandbox.__THEMES;
+          const names = Object.keys(themes);
+          if (names.length !== 6) throw new Error('Expected 6 renovation themes, got ' + names.length);
+          for (const name of names) {
+            const t = themes[name];
+            if (!t.caseCols || t.caseTitles.length % t.caseCols !== 0) {
+              throw new Error(name + ': case grid has orphan items: ' + t.caseTitles.length + ' / ' + t.caseCols);
+            }
+            if (!t.styleCols || t.styles.length % t.styleCols !== 0) {
+              throw new Error(name + ': style grid has orphan items: ' + t.styles.length + ' / ' + t.styleCols);
+            }
+          }
+          console.log('Renovation grids close cleanly for all 6 themes');
+          NODE
+
       - name: Check inline JavaScript syntax
         run: |
           python3 - <<'PY'
