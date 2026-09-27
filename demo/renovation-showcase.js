@@ -133,12 +133,18 @@ function hero(){
 function stats(){
  return '<div class="stats wrap">'+theme.stats.map(x=>'<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div>'
 }
+function caseMeta(i){
+ const areas=[118,98,170,220,135,260,145,200,126,188];
+ const budgets=['20-30 万','15-25 万','35-50 万','55-80 万','30-45 万','60-90 万','28-42 万','45-70 万','25-38 万','40-65 万'];
+ const types=['三居室','两居室','四居室','大平层','改善三居','复式','三居室','跃层','三居室','大平层'];
+ return {area:areas[i%areas.length],budget:budgets[i%budgets.length],type:types[i%types.length],duration:(90+i*8)+' 天'};
+}
 function cases(){
- return '<section class="section" id="cases"><div class="wrap"><div class="head reveal"><div><h2>真实落地案例</h2><p>不是概念效果图，而是围绕户型、家庭结构、预算和生活习惯完成的真实空间方案。</p></div><a href="'+pageUrl('cases')+'">查看全部案例 →</a></div><div class="cases">'+theme.caseTitles.map((t,i)=>'<a class="case reveal" href="'+pageUrl('cases')+'">'+img(uniqueImage(1+i),t)+'<div class="caseCopy"><small>'+[118,98,170,220,135,260][i]+'㎡ · '+theme.style+'</small><h3>'+t+'</h3></div></a>').join('')+'</div></div></section>'
+ return '<section class="section" id="cases"><div class="wrap"><div class="head reveal"><div><h2>真实落地案例</h2><p>不是概念效果图，而是围绕户型、家庭结构、预算和生活习惯完成的真实空间方案。</p></div><a href="'+pageUrl('cases')+'">查看全部案例 →</a></div><div class="cases">'+theme.caseTitles.map((t,i)=>{const m=caseMeta(i);return '<a class="case reveal" href="'+pageUrl('case-detail',i)+'">'+img(uniqueImage(1+i),t)+'<div class="caseCopy"><small>'+m.area+'㎡ · '+m.type+' · '+theme.style+'</small><h3>'+t+'</h3><span class="detailLink">查看案例详情 →</span></div></a>'}).join('')+'</div></div></section>'
 }
 function services(){
  const desc=['从平面规划、动线、收纳到完整视觉系统。','施工节点、预算、进度和现场质量统一管理。','改善采光、收纳、功能和老房结构问题。','家具、灯具、窗帘、艺术品与生活方式搭配。'];
- return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>装修服务</h2><p>从设计到落地，把装修过程中最难协调的事情放在一套服务流程里完成。</p></div></div><div class="services">'+theme.services.map((x,i)=>'<article class="service reveal"><span class="num">0'+(i+1)+'</span><h3>'+x+'</h3><p>'+desc[i]+'</p><a href="'+pageUrl('services')+'">了解服务 →</a></article>').join('')+'</div></div></section>'
+ return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>装修服务</h2><p>从设计到落地，把装修过程中最难协调的事情放在一套服务流程里完成。</p></div></div><div class="services">'+theme.services.map((x,i)=>'<article class="service reveal"><span class="num">0'+(i+1)+'</span><h3>'+x+'</h3><p>'+desc[i]+'</p><a class="serviceLink" href="'+pageUrl('service-detail',i)+'">查看服务详情 →</a></article>').join('')+'</div></div></section>'
 }
 function styles(){
  return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>设计风格不是套模板</h2><p>同一种审美，也要根据家庭结构、房屋条件和日常习惯重新设计。</p></div></div><div class="styleGrid">'+theme.styles.map((x,i)=>'<figure class="reveal">'+img(uniqueImage(7+i),x)+'<figcaption>'+x+'</figcaption></figure>').join('')+'</div></div></section>'
