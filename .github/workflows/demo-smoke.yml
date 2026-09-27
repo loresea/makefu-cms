@@ -43,6 +43,7 @@ jobs:
           test -f demo/template-presets.js
           test -f demo/image-library.js
           test -f demo/motion.js
+          test -f demo/template-preview.js
           test -f demo/logo.js
           test -f demo/site-home.html
           test -f demo/site-products.html
@@ -79,6 +80,8 @@ jobs:
           grep -q 'brand-center' demo/template-presets.js
           grep -q 'stacked' demo/design-system.css
           grep -q 'nav_variants' demo/template-matrix.json
+          grep -q 'makeTemplatePreview' demo/industry-market.html
+          grep -q 'makeTemplatePreview' demo/cms.html
 
       - name: Check internal demo links
         run: |
@@ -199,3 +202,4 @@ jobs:
           node --check demo/template-presets.js
           node --check demo/image-library.js
           node --check demo/motion.js
+          node --check demo/template-preview.js
