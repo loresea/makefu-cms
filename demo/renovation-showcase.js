@@ -147,7 +147,7 @@ function services(){
  return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>装修服务</h2><p>从设计到落地，把装修过程中最难协调的事情放在一套服务流程里完成。</p></div></div><div class="services">'+theme.services.map((x,i)=>'<article class="service reveal"><span class="num">0'+(i+1)+'</span><h3>'+x+'</h3><p>'+desc[i]+'</p><a class="serviceLink" href="'+pageUrl('service-detail',i)+'">查看服务详情 →</a></article>').join('')+'</div></div></section>'
 }
 function styles(){
- return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>设计风格不是套模板</h2><p>同一种审美，也要根据家庭结构、房屋条件和日常习惯重新设计。</p></div></div><div class="styleGrid">'+theme.styles.map((x,i)=>'<figure class="reveal">'+img(uniqueImage(7+i),x)+'<figcaption>'+x+'</figcaption></figure>').join('')+'</div></div></section>'
+ return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>设计风格不是套模板</h2><p>同一种审美，也要根据家庭结构、房屋条件和日常习惯重新设计。</p></div><a href="'+pageUrl('styles')+'">查看全部风格 →</a></div><div class="styleGrid">'+theme.styles.map((x,i)=>'<a class="styleItem reveal" href="'+pageUrl('style-detail',i)+'">'+img(uniqueImage(7+i),x)+'<span class="styleCaption">'+x+'<em>查看详情 →</em></span></a>').join('')+'</div></div></section>'
 }
 function process(){
  const arr=['需求与量房','平面方案','效果深化','预算与选材','施工落地','软装交付'];
@@ -157,7 +157,7 @@ function materials(){
  return '<section class="section"><div class="wrap materials"><div class="materialImage reveal">'+img(uniqueImage(12),'材料与工艺')+'</div><div class="reveal"><span class="eyebrow" style="color:var(--accent);border-color:var(--accent)">MATERIAL & CRAFT</span><h2 style="font-size:42px;line-height:1.18">材料不是参数表，<br>而是未来很多年的触感。</h2><p style="color:var(--muted)">我们把环保、耐用、维修成本和最终质感一起考虑，不单纯追求样板间效果。</p><div class="materialList">'+theme.materials.map(x=>'<div class="materialCard"><b>'+x+'</b><span>来源、规格、环保等级与施工节点可追溯。</span></div>').join('')+'</div></div></div></section>'
 }
 function team(){
- return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>设计团队</h2><p>主案、深化、软装和工程管理各自负责专业部分。</p></div><a href="'+pageUrl('designers')+'">认识团队 →</a></div><div class="team">'+theme.designers.map((x,i)=>'<article class="person reveal">'+img(uniqueImage(13+i),'设计团队')+'<div class="copy"><h3>'+x+'</h3><p>'+['住宅空间 / 改善型户型 / 全案统筹','平面优化 / 材料细节 / 现场深化','软装陈设 / 色彩 / 艺术品搭配'][i]+'</p></div></article>').join('')+'</div></div></section>'
+ return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>设计团队</h2><p>主案、深化、软装和工程管理各自负责专业部分。</p></div><a href="'+pageUrl('designers')+'">认识团队 →</a></div><div class="team">'+theme.designers.map((x,i)=>'<a class="person reveal" href="'+pageUrl('designer-detail',i)+'">'+img(uniqueImage(13+i),'设计团队')+'<div class="copy"><h3>'+x+'</h3><p>'+['住宅空间 / 改善型户型 / 全案统筹','平面优化 / 材料细节 / 现场深化','软装陈设 / 色彩 / 艺术品搭配'][i]+'</p><span class="serviceLink">查看设计师 →</span></div></a>').join('')+'</div></div></section>'
 }
 function packages(){
  return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>价格参考</h2><p>先把费用结构讲清楚，再根据房屋和需求给出正式报价。</p></div></div><div class="packages">'+theme.packages.map((x,i)=>'<article class="package '+(i===1?'hot':'')+' reveal"><small>'+['适合局部/基础需求','多数家庭选择','改善型/高要求项目'][i]+'</small><h3>'+x[0]+'</h3><div class="price">'+x[1]+'</div><ul><li>前期需求梳理</li><li>空间方案设计</li><li>材料与预算建议</li><li>节点交付与复盘</li></ul><a class="btn" href="'+pageUrl('contact')+'">获取详细报价</a></article>').join('')+'</div></div></section>'
@@ -168,7 +168,7 @@ function reviews(){
 }
 function journal(){
  const arr=['旧房翻新最容易漏掉的 6 项预算','全屋定制什么时候进场最合适？','小户型怎么做收纳，才不会越做越挤？'];
- return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>装修知识</h2><p>从真实项目里整理预算、工艺和空间规划经验。</p></div><a href="'+pageUrl('journal')+'">全部文章 →</a></div><div class="journal">'+arr.map((x,i)=>'<a class="article reveal" href="'+pageUrl('journal')+'">'+img(uniqueImage(16+i),x)+'<div class="copy"><time>2026.09.'+(18-i*4)+'</time><h3>'+x+'</h3><p style="color:var(--muted)">装修不是信息越多越好，而是关键节点要知道自己应该看什么。</p></div></a>').join('')+'</div></div></section>'
+ return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>装修知识</h2><p>从真实项目里整理预算、工艺和空间规划经验。</p></div><a href="'+pageUrl('journal')+'">全部文章 →</a></div><div class="journal">'+arr.map((x,i)=>'<a class="article reveal" href="'+pageUrl('article-detail',i)+'">'+img(uniqueImage(16+i),x)+'<div class="copy"><time>2026.09.'+(18-i*4)+'</time><h3>'+x+'</h3><p style="color:var(--muted)">装修不是信息越多越好，而是关键节点要知道自己应该看什么。</p><span class="serviceLink">阅读全文 →</span></div></a>').join('')+'</div></div></section>'
 }
 function quote(){
  return '<section class="section"><div class="wrap"><div class="quote reveal"><div><h2>先聊户型、预算和你真正想解决的问题。</h2><p>提交基础信息后，设计顾问会给你一个初步空间建议和预算范围。</p></div><a class="btn" href="'+pageUrl('contact')+'" style="background:#fff;color:#222;border-color:#fff">预约量房</a></div></div></section>'
