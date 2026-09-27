@@ -128,7 +128,7 @@
 
 <section class="page" id="p-redirects"><div class="hero"><div><h1>301 跳转</h1><p>改版和 URL 调整时保护已有 SEO 权重。</p></div><button class="btn dark" onclick="pop('新增 301 规则（演示）')">+ 新增规则</button></div><div class="card box"><table><tr><th>旧地址</th><th>新地址</th><th>状态码</th><th>命中</th><th>状态</th></tr><tr><td>/old-products</td><td>/products</td><td>301</td><td>82</td><td><span class="badge">启用</span></td></tr><tr><td>/news/123.html</td><td>/articles/company-news</td><td>301</td><td>16</td><td><span class="badge">启用</span></td></tr></table></div></section>
 
-<section class="page" id="p-settings"><div class="hero"><div><h1>网站设置</h1><p>站点信息、品牌、SEO、统计和维护配置。</p></div><button class="btn dark" onclick="pop('网站设置已模拟保存')">保存设置</button></div><div class="card box"><div class="settings"><div class="field"><label>网站名称</label><input value="码科服示例企业"></div><div class="field"><label>公司名称</label><input value="杭州示例科技有限公司"></div><div class="field"><label>联系电话</label><input value="400-000-0000"></div><div class="field"><label>邮箱</label><input value="hello@example.com"></div><div class="field full"><label>SEO 描述</label><input value="专业企业官网、产品展示与数字化服务。"></div><div class="field"><label>当前模板</label><select id="themeSelect"><option value="default">企业商务 Pro</option><option value="industrial">工业智造</option><option value="export">外贸独立站</option><option value="minimal">极简品牌</option><option value="travel">旅行发现</option><option value="renovation">筑家设计</option><option value="accounting">企财管家</option><option value="lawyer">衡正律师</option></select></div><div class="field"><label>自动备份</label><select><option>每天</option><option>每周</option></select></div><div class="field"><label>备案号</label><input value="浙ICP备XXXXXXXX号"></div><div class="field"><label>统计代码</label><input value="GA / 百度统计"></div></div></div></section>
+<section class="page" id="p-settings"><div class="hero"><div><h1>网站设置</h1><p>站点信息、品牌、SEO、统计和维护配置。</p></div><button class="btn dark" onclick="pop('网站设置已模拟保存')">保存设置</button></div><div class="card box"><div class="settings"><div class="field"><label>网站名称</label><input value="码科服示例企业"></div><div class="field"><label>公司名称</label><input value="杭州示例科技有限公司"></div><div class="field"><label>联系电话</label><input value="400-000-0000"></div><div class="field"><label>邮箱</label><input value="hello@example.com"></div><div class="field full"><label>SEO 描述</label><input value="专业企业官网、产品展示与数字化服务。"></div><div class="field"><label>当前模板</label><input id="currentTemplateInput" value="未选择" readonly><small style="color:var(--muted)">模板请在“模板市场”安装，不再使用旧版固定模板。</small></div><div class="field"><label>自动备份</label><select><option>每天</option><option>每周</option></select></div><div class="field"><label>备案号</label><input value="浙ICP备XXXXXXXX号"></div><div class="field"><label>统计代码</label><input value="GA / 百度统计"></div></div></div></section>
 
 <section class="page" id="p-users"><div class="hero"><div><h1>用户与权限</h1><p>超级管理员、编辑和后续 RBAC 权限扩展。</p></div><button class="btn dark" onclick="pop('新增后台用户（演示）')">+ 新增用户</button></div><div class="card box"><table><tr><th>用户</th><th>邮箱</th><th>角色</th><th>最后登录</th><th>状态</th></tr><tr><td><b>管理员</b></td><td>admin@example.com</td><td><span class="badge blue">超级管理员</span></td><td>刚刚</td><td><span class="badge">正常</span></td></tr><tr><td><b>内容编辑</b></td><td>editor@example.com</td><td><span class="badge gray">编辑</span></td><td>昨天</td><td><span class="badge">正常</span></td></tr></table></div></section>
 
@@ -182,7 +182,7 @@ function showPage(name){
 document.querySelectorAll('[data-page]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();showPage(a.dataset.page)}));
 let tt;
 function pop(s){const x=document.getElementById('toast');if(!x)return;x.textContent=s;x.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>x.classList.remove('show'),1900)}
-function currentTheme(){return localStorage.getItem('makefu-demo-theme')||'default'}
+function currentTheme(){return localStorage.getItem('makefu-demo-theme')||''}
 
 let moduleRegistry={modules:[]},activeIndustryManifest=null,industryRegistry=[];
 function activePackId(){return localStorage.getItem('makefu-active-industry-pack')||''}
@@ -367,20 +367,16 @@ async function installMarketTemplate(slug){
     pop('已启用 '+(x.display_name||x.name)+' · '+({theme_only:'仅模板',structure:'行业结构',demo:'完整演示数据'}[mode]));
   }
 }
-const themeNames={default:'企业商务 Pro',industrial:'工业智造',export:'外贸独立站',minimal:'极简品牌',travel:'旅行发现',renovation:'筑家设计',accounting:'企财管家',lawyer:'衡正律师'};const industryThemeUrls={travel:'./travel.html',renovation:'./renovation.html',accounting:'./accounting.html',lawyer:'./lawyer.html'};
-function refreshTheme(){const t=currentTheme();document.querySelectorAll('[data-theme]').forEach(c=>{const on=c.dataset.theme===t;const m=c.querySelector('.activeMark'),b=c.querySelector('.activate');if(m){m.className='badge '+(on?'':'gray')+' activeMark';m.textContent=on?'当前模板':'未启用'}if(b)b.style.display=on?'none':'inline-flex'});const m=marketBySlug[t];document.getElementById('frontLink').href=industryThemeUrls[t]||(m?.preview||('./template.html?theme='+encodeURIComponent(t)+'&page=home'));const ts=document.getElementById('themeSelect');if(ts&&[...ts.options].some(o=>o.value===t))ts.value=t;document.getElementById('dashTheme').textContent=themeNames[t]||m?.name||t}
-function activateTheme(t){localStorage.setItem('makefu-demo-theme',t);localStorage.setItem('makefu-demo-content-mode','keep');refreshTheme();pop('模板已启用：'+themeNames[t]+'（保留现有内容）')}
-function activateIndustryTheme(t){openModal('启用行业模板：'+themeNames[t],
-  '<p>行业模板包含自己的模块结构、字段定义和示例内容。为了避免切换模板时把客户真实数据覆盖掉，默认不会直接替换内容。</p>'+
-  '<div class="themeChoice">'+
-    '<label class="themeOption"><input type="radio" name="contentMode" value="keep" checked><div><b>仅切换外观与模板结构（推荐已有网站）</b><span>保留文章、产品、案例等真实数据。模板会读取现有内容；缺少的行业专属模块显示为空状态并提示配置。</span></div></label>'+
-    '<label class="themeOption"><input type="radio" name="contentMode" value="fill"><div><b>导入行业起步内容，只填空白项</b><span>导入旅游/装修/财税/律师对应的菜单、内容区块、示例分类和默认文案，不覆盖已有内容。</span></div></label>'+
-    '<label class="themeOption"><input type="radio" name="contentMode" value="replace"><div><b>完整应用行业演示数据（仅新站/测试站）</b><span>先自动创建备份，再用行业内容包重建菜单、模块和演示内容；已有真实内容不建议使用。</span></div></label>'+
-  '</div>'+
-  '<p style="margin-top:14px"><span class="badge blue">推荐机制</span> 模板和内容包分开管理，切换模板 ≠ 覆盖内容。</p>'
-);document.getElementById('modalSaveBtn').textContent='确认启用';document.getElementById('modalSaveBtn').onclick=()=>{const mode=document.querySelector('input[name=contentMode]:checked')?.value||'keep';if(mode==='replace'&&!confirm('完整演示数据会替换模板相关内容。系统将先创建备份，继续吗？'))return;localStorage.setItem('makefu-demo-theme',t);localStorage.setItem('makefu-demo-content-mode',mode);closeModal();refreshTheme();pop('已启用 '+themeNames[t]+' · 内容策略：'+({keep:'保留现有内容',fill:'仅填空白',replace:'完整行业内容包'}[mode]))}}
-
-document.getElementById('themeSelect').addEventListener('change',e=>activateTheme(e.target.value));
+function refreshTheme(){
+  const t=currentTheme(),m=marketBySlug[t];
+  const front=document.getElementById('frontLink');if(front)front.href=m?.preview||'./industry-market.html';
+  const dash=document.getElementById('dashTheme');if(dash)dash.textContent=m?.display_name||'未选择新版模板';
+  const name=document.getElementById('installedThemeName'),meta=document.getElementById('installedThemeMeta'),preview=document.getElementById('installedThemePreview');
+  if(name)name.textContent=m?.display_name||'尚未选择新版模板';
+  if(meta)meta.textContent=m?(m.category+' · '+(marketStyleNames[m.style]||m.style)+' · '+(m.direction||'行业成品模板')):'请从模板市场选择 200 个行业中的任意模板。';
+  if(preview)preview.href=m?.preview||'./industry-market.html';
+  const current=document.getElementById('currentTemplateInput');if(current)current.value=m?.display_name||'未选择';
+}
 function openModal(title,html){modalTitle.textContent=title;modalBody.innerHTML=html;const b=document.getElementById('modalSaveBtn');if(b){b.style.display='inline-flex';b.textContent='保存';b.onclick=saveModal}modal.classList.add('on')}function closeModal(){modal.classList.remove('on')}function saveModal(){closeModal();pop('已保存（演示）')}
 function openEditor(type){
   if(type==='article'){ location.href='./article-editor.html'; return; }
