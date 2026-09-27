@@ -168,7 +168,7 @@ GET /api/v1/search?q=keyword</div><p style="color:var(--muted)">列表支持分�
 
 <div class="modal" id="modal"><div class="dialog"><div class="dialogHd"><b id="modalTitle">编辑</b><button class="btn" onclick="closeModal()">×</button></div><div class="dialogBody" id="modalBody"></div><div class="dialogFt"><span></span><div><button class="btn" onclick="closeModal()">取消</button> <button id="modalSaveBtn" class="btn dark" onclick="saveModal()">保存</button></div></div></div></div>
 <div class="toast" id="toast"></div>
-<script src="./logo.js"></script><script src="./template-presets.js"></script><script src="./image-library.js"></script><script src="./template-preview.js"></script><script src="./template-market-data.js"></script><script>
+<script src="./logo.js"></script><script src="./template-presets.js"></script><script src="./image-library.js"></script><script src="./template-preview.js"></script><script src="./industry-template-system.js"></script><script src="./template-market-data.js"></script><script>
 const titles={dashboard:'工作台',pages:'页面管理',articles:'文章管理',products:'产品管理',cases:'案例管理',media:'媒体库',blocks:'内容区块',revisions:'版本历史',forms:'表单线索',menus:'菜单管理',themes:'模板管理','theme-market':'模板市场',plugins:'插件中心','plugin-market':'插件市场',seo:'SEO 中心',redirects:'301 跳转',settings:'网站设置',modules:'模块中心','module-data':'模块数据',users:'用户与权限',backup:'备份与迁移',delivery:'交付中心',update:'系统更新',health:'系统状态',developer:'API / 开发者',webhooks:'Webhooks',audit:'操作日志'};
 function showPage(name){
   if(!titles[name])name='dashboard';
@@ -256,12 +256,9 @@ const marketLayoutNames=window.MARKET_LAYOUT_NAMES||{};
 async function loadTemplateMarket(force=false){
   if(marketTemplates.length&&!force){renderTemplateMarket();return}
   try{
-    const [j,rv]=await Promise.all([
-      fetch('./industries.json',{cache:force?'reload':'default'}).then(r=>r.json()),
-      fetch('./renovation-variants.json',{cache:force?'reload':'default'}).then(r=>r.json()).catch(()=>({templates:[]}))
-    ]);
-    const base=(j.industries||[]).filter(x=>x.slug!=='renovation');
-    marketTemplates=base.concat(rv.templates||[]);
+    const j=await fetch('./industries.json',{cache:force?'reload':'default'}).then(r=>r.json());
+    industryRegistry=j.industries||[];
+    marketTemplates=buildIndustryTemplates(industryRegistry);
     marketBySlug=Object.fromEntries(marketTemplates.map(x=>[x.slug,x]));
     marketMeta=marketTemplates.map((x,i)=>{
       const auto=getTemplatePreset(x,i);
