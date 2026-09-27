@@ -95,6 +95,7 @@
     </select>
   </div>
   <div class="marketFilters">
+    <select id="templateMarketIndustry" class="input"><option value="">全部具体行业</option></select>
     <select id="templateMarketCategory" class="input"><option value="">全部行业分类</option></select>
     <select id="templateMarketStyle" class="input"><option value="">全部设计风格</option></select>
     <select id="templateMarketUse" class="input"><option value="">全部用途</option></select>
@@ -283,7 +284,8 @@ async function loadTemplateMarket(force=false){
   }catch(e){console.error(e)}
 }
 function fillMarketFilters(){
-  const cat=document.getElementById('templateMarketCategory'),sty=document.getElementById('templateMarketStyle'),use=document.getElementById('templateMarketUse');
+  const ind=document.getElementById('templateMarketIndustry'),cat=document.getElementById('templateMarketCategory'),sty=document.getElementById('templateMarketStyle'),use=document.getElementById('templateMarketUse');
+  if(ind){ind.innerHTML='<option value="">全部具体行业</option>';const im=new Map();marketTemplates.forEach(x=>im.set(x.industry_slug,x.industry_name||x.display_name?.split(' · ')[0]||x.name));[...im.entries()].sort((a,b)=>a[1].localeCompare(b[1],'zh-CN')).forEach(([slug,name])=>ind.insertAdjacentHTML('beforeend','<option value="'+slug+'">'+name+'</option>'))}
   if(cat){cat.innerHTML='<option value="">全部行业分类</option>';[...new Set(marketTemplates.map(x=>x.category))].sort().forEach(x=>cat.insertAdjacentHTML('beforeend','<option>'+x+'</option>'))}
   if(sty){sty.innerHTML='<option value="">全部设计风格</option>';[...new Set(marketMeta.map(v=>v.p.style))].sort().forEach(v=>sty.insertAdjacentHTML('beforeend','<option value="'+v+'">'+(marketStyleNames[v]||v)+'</option>'))}
   if(use){use.innerHTML='<option value="">全部用途</option>';[...new Set(marketMeta.flatMap(v=>v.uses))].sort().forEach(x=>use.insertAdjacentHTML('beforeend','<option>'+x+'</option>'))}
@@ -311,9 +313,9 @@ function setMarketTab(tab){
 function renderTemplateMarket(){
   const grid=document.getElementById('templateMarketGrid');if(!grid)return;
   const q=(document.getElementById('templateMarketSearch')?.value||'').trim();
-  const cat=document.getElementById('templateMarketCategory')?.value||'',sty=document.getElementById('templateMarketStyle')?.value||'',use=document.getElementById('templateMarketUse')?.value||'',my=document.getElementById('templateMarketMy')?.value||'';
+  const ind=document.getElementById('templateMarketIndustry')?.value||'',cat=document.getElementById('templateMarketCategory')?.value||'',sty=document.getElementById('templateMarketStyle')?.value||'',use=document.getElementById('templateMarketUse')?.value||'',my=document.getElementById('templateMarketMy')?.value||'';
   const sort=document.getElementById('templateMarketSort')?.value||'recommended';
-  let rows=marketMeta.filter(v=>(!cat||v.x.category===cat)&&(!sty||v.p.style===sty)&&(!use||v.uses.includes(use))&&marketMatches(v,q));
+  let rows=marketMeta.filter(v=>(!ind||v.x.industry_slug===ind)&&(!cat||v.x.category===cat)&&(!sty||v.p.style===sty)&&(!use||v.uses.includes(use))&&marketMatches(v,q));
   if(marketTab==='recommended')rows=rows.filter(v=>marketInCollection(v,marketCollection));
   if(marketTab==='industry'&&cat==='')rows=rows;
   if(marketTab==='style'&&sty==='')rows=rows;
@@ -439,5 +441,5 @@ function confirmAction(msg){openModal('确认操作','<p>'+msg+'</p><p style="co
 function runBackup(){pop('备份完成：database-20260921-1055.sqlite')}
 function runMigration(){let w=0,el=document.getElementById('migProgress');const id=setInterval(()=>{w+=10;el.style.width=w+'%';if(w>=100){clearInterval(id);pop('迁移完成：已校验表与记录数量')}} ,110)}
 function runUpdate(){let w=0,el=document.getElementById('updProgress'),log=document.getElementById('updLog');const steps=['创建代码备份…','创建数据库备份…','验证 SHA256…','验证 Ed25519 签名…','进入维护模式…','替换核心文件…','执行 migration…','清理缓存…','健康检查…','升级完成。'];log.textContent='';const id=setInterval(()=>{if(w>=100){clearInterval(id);pop('升级流程模拟完成');return}w+=10;el.style.width=w+'%';log.textContent+=steps[w/10-1]+'\n';log.scrollTop=log.scrollHeight},180)}
-addEventListener('load',async()=>{await loadArchitecture();showPage(location.hash.slice(1)||'dashboard');loadTemplateMarket();refreshTheme();document.querySelectorAll('[data-market-tab]').forEach(b=>b.addEventListener('click',()=>setMarketTab(b.dataset.marketTab)));['templateMarketSearch','templateMarketCategory','templateMarketStyle','templateMarketUse','templateMarketMy','templateMarketSort'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener(el.tagName==='INPUT'?'input':'change',()=>{marketPage=1;renderTemplateMarket()})})});addEventListener('hashchange',()=>showPage(location.hash.slice(1)||'dashboard'));
+addEventListener('load',async()=>{await loadArchitecture();showPage(location.hash.slice(1)||'dashboard');loadTemplateMarket();refreshTheme();document.querySelectorAll('[data-market-tab]').forEach(b=>b.addEventListener('click',()=>setMarketTab(b.dataset.marketTab)));['templateMarketSearch','templateMarketIndustry','templateMarketCategory','templateMarketStyle','templateMarketUse','templateMarketMy','templateMarketSort'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener(el.tagName==='INPUT'?'input':'change',()=>{marketPage=1;renderTemplateMarket()})})});addEventListener('hashchange',()=>showPage(location.hash.slice(1)||'dashboard'));
 </script></body></html>
