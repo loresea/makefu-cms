@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "industry": "renovation",
   "industry_name": "装修装饰",
-  "count": 5,
+  "count": 6,
   "templates": [
     {
       "slug": "renovation-modern",
@@ -102,6 +102,26 @@
         "东方现代",
         "新中式",
         "留白"
+      ]
+    },
+    {
+      "slug": "renovation-urban",
+      "industry_slug": "renovation",
+      "name": "构域空间",
+      "display_name": "装修 · 都市工业",
+      "category": "家居建材",
+      "family": "home-living",
+      "accent": "#2563eb",
+      "style": "tech-minimal",
+      "layout": "commerce",
+      "motion": "image-zoom",
+      "preview": "./renovation-urban.html",
+      "headline": "黑白灰、金属、微水泥与智能系统构成的都市先锋装修模板。",
+      "brand": "构域空间",
+      "tags": [
+        "都市工业",
+        "LOFT",
+        "智能家居"
       ]
     }
   ]
