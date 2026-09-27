@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "modules": [
     {
       "id": "pages",
@@ -135,6 +135,318 @@
       ],
       "retention": "keep_on_disable",
       "description": "装修行业预约量房与客户需求。"
+    },
+    {
+      "id": "products",
+      "name": "产品/商品",
+      "type": "module",
+      "menu_label": "产品中心",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "products",
+        "product_categories",
+        "product_fields"
+      ],
+      "retention": "keep_on_disable",
+      "description": "工业产品、商品、车型等可配置产品数据。"
+    },
+    {
+      "id": "solutions",
+      "name": "解决方案",
+      "type": "module",
+      "menu_label": "解决方案",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "solution",
+      "retention": "keep_on_disable",
+      "description": "行业解决方案与方案详情。"
+    },
+    {
+      "id": "applications",
+      "name": "应用场景",
+      "type": "module",
+      "menu_label": "应用领域",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "application",
+      "retention": "keep_on_disable",
+      "description": "应用行业、场景与用途内容。"
+    },
+    {
+      "id": "certifications",
+      "name": "资质能力",
+      "type": "module",
+      "menu_label": "资质实力",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values",
+        "media"
+      ],
+      "content_type": "certification",
+      "retention": "keep_on_disable",
+      "description": "资质证书、生产能力、荣誉与认证。"
+    },
+    {
+      "id": "downloads",
+      "name": "资料中心",
+      "type": "module",
+      "menu_label": "资料中心",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "media"
+      ],
+      "content_type": "download",
+      "retention": "keep_on_disable",
+      "description": "技术资料、白皮书、手册和下载资源。"
+    },
+    {
+      "id": "pricing",
+      "name": "价格套餐",
+      "type": "module",
+      "menu_label": "价格套餐",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "pricing",
+      "retention": "keep_on_disable",
+      "description": "套餐、报价参考与服务价格。"
+    },
+    {
+      "id": "process",
+      "name": "服务流程",
+      "type": "module",
+      "menu_label": "服务流程",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "process",
+      "retention": "keep_on_disable",
+      "description": "办理、交付、合作和服务流程。"
+    },
+    {
+      "id": "routes",
+      "name": "旅游线路",
+      "type": "module",
+      "menu_label": "旅游线路",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "listings",
+        "listing_fields"
+      ],
+      "content_type": "route",
+      "retention": "keep_on_disable",
+      "description": "旅游线路、行程、天数、价格与出发信息。"
+    },
+    {
+      "id": "destinations",
+      "name": "目的地",
+      "type": "module",
+      "menu_label": "目的地",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values",
+        "media"
+      ],
+      "content_type": "destination",
+      "retention": "keep_on_disable",
+      "description": "城市、景区和目的地内容。"
+    },
+    {
+      "id": "programs",
+      "name": "课程/项目",
+      "type": "module",
+      "menu_label": "课程项目",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "listings",
+        "listing_fields"
+      ],
+      "content_type": "program",
+      "retention": "keep_on_disable",
+      "description": "课程、教育项目与招生项目。"
+    },
+    {
+      "id": "teachers",
+      "name": "师资团队",
+      "type": "module",
+      "menu_label": "师资团队",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "people",
+        "people_relations"
+      ],
+      "content_type": "teacher",
+      "retention": "keep_on_disable",
+      "description": "教师、讲师与导师档案。"
+    },
+    {
+      "id": "outcomes",
+      "name": "学习成果",
+      "type": "module",
+      "menu_label": "学习成果",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "outcome",
+      "retention": "keep_on_disable",
+      "description": "升学、成绩、作品、就业和学习成果。"
+    },
+    {
+      "id": "doctors",
+      "name": "医生专家",
+      "type": "module",
+      "menu_label": "医生团队",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "people",
+        "people_relations"
+      ],
+      "content_type": "doctor",
+      "retention": "keep_on_disable",
+      "description": "医生、专家与医疗团队档案。"
+    },
+    {
+      "id": "facilities",
+      "name": "环境设备",
+      "type": "module",
+      "menu_label": "环境设备",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values",
+        "media"
+      ],
+      "content_type": "facility",
+      "retention": "keep_on_disable",
+      "description": "环境、设备、科室和服务设施。"
+    },
+    {
+      "id": "stores",
+      "name": "门店渠道",
+      "type": "module",
+      "menu_label": "门店渠道",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "store",
+      "retention": "keep_on_disable",
+      "description": "门店、经销商、渠道与地址网络。"
+    },
+    {
+      "id": "collections",
+      "name": "系列分类",
+      "type": "module",
+      "menu_label": "系列分类",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "collection",
+      "retention": "keep_on_disable",
+      "description": "商品系列、主题分类和产品集合。"
+    },
+    {
+      "id": "projects",
+      "name": "工程项目",
+      "type": "module",
+      "menu_label": "工程项目",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values",
+        "media"
+      ],
+      "content_type": "project",
+      "retention": "keep_on_disable",
+      "description": "能源、工程与施工项目。"
+    },
+    {
+      "id": "network",
+      "name": "服务网络",
+      "type": "module",
+      "menu_label": "服务网络",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "network",
+      "retention": "keep_on_disable",
+      "description": "物流网络、服务区域、网点与线路。"
+    },
+    {
+      "id": "vehicles",
+      "name": "车型车辆",
+      "type": "module",
+      "menu_label": "车型中心",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "listings",
+        "listing_fields"
+      ],
+      "content_type": "vehicle",
+      "retention": "keep_on_disable",
+      "description": "车型、车辆、配置、价格和库存展示。"
+    },
+    {
+      "id": "locations",
+      "name": "服务区域",
+      "type": "module",
+      "menu_label": "服务区域",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "location",
+      "retention": "keep_on_disable",
+      "description": "本地服务区域、网点与覆盖范围。"
+    },
+    {
+      "id": "reviews",
+      "name": "客户评价",
+      "type": "module",
+      "menu_label": "客户评价",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "review",
+      "retention": "keep_on_disable",
+      "description": "客户口碑、评价与见证。"
+    },
+    {
+      "id": "properties",
+      "name": "楼盘项目",
+      "type": "module",
+      "menu_label": "楼盘项目",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "listings",
+        "listing_fields"
+      ],
+      "content_type": "property",
+      "retention": "keep_on_disable",
+      "description": "楼盘、房源、户型与项目详情。"
     }
   ]
 }
