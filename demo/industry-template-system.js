@@ -340,11 +340,11 @@ function buildIndustryTemplates(industries){
  for(const industry of industries){
   const special=INDUSTRY_SPECIAL_OVERRIDES[industry.slug];
   const deep=window.getDeepIndustryProfile?window.getDeepIndustryProfile(industry):null;
+  const bp=resolveIndustryBlueprint(industry);
   if(special?.variants){
-   special.variants.forEach((v,i)=>out.push({...industry,...v,industry_slug:industry.slug,industry_name:industry.name,variant_index:i,family:industry.family,category:industry.category,direction:v.display_name?.split(' · ')[1]||('设计方向 '+(i+1)),keywords:deep?.keywords||[],metrics:deep?.metrics||[],cta:deep?.cta||'立即咨询',tags:[v.display_name,industry.name,'成品模板',...(deep?.keywords||[])]}));
+   special.variants.forEach((v,i)=>out.push({...industry,...v,industry_slug:industry.slug,industry_name:industry.name,variant_index:i,family:industry.family,category:industry.category,direction:v.display_name?.split(' · ')[1]||('设计方向 '+(i+1)),keywords:deep?.keywords||bp.keywords||[],metrics:deep?.metrics||bp.metrics||[],cta:deep?.cta||bp.cta||'立即咨询',module_labels:(bp.modules||[]).map(x=>x[1]),nav_labels:(bp.nav||[]).map(x=>x[1]),tags:[v.display_name,industry.name,'成品模板',...(deep?.keywords||bp.keywords||[])]}));
    continue;
   }
-  const bp=resolveIndustryBlueprint(industry);
   bp.variants.forEach((v,i)=>{
    const [direction,style,layout,tone,position]=v;
    const slug=industry.slug+'-v'+(i+1);
@@ -366,7 +366,9 @@ function buildIndustryTemplates(industries){
     blueprint_label:bp.label,
     keywords:bp.keywords||[],
     metrics:bp.metrics||[],
-    cta:bp.cta||'立即咨询'
+    cta:bp.cta||'立即咨询',
+    module_labels:(bp.modules||[]).map(x=>x[1]),
+    nav_labels:(bp.nav||[]).map(x=>x[1])
    });
   });
  }
