@@ -320,15 +320,31 @@ function makeBrand(industry,variantIndex){
  const suffix=['优选','智造','臻选','新域','领航','创见'][variantIndex]||'品牌';
  return short+suffix;
 }
+function resolveIndustryBlueprint(industry){
+ const deep=window.getDeepIndustryProfile?window.getDeepIndustryProfile(industry):null;
+ if(deep){
+  const matrix=window.DEEP_VISUAL_MATRIX||[
+   ['tech-minimal','split','light'],['legal-luxury','fullscreen','dark'],['local-conversion','conversion','brand'],
+   ['home-editorial','editorial','light'],['ecommerce-modern','catalog','light'],['creative-studio','portfolio','dark']
+  ];
+  return {
+   label:deep.label,detailNoun:deep.detailNoun,cta:deep.cta,modules:deep.modules,nav:deep.nav,home:deep.home,
+   keywords:deep.keywords||[],metrics:deep.metrics||[],
+   variants:(deep.variantLabels||[]).map((direction,i)=>[direction,matrix[i][0],matrix[i][1],matrix[i][2],(deep.keywords||[]).slice(0,3).join(' · ')])
+  };
+ }
+ return INDUSTRY_FAMILY_BLUEPRINTS[industry.family]||INDUSTRY_FAMILY_BLUEPRINTS['professional-trust'];
+}
 function buildIndustryTemplates(industries){
  const out=[];
  for(const industry of industries){
   const special=INDUSTRY_SPECIAL_OVERRIDES[industry.slug];
+  const deep=window.getDeepIndustryProfile?window.getDeepIndustryProfile(industry):null;
   if(special?.variants){
-   special.variants.forEach((v,i)=>out.push({...industry,...v,industry_slug:industry.slug,industry_name:industry.name,variant_index:i,family:industry.family,category:industry.category,tags:[v.display_name,industry.name,'成品模板']}));
+   special.variants.forEach((v,i)=>out.push({...industry,...v,industry_slug:industry.slug,industry_name:industry.name,variant_index:i,family:industry.family,category:industry.category,direction:v.display_name?.split(' · ')[1]||('设计方向 '+(i+1)),keywords:deep?.keywords||[],metrics:deep?.metrics||[],cta:deep?.cta||'立即咨询',tags:[v.display_name,industry.name,'成品模板',...(deep?.keywords||[])]}));
    continue;
   }
-  const bp=INDUSTRY_FAMILY_BLUEPRINTS[industry.family]||INDUSTRY_FAMILY_BLUEPRINTS['professional-trust'];
+  const bp=resolveIndustryBlueprint(industry);
   bp.variants.forEach((v,i)=>{
    const [direction,style,layout,tone,position]=v;
    const slug=industry.slug+'-v'+(i+1);
@@ -344,31 +360,36 @@ function buildIndustryTemplates(industries){
     direction,
     style,layout,tone,
     accent:VARIANT_ACCENTS[(i+industry.slug.length)%VARIANT_ACCENTS.length],
-    headline:position+'。围绕'+industry.name+'真实业务结构设计，包含完整列表、详情、案例/内容与咨询页面。',
+    headline:direction+'方向。围绕'+industry.name+'的'+(bp.keywords||[]).join('、')+'等真实业务场景设计，包含完整列表、详情、案例/内容与'+(bp.cta||'咨询')+'页面。',
     preview:'./industry-template.html?industry='+encodeURIComponent(industry.slug)+'&variant='+i+'&page=home',
-    tags:[industry.name,direction,bp.label,position],
-    blueprint_label:bp.label
+    tags:[industry.name,direction,bp.label,position,...(bp.keywords||[])],
+    blueprint_label:bp.label,
+    keywords:bp.keywords||[],
+    metrics:bp.metrics||[],
+    cta:bp.cta||'立即咨询'
    });
   });
  }
  return out;
 }
 function buildIndustryManifest(industry){
- const bp=INDUSTRY_FAMILY_BLUEPRINTS[industry.family]||INDUSTRY_FAMILY_BLUEPRINTS['professional-trust'];
+ const bp=resolveIndustryBlueprint(industry);
  const modules=['pages','media','articles','forms',...bp.modules.map(x=>x[0])];
  const content_types={};
  bp.modules.forEach(([id,label])=>{if(INDUSTRY_MODULE_FIELDS[id])content_types[id]={label,fields:INDUSTRY_MODULE_FIELDS[id].map(([key,fieldLabel,type])=>({key,label:fieldLabel,type}))}});
  return {
-  version:'2.0.0',industry:industry.slug,industry_name:industry.name,pack_name:industry.name+'行业结构包',
-  family:industry.family,required_modules:[...new Set(modules)],
+  version:'2.1.0',industry:industry.slug,industry_name:industry.name,pack_name:industry.name+'行业结构包',
+  family:industry.family,profile_label:bp.label,required_modules:[...new Set(modules)],
   content_types,
   backend_menu:[
    {group:'网站内容',items:bp.modules.filter(x=>!['forms'].includes(x[0])).map(x=>({module:x[0],label:x[1]}))},
-   {group:'客户线索',items:[{module:'forms',label:bp.nav.some(x=>x[0]==='contact')?'咨询/预约线索':'表单线索'}]}
+   {group:'客户线索',items:[{module:'forms',label:bp.cta||'咨询/预约线索'}]}
   ],
   nav:bp.nav.map(x=>({page:x[0],label:x[1]})),
   home_blocks:bp.home,
   detail_noun:bp.detailNoun,
+  keywords:bp.keywords||[],
+  metrics:bp.metrics||[],
   install_modes:{
    theme_only:{label:'仅安装模板',apply_modules:false,apply_menu:false,apply_fields:false,import_demo:false},
    structure:{label:'模板 + 行业结构',apply_modules:true,apply_menu:true,apply_fields:true,import_demo:false},
@@ -377,8 +398,9 @@ function buildIndustryManifest(industry){
   uninstall_policy:{theme_remove_keeps_data:true,module_disable_keeps_data:true,drop_data_requires_explicit_confirmation:true}
  };
 }
-function getIndustryBlueprint(industry){return INDUSTRY_FAMILY_BLUEPRINTS[industry.family]||INDUSTRY_FAMILY_BLUEPRINTS['professional-trust']}
+function getIndustryBlueprint(industry){return resolveIndustryBlueprint(industry)}
 window.INDUSTRY_FAMILY_BLUEPRINTS=INDUSTRY_FAMILY_BLUEPRINTS;
+window.resolveIndustryBlueprint=resolveIndustryBlueprint;
 window.buildIndustryTemplates=buildIndustryTemplates;
 window.buildIndustryManifest=buildIndustryManifest;
 window.getIndustryBlueprint=getIndustryBlueprint;
