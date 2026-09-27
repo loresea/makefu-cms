@@ -447,6 +447,20 @@
       "content_type": "property",
       "retention": "keep_on_disable",
       "description": "楼盘、房源、户型与项目详情。"
+    },
+    {
+      "id": "team",
+      "name": "专业团队",
+      "type": "module",
+      "menu_label": "团队管理",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "people",
+        "people_relations"
+      ],
+      "content_type": "team",
+      "retention": "keep_on_disable",
+      "description": "顾问、主创、专家、人员与团队档案。"
     }
   ]
 }
