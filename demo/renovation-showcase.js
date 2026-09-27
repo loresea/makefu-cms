@@ -101,7 +101,7 @@ let key=document.body.dataset.theme||params.get('theme')||'modern';
 let theme=THEMES[key]||THEMES.modern;
 let subPage=document.body.dataset.page||params.get('page')||'home';
 
-function pageUrl(page){return './renovation-page.html?theme='+encodeURIComponent(key)+'&page='+encodeURIComponent(page)}
+function pageUrl(page,item){return './renovation-page.html?theme='+encodeURIComponent(key)+'&page='+encodeURIComponent(page)+(item!==undefined?'&item='+encodeURIComponent(item):'')}
 function homeUrl(){return './renovation-'+key+'.html'}
 
 function renderShell(){
@@ -110,13 +110,17 @@ function renderShell(){
  q('#brand').innerHTML=window.industryLogoMarkup?industryLogoMarkup(theme.name,theme.accent,'home-living','',key==='luxury'?'dark':'light'):theme.name;
  q('#brand').href=homeUrl();
  q('#siteLabel').textContent=theme.style+' · 装修行业成品模板';
+ const activeMap={'case-detail':'cases','service-detail':'services','style-detail':'styles','designer-detail':'designers','article-detail':'journal'};
+ const active=activeMap[subPage]||subPage;
  q('#navlinks').innerHTML=[
   ['home','首页',homeUrl()],
   ['cases','装修案例',pageUrl('cases')],
   ['services','装修服务',pageUrl('services')],
+  ['styles','设计风格',pageUrl('styles')],
+  ['materials','材料工艺',pageUrl('materials')],
   ['designers','设计团队',pageUrl('designers')],
   ['journal','装修知识',pageUrl('journal')]
- ].map(x=>'<a class="'+(subPage===x[0]?'on':'')+'" href="'+x[2]+'">'+x[1]+'</a>').join('');
+ ].map(x=>'<a class="'+(active===x[0]?'on':'')+'" href="'+x[2]+'">'+x[1]+'</a>').join('');
  q('#navcta').href=pageUrl('contact');
  q('#footerBrand').textContent=theme.name;
  q('#footerDesc').textContent=theme.sub+'。'+theme.desc;
