@@ -221,3 +221,21 @@ body[data-theme="urban"] .cases{grid-template-columns:repeat(4,1fr)}
  .designerProfile{grid-template-columns:1fr}
  .designerProfile>img{height:360px}
 }
+
+/* 2026-09-27: hard rule — image/card rows must always close with no orphan cells. */
+.balancedGrid{display:grid!important;gap:16px!important;grid-auto-flow:row dense!important}
+.balancedGrid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.balancedGrid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.balancedGrid.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.balancedGrid>*{grid-column:auto!important;grid-row:auto!important;transform:none!important;min-width:0!important}
+.cases.balancedGrid .case{min-height:360px!important}
+.styleGrid.balancedGrid{grid-auto-rows:300px!important}
+.styleGrid.balancedGrid .styleItem{height:300px!important}
+.styleGrid.balancedGrid .styleItem img{width:100%!important;height:100%!important;object-fit:cover!important}
+@media(max-width:1000px){
+  .balancedGrid.cols-3,.balancedGrid.cols-4{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:620px){
+  .balancedGrid.cols-2,.balancedGrid.cols-3,.balancedGrid.cols-4{grid-template-columns:1fr!important}
+  .cases.balancedGrid .case,.styleGrid.balancedGrid .styleItem{min-height:300px!important;height:300px!important}
+}
