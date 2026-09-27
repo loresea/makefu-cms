@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "modules": [
+    {
+      "id": "pages",
+      "name": "页面",
+      "type": "core",
+      "menu_label": "页面管理",
+      "data_mode": "core_table",
+      "tables": [
+        "pages"
+      ],
+      "retention": "always",
+      "description": "独立页面与基础栏目。"
+    },
+    {
+      "id": "articles",
+      "name": "文章",
+      "type": "core",
+      "menu_label": "文章管理",
+      "data_mode": "core_table",
+      "tables": [
+        "articles",
+        "article_categories",
+        "article_tags"
+      ],
+      "retention": "always",
+      "description": "新闻、知识与内容中心。"
+    },
+    {
+      "id": "media",
+      "name": "媒体库",
+      "type": "core",
+      "menu_label": "媒体库",
+      "data_mode": "core_table",
+      "tables": [
+        "media"
+      ],
+      "retention": "always",
+      "description": "统一图片与文件资源。"
+    },
+    {
+      "id": "forms",
+      "name": "表单线索",
+      "type": "core",
+      "menu_label": "表单线索",
+      "data_mode": "core_table",
+      "tables": [
+        "forms",
+        "form_submissions"
+      ],
+      "retention": "always",
+      "description": "预约、询价与客户线索。"
+    },
+    {
+      "id": "cases",
+      "name": "案例",
+      "type": "module",
+      "menu_label": "案例管理",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values",
+        "media"
+      ],
+      "content_type": "case",
+      "retention": "keep_on_disable",
+      "description": "行业项目、案例与作品展示。"
+    },
+    {
+      "id": "services",
+      "name": "服务",
+      "type": "module",
+      "menu_label": "服务管理",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values"
+      ],
+      "content_type": "service",
+      "retention": "keep_on_disable",
+      "description": "行业服务项目与服务详情。"
+    },
+    {
+      "id": "styles",
+      "name": "风格",
+      "type": "module",
+      "menu_label": "风格管理",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values",
+        "media"
+      ],
+      "content_type": "style",
+      "retention": "keep_on_disable",
+      "description": "设计风格、方案类型等行业分类内容。"
+    },
+    {
+      "id": "materials",
+      "name": "材料工艺",
+      "type": "module",
+      "menu_label": "材料工艺",
+      "data_mode": "shared_table",
+      "tables": [
+        "contents",
+        "content_values",
+        "media"
+      ],
+      "content_type": "material",
+      "retention": "keep_on_disable",
+      "description": "材料、工艺、设备、资质等行业内容。"
+    },
+    {
+      "id": "designers",
+      "name": "设计团队",
+      "type": "module",
+      "menu_label": "设计团队",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "designers",
+        "designer_relations"
+      ],
+      "retention": "keep_on_disable",
+      "description": "有独立人员档案、专业方向与关联项目。"
+    },
+    {
+      "id": "appointments",
+      "name": "预约量房",
+      "type": "module",
+      "menu_label": "预约量房",
+      "data_mode": "dedicated_table",
+      "tables": [
+        "appointments"
+      ],
+      "retention": "keep_on_disable",
+      "description": "装修行业预约量房与客户需求。"
+    }
+  ]
+}
