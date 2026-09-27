@@ -57,6 +57,8 @@ jobs:
           test -f demo/template-preview.js
           test -f demo/template-market-data.js
           test -f demo/template-detail.html
+          test -f demo/module-registry.json
+          test -f demo/industry-manifests/renovation.json
           test -f demo/logo.js
           test -f demo/site-home.html
           test -f demo/site-products.html
@@ -99,6 +101,12 @@ jobs:
           grep -q 'data-market-tab="mine"' demo/cms.html
           grep -q 'MARKET_COLLECTIONS' demo/template-market-data.js
           grep -q 'template-detail.html' demo/industry-market.html
+          grep -q 'makefu-active-industry-pack' demo/cms.html
+          grep -q 'applyIndustryPack' demo/cms.html
+          grep -q 'module-registry.json' demo/cms.html
+          grep -q 'industry-manifests/renovation.json' demo/cms.html
+          grep -q '"required_modules"' demo/industry-manifests/renovation.json
+          grep -q '"backend_menu"' demo/industry-manifests/renovation.json
           grep -q 'renovation-variants.json' demo/cms.html
           grep -q '"count": 6' demo/renovation-variants.json
           grep -q 'case-detail' demo/renovation-showcase.js
