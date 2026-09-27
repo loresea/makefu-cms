@@ -285,6 +285,35 @@ const INDUSTRY_SPECIAL_OVERRIDES={
  }
 };
 
+const INDUSTRY_MODULE_FIELDS={
+ products:[['model','型号/系列','text'],['category','产品分类','text'],['specs','核心参数','richtext'],['applications','适用场景','tags'],['price_mode','价格/询价方式','text']],
+ services:[['audience','适用客户','text'],['scope','服务范围','richtext'],['period','服务周期','text'],['deliverables','交付内容','richtext'],['price_mode','价格方式','text']],
+ solutions:[['pain_point','客户问题','richtext'],['industry','适用行业','tags'],['architecture','方案架构','richtext'],['result','预期效果','richtext']],
+ applications:[['scene','应用场景','text'],['requirements','关键需求','richtext'],['recommended','推荐方案','relation']],
+ cases:[['client_type','客户类型','text'],['project_scale','项目规模','text'],['challenge','项目难点','richtext'],['solution','解决方案','richtext'],['result','项目结果','richtext']],
+ downloads:[['file_type','资料类型','text'],['version','版本','text'],['file','下载文件','media']],
+ certifications:[['cert_no','证书/资质编号','text'],['issuer','颁发机构','text'],['validity','有效期','text'],['certificate','证书图片','media']],
+ pricing:[['price','价格/起步价','text'],['includes','包含内容','richtext'],['audience','适用客户','text']],
+ process:[['step','流程阶段','text'],['duration','预计时间','text'],['deliverable','阶段交付','text']],
+ routes:[['days','行程天数','number'],['destinations','目的地','tags'],['price','参考价格','text'],['departure','出发信息','text'],['suitable','适合人群','text']],
+ destinations:[['region','地区','text'],['season','推荐季节','text'],['highlights','目的地亮点','richtext']],
+ programs:[['duration','课程周期','text'],['audience','适合对象','text'],['schedule','上课方式','text'],['tuition','费用','text'],['outcomes','学习目标','richtext']],
+ teachers:[['title','职位/职称','text'],['years','从业年限','number'],['specialties','擅长方向','tags'],['bio','个人简介','richtext']],
+ outcomes:[['type','成果类型','text'],['result','成果说明','richtext'],['year','年份','number']],
+ doctors:[['title','职称','text'],['specialty','擅长领域','tags'],['years','从业年限','number'],['qualification','执业资质','text'],['schedule','出诊/服务时间','text']],
+ facilities:[['type','设施类型','text'],['brand','品牌/型号','text'],['purpose','用途','richtext']],
+ stores:[['address','地址','text'],['phone','联系电话','text'],['hours','营业时间','text'],['services','服务范围','tags']],
+ collections:[['positioning','系列定位','text'],['audience','目标人群','text'],['features','系列特点','richtext']],
+ projects:[['location','项目地点','text'],['scale','项目规模','text'],['period','项目周期','text'],['result','项目成果','richtext']],
+ network:[['region','覆盖区域','text'],['routes','主要线路','tags'],['capacity','服务能力','text']],
+ vehicles:[['model','车型/型号','text'],['price','价格','text'],['power','动力/能源','text'],['range','续航/里程','text'],['configuration','核心配置','richtext']],
+ locations:[['region','服务区域','text'],['response','响应时间','text'],['coverage','覆盖说明','richtext']],
+ reviews:[['customer','客户称呼','text'],['score','评分','number'],['content','评价内容','richtext']],
+ properties:[['address','项目地址','text'],['area','面积区间','text'],['layout','户型','tags'],['price','参考价格','text'],['status','销售/交付状态','text']],
+ team:[['title','职位','text'],['years','从业年限','number'],['specialties','擅长领域','tags'],['bio','个人简介','richtext']],
+ materials:[['brand','品牌/来源','text'],['grade','等级/标准','text'],['craft','工艺说明','richtext']]
+};
+
 const VARIANT_ACCENTS=['#2563eb','#111827','#16a34a','#7c3aed','#ea580c','#0f766e'];
 function makeBrand(industry,variantIndex){
  const short=String(industry.name).replace(/行业|公司|服务|设备|系统|中心|事务所|培训|装饰/g,'').slice(0,6);
@@ -326,9 +355,12 @@ function buildIndustryTemplates(industries){
 function buildIndustryManifest(industry){
  const bp=INDUSTRY_FAMILY_BLUEPRINTS[industry.family]||INDUSTRY_FAMILY_BLUEPRINTS['professional-trust'];
  const modules=['pages','media','articles','forms',...bp.modules.map(x=>x[0])];
+ const content_types={};
+ bp.modules.forEach(([id,label])=>{if(INDUSTRY_MODULE_FIELDS[id])content_types[id]={label,fields:INDUSTRY_MODULE_FIELDS[id].map(([key,fieldLabel,type])=>({key,label:fieldLabel,type}))}});
  return {
   version:'2.0.0',industry:industry.slug,industry_name:industry.name,pack_name:industry.name+'行业结构包',
   family:industry.family,required_modules:[...new Set(modules)],
+  content_types,
   backend_menu:[
    {group:'网站内容',items:bp.modules.filter(x=>!['forms'].includes(x[0])).map(x=>({module:x[0],label:x[1]}))},
    {group:'客户线索',items:[{module:'forms',label:bp.nav.some(x=>x[0]==='contact')?'咨询/预约线索':'表单线索'}]}
