@@ -30,6 +30,16 @@ jobs:
           test -f demo/install.html
           test -f demo/travel.html
           test -f demo/renovation.html
+          test -f demo/renovation-modern.html
+          test -f demo/renovation-natural.html
+          test -f demo/renovation-luxury.html
+          test -f demo/renovation-retro.html
+          test -f demo/renovation-oriental.html
+          test -f demo/renovation-market.html
+          test -f demo/renovation-page.html
+          test -f demo/renovation-showcase.css
+          test -f demo/renovation-showcase.js
+          test -f demo/renovation-variants.json
           test -f demo/accounting.html
           test -f demo/lawyer.html
           test -f demo/industry-market.html
@@ -82,6 +92,8 @@ jobs:
           grep -q 'nav_variants' demo/template-matrix.json
           grep -q 'makeTemplatePreview' demo/industry-market.html
           grep -q 'makeTemplatePreview' demo/cms.html
+          grep -q 'renovation-variants.json' demo/cms.html
+          grep -q 'count.*5' demo/renovation-variants.json
 
       - name: Check internal demo links
         run: |
@@ -203,3 +215,4 @@ jobs:
           node --check demo/image-library.js
           node --check demo/motion.js
           node --check demo/template-preview.js
+          node --check demo/renovation-showcase.js
