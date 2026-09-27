@@ -276,7 +276,7 @@ Object.assign(DEEP_PROFILES,{
 });
 
 const INDUSTRY_DEEP_MAP={
- travel:'travel_agency',study-tour:'study_tour',
+ travel:'travel_agency','study-tour':'study_tour',
  renovation:'renovation_company','restaurant-design':'commercial_decoration','interior-design':'interior_design','home-decoration':'home_decoration','commercial-decoration':'commercial_decoration',
  accounting:'accounting_tax','tax-planning':'accounting_tax','financial-advisory':'accounting_tax','audit-service':'accounting_tax','company-registration':'company_services','business-services':'company_services','qualification-service':'company_services',
  lawyer:'lawyer','ip-service':'ip_patent','trademark-service':'ip_patent','patent-service':'ip_patent','testing-certification':'testing_cert','management-consulting':'consulting_hr',hr:'consulting_hr',headhunting:'consulting_hr',translation:'translation_service',
