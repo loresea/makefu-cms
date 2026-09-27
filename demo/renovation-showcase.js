@@ -13,11 +13,11 @@ const photo=i=>'https://images.unsplash.com/photo-'+PHOTO_IDS[i%PHOTO_IDS.length
 const THEMES={
 modern:{
  name:'筑家 DESIGN',sub:'现代极简全案设计',accent:'#a16207',style:'现代极简',tag:'MODERN MINIMAL',hero:'把房子，变成真正适合生活的家。',desc:'从空间规划、预算控制到材料与施工管理，我们更在意住进去之后的每一天，而不只是交付那一刻的照片。',
- imageOffset:0,
+ imageOffset:0,caseCols:4,styleCols:3,
  stats:[['12 年','本地设计与施工经验'],['580+','整屋落地项目'],['36 位','设计与项目管理团队'],['4.9/5','客户交付满意度']],
  services:['全案设计','整屋施工','旧房翻新','软装搭配'],
  caseTitles:['170㎡ 原木与留白','98㎡ 小户型收纳升级','240㎡ 现代东方住宅','江景大平层改造','三代同堂改善住宅','轻奢复式空间','135㎡ 无主灯改善宅','200㎡ 城市跃层'],
- styles:['现代简约','原木自然','意式极简','奶油风','现代东方'],
+ styles:['现代简约','原木自然','意式极简','奶油风','现代东方','法式现代'],
  materials:['环保基材','进口涂料','系统门窗','定制木作'],
  designers:['周屿｜首席设计师','林简｜空间设计师','沈墨｜软装设计师'],
  packages:[['基础设计','¥198/㎡'],['全案设计','¥398/㎡'],['全案托管','按项目报价']],
@@ -25,11 +25,11 @@ modern:{
 },
 natural:{
  name:'木舍空间',sub:'自然生活设计',accent:'#73895c',style:'自然小清新',tag:'NATURAL LIVING',hero:'让阳光、木头和日常，成为家的主角。',desc:'以自然材质、柔和色彩和真实生活习惯为出发点，为年轻家庭打造轻松、耐住、不过度设计的居住空间。',
- imageOffset:5,
+ imageOffset:5,caseCols:2,styleCols:3,
  stats:[['9 年','自然住宅设计'],['320+','家庭改造案例'],['86%','老客户转介绍'],['18 项','环保材料标准']],
  services:['自然系全案','儿童友好住宅','收纳优化','软装焕新'],
  caseTitles:['奶油木色亲子宅','绿意阳台两居室','阳光餐厨一体化','小户型自然收纳','宠物友好之家','低饱和度三居'],
- styles:['奶油自然','日式原木','中古混搭','北欧清新','无主灯'],
+ styles:['奶油自然','日式原木','中古混搭','北欧清新','无主灯','森系侘寂'],
  materials:['F4 星板材','植物木蜡油','天然石材','环保织物'],
  designers:['木禾｜主理人','安然｜住宅设计师','程雨｜软装设计师'],
  packages:[['局部焕新','¥29,800 起'],['整屋设计','¥168/㎡'],['全案落地','¥168,000 起']],
@@ -37,11 +37,11 @@ natural:{
 },
 luxury:{
  name:'MAISON AUREA',sub:'高端住宅与别墅设计',accent:'#c39a5b',style:'欧式轻奢',tag:'LUXURY RESIDENCE',hero:'经典比例，克制奢华。',desc:'为大平层、别墅与改善型住宅提供从建筑空间、硬装、软装到艺术陈设的一体化高端设计服务。',
- imageOffset:10,
+ imageOffset:10,caseCols:4,styleCols:3,
  stats:[['15 年','高端私宅经验'],['260+','别墅与大平层'],['32 位','设计与工程团队'],['18 城','项目落地城市']],
  services:['私宅定制','别墅设计','软装陈设','工程托管'],
  caseTitles:['滨江 320㎡ 江景私宅','法式轻奢别墅','意式大平层','城市顶层复式','收藏家住宅','黑金现代宅','湖景叠墅','私宴会客厅'],
- styles:['法式轻奢','意式现代','现代古典','Art Deco','极致黑金'],
+ styles:['法式轻奢','意式现代','现代古典','Art Deco','极致黑金','新古典'],
  materials:['天然大理石','定制木饰面','进口壁布','艺术灯具'],
  designers:['ALEX｜Design Director','SOPHIA｜Interior Architect','EVA｜Art Curator'],
  packages:[['Design Only','¥680/㎡'],['Turnkey','¥1,280/㎡'],['Private Residence','预约面谈']],
@@ -49,11 +49,11 @@ luxury:{
 },
 retro:{
  name:'拾光设计事务所',sub:'复古住宅与生活方式设计',accent:'#9b3f2f',style:'复古事务所',tag:'RETRO EDITORIAL',hero:'旧物有时间感，新家也该有自己的故事。',desc:'我们偏爱木色、旧铜、手工砖和有岁月感的家具，把复古语言重新翻译成适合当代生活的空间。',
- imageOffset:15,
+ imageOffset:15,caseCols:3,styleCols:3,
  stats:[['2017','工作室成立'],['210+','复古住宅案例'],['47 家','长期材料合作'],['12 次','设计媒体刊登']],
  services:['复古全案','中古软装','老房更新','商业空间'],
  caseTitles:['红棕色复古公寓','中古家具收藏宅','老洋房焕新','复古咖啡住宅','墨绿与黄铜之家','90㎡ 旧房重生'],
- styles:['中古现代','法式复古','工业复古','美式中古','老上海'],
+ styles:['中古现代','法式复古','工业复古','美式中古','老上海','英伦复古'],
  materials:['手工砖','复古木地板','黄铜五金','艺术涂料'],
  designers:['阿拾｜Founder','陈眠｜Interior Designer','苏禾｜Stylist'],
  packages:[['Concept','¥260/㎡'],['Full Design','¥460/㎡'],['Renovation','按项目报价']],
@@ -61,11 +61,11 @@ retro:{
 },
 oriental:{
  name:'观堂空间',sub:'现代东方住宅设计',accent:'#8b6b4c',style:'东方现代',tag:'ORIENTAL MODERN',hero:'留白有度，器物有序，日常自成风景。',desc:'从东方空间秩序与当代生活方式出发，以木、石、布、光构建克制、安静、耐看的居所。',
- imageOffset:20,
+ imageOffset:20,caseCols:3,styleCols:3,
  stats:[['11 年','东方住宅研究'],['180+','私宅设计'],['28 项','木作工艺节点'],['96%','项目如期交付']],
  services:['现代东方全案','新中式住宅','庭院与茶空间','木作定制'],
  caseTitles:['西湖边的静谧之家','茶室与客厅共生','木石之间的大平层','四合院现代更新','雅灰与胡桃木之家','山景别墅','书房与庭院之家'],
- styles:['现代东方','侘寂东方','新中式','宋式雅居','东方极简'],
+ styles:['现代东方','侘寂东方','新中式','宋式雅居','东方极简','禅意原木'],
  materials:['胡桃木','洞石','亚麻织物','手工灰泥'],
  designers:['顾言｜主持设计师','许砚｜室内建筑师','叶青｜陈设设计师'],
  packages:[['空间设计','¥360/㎡'],['全案设计','¥560/㎡'],['私宅定制','预约评估']],
@@ -73,11 +73,11 @@ oriental:{
 },
 urban:{
  name:'构域空间',sub:'都市先锋与工业风住宅设计',accent:'#2563eb',style:'都市工业',tag:'URBAN LOFT',hero:'把结构、材质与科技感，变成城市生活的个性。',desc:'面向城市公寓、复式与年轻改善家庭，以黑白灰、金属、微水泥和智能系统构建更利落、更有秩序的当代住宅。',
- imageOffset:24,
+ imageOffset:24,caseCols:4,styleCols:3,
  stats:[['8 年','都市住宅设计'],['190+','公寓与复式项目'],['42 项','智能家居联动节点'],['95%','预算控制达成率']],
  services:['都市全案设计','LOFT 改造','智能家居整合','灯光与软装'],
  caseTitles:['140㎡ 黑白城市宅','88㎡ 工业风公寓','210㎡ 智能复式','120㎡ 微水泥住宅','160㎡ 城市景观宅','100㎡ 年轻夫妻之家','185㎡ 黑钢与木作','230㎡ 都市顶层'],
- styles:['工业 LOFT','黑白现代','微水泥极简','智能住宅','城市精品公寓'],
+ styles:['工业 LOFT','黑白现代','微水泥极简','智能住宅','城市精品公寓','赛博极简'],
  materials:['微水泥','黑钢系统','超白玻璃','智能照明'],
  designers:['陆川｜空间主理人','纪元｜智能住宅设计师','韩野｜灯光与软装设计师'],
  packages:[['空间规划','¥238/㎡'],['都市全案','¥468/㎡'],['智能整屋','按项目报价']],
@@ -95,6 +95,11 @@ function img(url,alt,cls=''){
  return '<img class="'+cls+'" src="'+url+'" alt="'+esc(alt)+'" loading="lazy" onerror="this.onerror=null;this.src=\''+fb+'\'">'
 }
 function uniqueImage(n){return photo(theme.imageOffset+n)}
+function fillGrid(items,cols,factory){
+ const arr=[...(items||[])],rem=arr.length%cols;
+ if(rem){const need=cols-rem;for(let i=0;i<need;i++)arr.push(factory(arr.length,i))}
+ return arr;
+}
 function q(name){return document.querySelector(name)}
 const params=new URLSearchParams(location.search);
 let key=document.body.dataset.theme||params.get('theme')||'modern';
@@ -140,14 +145,18 @@ function caseMeta(i){
  return {area:areas[i%areas.length],budget:budgets[i%budgets.length],type:types[i%types.length],duration:(90+i*8)+' 天'};
 }
 function cases(){
- return '<section class="section" id="cases"><div class="wrap"><div class="head reveal"><div><h2>真实落地案例</h2><p>不是概念效果图，而是围绕户型、家庭结构、预算和生活习惯完成的真实空间方案。</p></div><a href="'+pageUrl('cases')+'">查看全部案例 →</a></div><div class="cases">'+theme.caseTitles.map((t,i)=>{const m=caseMeta(i);return '<a class="case reveal" href="'+pageUrl('case-detail',i)+'">'+img(uniqueImage(1+i),t)+'<div class="caseCopy"><small>'+m.area+'㎡ · '+m.type+' · '+theme.style+'</small><h3>'+t+'</h3><span class="detailLink">查看案例详情 →</span></div></a>'}).join('')+'</div></div></section>'
+ const cols=theme.caseCols||3;
+ const caseItems=fillGrid(theme.caseTitles,cols,(idx)=>theme.style+'精选案例 '+(idx+1));
+ return '<section class="section" id="cases"><div class="wrap"><div class="head reveal"><div><h2>真实落地案例</h2><p>不是概念效果图，而是围绕户型、家庭结构、预算和生活习惯完成的真实空间方案。</p></div><a href="'+pageUrl('cases')+'">查看全部案例 →</a></div><div class="cases balancedGrid cols-'+cols+'">'+caseItems.map((t,i)=>{const m=caseMeta(i);return '<a class="case reveal" href="'+pageUrl('case-detail',i)+'">'+img(uniqueImage(1+i),t)+'<div class="caseCopy"><small>'+m.area+'㎡ · '+m.type+' · '+theme.style+'</small><h3>'+t+'</h3><span class="detailLink">查看案例详情 →</span></div></a>'}).join('')+'</div></div></section>'
 }
 function services(){
  const desc=['从平面规划、动线、收纳到完整视觉系统。','施工节点、预算、进度和现场质量统一管理。','改善采光、收纳、功能和老房结构问题。','家具、灯具、窗帘、艺术品与生活方式搭配。'];
  return '<section class="section alt"><div class="wrap"><div class="head reveal"><div><h2>装修服务</h2><p>从设计到落地，把装修过程中最难协调的事情放在一套服务流程里完成。</p></div></div><div class="services">'+theme.services.map((x,i)=>'<article class="service reveal"><span class="num">0'+(i+1)+'</span><h3>'+x+'</h3><p>'+desc[i]+'</p><a class="serviceLink" href="'+pageUrl('service-detail',i)+'">查看服务详情 →</a></article>').join('')+'</div></div></section>'
 }
 function styles(){
- return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>设计风格不是套模板</h2><p>同一种审美，也要根据家庭结构、房屋条件和日常习惯重新设计。</p></div><a href="'+pageUrl('styles')+'">查看全部风格 →</a></div><div class="styleGrid">'+theme.styles.map((x,i)=>'<a class="styleItem reveal" href="'+pageUrl('style-detail',i)+'">'+img(uniqueImage(7+i),x)+'<span class="styleCaption">'+x+'<em>查看详情 →</em></span></a>').join('')+'</div></div></section>'
+ const cols=theme.styleCols||3;
+ const styleItems=fillGrid(theme.styles,cols,(idx)=>'精选风格 '+(idx+1));
+ return '<section class="section"><div class="wrap"><div class="head reveal"><div><h2>设计风格不是套模板</h2><p>同一种审美，也要根据家庭结构、房屋条件和日常习惯重新设计。</p></div><a href="'+pageUrl('styles')+'">查看全部风格 →</a></div><div class="styleGrid balancedGrid cols-'+cols+'">'+styleItems.map((x,i)=>'<a class="styleItem reveal" href="'+pageUrl('style-detail',i)+'">'+img(uniqueImage(7+i),x)+'<span class="styleCaption">'+x+'<em>查看详情 →</em></span></a>').join('')+'</div></div></section>'
 }
 function process(){
  const arr=['需求与量房','平面方案','效果深化','预算与选材','施工落地','软装交付'];
