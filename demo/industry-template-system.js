@@ -325,7 +325,7 @@ function buildIndustryTemplates(industries){
  for(const industry of industries){
   const special=INDUSTRY_SPECIAL_OVERRIDES[industry.slug];
   if(special?.variants){
-   special.variants.forEach((v,i)=>out.push({...industry,...v,industry_slug:industry.slug,variant_index:i,family:industry.family,category:industry.category,tags:[v.display_name,industry.name,'成品模板']}));
+   special.variants.forEach((v,i)=>out.push({...industry,...v,industry_slug:industry.slug,industry_name:industry.name,variant_index:i,family:industry.family,category:industry.category,tags:[v.display_name,industry.name,'成品模板']}));
    continue;
   }
   const bp=INDUSTRY_FAMILY_BLUEPRINTS[industry.family]||INDUSTRY_FAMILY_BLUEPRINTS['professional-trust'];
@@ -336,6 +336,7 @@ function buildIndustryTemplates(industries){
     ...industry,
     slug,
     industry_slug:industry.slug,
+    industry_name:industry.name,
     source_industry_slug:industry.slug,
     variant_index:i,
     name:makeBrand(industry,i),
