@@ -183,12 +183,50 @@ function renderHome(){
 function subHero(title,desc){
  return '<section class="subHero"><div class="wrap"><small style="color:var(--accent);font-weight:900">'+theme.style+' · '+theme.name+'</small><h1>'+title+'</h1><p>'+desc+'</p></div></section>'
 }
+function detailGallery(base,title){
+ return '<div class="detailGallery">'+[0,1,2].map(i=>'<figure class="reveal">'+img(uniqueImage(base+i),title+'效果图 '+(i+1))+'</figure>').join('')+'</div>'
+}
+function caseDetail(item){
+ const i=Math.max(0,Math.min(Number(item||0),theme.caseTitles.length-1)),title=theme.caseTitles[i],m=caseMeta(i);
+ return subHero(title,m.area+'㎡ · '+m.type+' · '+theme.style+' · 完整装修案例详情')+
+ '<section class="section"><div class="wrap detailGrid"><article class="detailBody"><div class="mainPhoto reveal">'+img(uniqueImage(1+i),title)+'</div><div class="detailIntro reveal"><h2>项目背景</h2><p>业主希望在现有户型基础上重新梳理采光、收纳和家庭成员之间的互动关系。我们先从平面布局开始，而不是直接套用某一种装修风格。</p><h2>设计重点</h2><p>通过公共区域一体化、隐藏收纳、灯光分层和材质控制，让空间既有完整视觉，又能承受长期生活使用。</p></div>'+detailGallery(7+i,title)+'</article><aside class="sideBox reveal"><h3>案例信息</h3><div class="sideRow"><span>建筑面积</span><b>'+m.area+'㎡</b></div><div class="sideRow"><span>户型</span><b>'+m.type+'</b></div><div class="sideRow"><span>设计风格</span><b>'+theme.style+'</b></div><div class="sideRow"><span>装修预算</span><b>'+m.budget+'</b></div><div class="sideRow"><span>项目周期</span><b>'+m.duration+'</b></div><a class="btn" style="width:100%;margin-top:18px" href="'+pageUrl('contact')+'">咨询类似户型</a></aside></div></section>'+process()+quote();
+}
+function serviceDetail(item){
+ const i=Math.max(0,Math.min(Number(item||0),theme.services.length-1)),name=theme.services[i];
+ const copy=['从需求访谈、量房、平面布局、效果深化到施工图，形成完整空间解决方案。','由项目经理统筹施工节点、预算、工期、材料进场和验收。','针对采光、墙体、老化管线、收纳不足等旧房问题做系统更新。','围绕家具、灯具、窗帘、艺术品和生活用品完成整体陈设。'][i]||'围绕真实居住需求提供完整服务。';
+ return subHero(name,'装修服务详情 · 服务范围、交付内容、流程与价格参考')+
+ '<section class="section"><div class="wrap detailGrid"><article class="detailBody"><div class="mainPhoto reveal">'+img(uniqueImage(10+i),name)+'</div><h2>服务说明</h2><p>'+copy+'</p><h2>包含内容</h2><div class="materialList"><div class="materialCard"><b>前期沟通</b><span>家庭结构、预算、房屋条件与核心需求。</span></div><div class="materialCard"><b>方案交付</b><span>平面、效果、材料、施工节点等阶段成果。</span></div><div class="materialCard"><b>项目跟进</b><span>进度、现场问题、变更与验收过程可追踪。</span></div><div class="materialCard"><b>交付售后</b><span>完成验收、软装进场与后续使用支持。</span></div></div></article><aside class="sideBox reveal"><h3>'+name+'</h3><div class="sideRow"><span>适合人群</span><b>按实际需求评估</b></div><div class="sideRow"><span>服务周期</span><b>30-180 天</b></div><div class="sideRow"><span>费用方式</span><b>'+theme.packages[Math.min(i,theme.packages.length-1)][1]+'</b></div><a class="btn" style="width:100%;margin-top:18px" href="'+pageUrl('contact')+'">预约沟通</a></aside></div></section>'+process()+packages();
+}
+function styleDetail(item){
+ const i=Math.max(0,Math.min(Number(item||0),theme.styles.length-1)),name=theme.styles[i];
+ return subHero(name,'设计风格详情 · 色彩、材质、空间比例与适用家庭')+
+ '<section class="section"><div class="wrap"><div class="detailGrid"><article class="detailBody"><div class="mainPhoto reveal">'+img(uniqueImage(7+i),name)+'</div><h2>'+name+'怎么做才不会变成“套风格”？</h2><p>真正的风格落地需要同时考虑户型条件、采光、层高、生活习惯与预算。我们不会简单复制效果图，而是把风格语言拆解成材质、比例、灯光、家具和色彩关系。</p>'+detailGallery(9+i,name)+'</article><aside class="sideBox reveal"><h3>风格关键词</h3><div class="sideRow"><span>主材方向</span><b>'+theme.materials[i%theme.materials.length]+'</b></div><div class="sideRow"><span>空间气质</span><b>'+theme.style+'</b></div><div class="sideRow"><span>适合户型</span><b>两居 / 三居 / 大平层</b></div><a class="btn" style="width:100%;margin-top:18px" href="'+pageUrl('contact')+'">获取同风格方案</a></aside></div></div></section>'+cases();
+}
+function designerDetail(item){
+ const i=Math.max(0,Math.min(Number(item||0),theme.designers.length-1)),name=theme.designers[i];
+ return subHero(name,'设计师详情 · 专业方向、项目经验与代表案例')+
+ '<section class="section"><div class="wrap detailGrid"><article class="detailBody"><div class="designerProfile reveal">'+img(uniqueImage(13+i),name)+'<div><h2>'+name+'</h2><p>长期关注住宅空间与真实生活之间的关系，擅长从户型、收纳、材质和家庭成员习惯出发完成完整设计。</p><div class="materialList"><div class="materialCard"><b>专业方向</b><span>'+['改善型住宅 / 全案设计','空间优化 / 施工深化','软装陈设 / 灯光与色彩'][i]+'</span></div><div class="materialCard"><b>项目经验</b><span>'+(8+i*2)+' 年 · '+(80+i*35)+'+ 项目</span></div></div></div></div><h2>代表项目</h2>'+detailGallery(3+i,name+'代表项目')+'</article><aside class="sideBox reveal"><h3>预约设计师</h3><p style="color:var(--muted)">提交户型和需求后，由团队确认是否匹配当前设计师。</p><a class="btn" style="width:100%" href="'+pageUrl('contact')+'">预约沟通</a></aside></div></section>';
+}
+function articleDetail(item){
+ const titles=['旧房翻新最容易漏掉的 6 项预算','全屋定制什么时候进场最合适？','小户型怎么做收纳，才不会越做越挤？'];
+ const i=Math.max(0,Math.min(Number(item||0),titles.length-1)),title=titles[i];
+ return subHero(title,'装修知识 · 2026.09.'+(18-i*4)+' · 阅读约 6 分钟')+
+ '<section class="section"><div class="wrap detailGrid"><article class="detailBody prose"><div class="mainPhoto reveal">'+img(uniqueImage(16+i),title)+'</div><p>装修真正容易超预算的地方，往往不是你最先注意到的主材，而是拆改、基层处理、设备调整、收口和现场变化。</p><h2>先把预算拆成几个层级</h2><p>建议把预算分成设计施工、主材设备、定制家具、软装电器和机动费用。每一个层级都保留明确的弹性空间。</p><h2>为什么很多项目做到一半才发现不够钱？</h2><p>因为前期报价只覆盖了显性的项目，而没有把现场条件、生活设备和最终陈设一起考虑。完整预算应该跟设计深化同步更新。</p><h2>我们的建议</h2><p>在确定平面方案后尽早完成设备、材料和定制方向，把可能发生的大额变化提前暴露，而不是等施工开始后被动选择。</p><blockquote>装修预算不是一张静态报价单，而应该是一套持续更新的项目成本计划。</blockquote></article><aside class="sideBox reveal"><h3>文章信息</h3><div class="sideRow"><span>分类</span><b>装修知识</b></div><div class="sideRow"><span>作者</span><b>'+theme.name+'</b></div><div class="sideRow"><span>阅读时间</span><b>约 6 分钟</b></div><a class="btn" style="width:100%;margin-top:18px" href="'+pageUrl('journal')+'">返回文章列表</a></aside></div></section>'+journal();
+}
 function renderSub(){
  let html='';
+ const item=Number(params.get('item')||0);
  if(subPage==='cases') html=subHero('装修案例','完整展示不同户型、面积、预算和生活方式的落地案例。')+cases();
+ else if(subPage==='case-detail') html=caseDetail(item);
  else if(subPage==='services') html=subHero('装修服务','从单项设计到完整全案，不同阶段选择不同服务。')+services()+process()+materials()+packages();
+ else if(subPage==='service-detail') html=serviceDetail(item);
+ else if(subPage==='styles') html=subHero('设计风格','不同审美方向对应不同材质、比例、灯光和生活方式。')+styles()+cases();
+ else if(subPage==='style-detail') html=styleDetail(item);
+ else if(subPage==='materials') html=subHero('材料与工艺','不仅看品牌，还看环保等级、施工节点、耐用性和后期维护。')+materials()+process()+cases();
  else if(subPage==='designers') html=subHero('设计团队','找到真正理解你生活方式、并能负责落地的人。')+team()+cases();
+ else if(subPage==='designer-detail') html=designerDetail(item);
  else if(subPage==='journal') html=subHero('装修知识','预算、工艺、收纳、材料与真实项目经验。')+journal()+process();
+ else if(subPage==='article-detail') html=articleDetail(item);
  else if(subPage==='contact') html=subHero('预约量房','填写房屋和需求信息，获取初步方案与预算范围。')+'<section class="section"><div class="wrap detailGrid"><div class="mainPhoto reveal">'+img(uniqueImage(19),'预约量房')+'</div><form class="sideBox reveal" onsubmit="event.preventDefault();alert(\'演示环境：预约已提交\')"><h3>预约量房</h3><label>姓名<input required style="width:100%;padding:10px;margin:6px 0 12px"></label><label>联系电话<input required style="width:100%;padding:10px;margin:6px 0 12px"></label><label>房屋面积<input placeholder="例如 120㎡" style="width:100%;padding:10px;margin:6px 0 12px"></label><label>装修预算<select style="width:100%;padding:10px;margin:6px 0 12px"><option>10-20 万</option><option>20-40 万</option><option>40-80 万</option><option>80 万以上</option></select></label><label>需求说明<textarea style="width:100%;min-height:110px;padding:10px;margin:6px 0 12px"></textarea></label><button class="btn" style="width:100%">提交预约</button></form></div></section>';
  else html=subHero('关于我们',theme.desc)+materials()+team()+reviews();
  q('#app').innerHTML=html;initReveal();
