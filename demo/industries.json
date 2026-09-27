@@ -46,7 +46,7 @@
       "category": "家居建材",
       "family": "portfolio-editorial",
       "accent": "#292524",
-      "headline": "装修行业提供 5 套不同审美与定位的成品模板，可直接预览与安装。",
+      "headline": "装修行业提供 6 套不同审美、定位与完整功能模块的成品模板，可直接预览与安装。",
       "preview": "./renovation-market.html",
       "install_modes": [
         "theme_only",
@@ -54,7 +54,7 @@
         "full_demo"
       ],
       "status": "preview-ready",
-      "template_count": 5
+      "template_count": 6
     },
     {
       "id": 3,
