@@ -1,0 +1,226 @@
+{
+  "version": "1.0.0",
+  "industry": "renovation",
+  "industry_name": "装修装饰",
+  "pack_name": "装修行业结构包",
+  "required_modules": [
+    "pages",
+    "articles",
+    "media",
+    "forms",
+    "cases",
+    "services",
+    "styles",
+    "materials",
+    "designers",
+    "appointments"
+  ],
+  "backend_menu": [
+    {
+      "group": "网站内容",
+      "items": [
+        {
+          "module": "pages",
+          "label": "页面管理"
+        },
+        {
+          "module": "cases",
+          "label": "装修案例"
+        },
+        {
+          "module": "services",
+          "label": "装修服务"
+        },
+        {
+          "module": "styles",
+          "label": "设计风格"
+        },
+        {
+          "module": "materials",
+          "label": "材料工艺"
+        },
+        {
+          "module": "designers",
+          "label": "设计团队"
+        },
+        {
+          "module": "articles",
+          "label": "装修知识"
+        }
+      ]
+    },
+    {
+      "group": "客户线索",
+      "items": [
+        {
+          "module": "appointments",
+          "label": "预约量房"
+        },
+        {
+          "module": "forms",
+          "label": "表单线索"
+        }
+      ]
+    }
+  ],
+  "content_types": {
+    "case": {
+      "label": "装修案例",
+      "fields": [
+        {
+          "key": "area",
+          "label": "面积",
+          "type": "number",
+          "unit": "㎡"
+        },
+        {
+          "key": "house_type",
+          "label": "户型",
+          "type": "text"
+        },
+        {
+          "key": "design_style",
+          "label": "设计风格",
+          "type": "relation",
+          "target": "style"
+        },
+        {
+          "key": "budget",
+          "label": "装修预算",
+          "type": "text"
+        },
+        {
+          "key": "duration",
+          "label": "项目周期",
+          "type": "text"
+        },
+        {
+          "key": "designer",
+          "label": "设计师",
+          "type": "relation",
+          "target": "designer"
+        }
+      ]
+    },
+    "service": {
+      "label": "装修服务",
+      "fields": [
+        {
+          "key": "audience",
+          "label": "适用客户",
+          "type": "text"
+        },
+        {
+          "key": "period",
+          "label": "服务周期",
+          "type": "text"
+        },
+        {
+          "key": "price_mode",
+          "label": "价格方式",
+          "type": "text"
+        },
+        {
+          "key": "deliverables",
+          "label": "交付内容",
+          "type": "richtext"
+        }
+      ]
+    },
+    "style": {
+      "label": "设计风格",
+      "fields": [
+        {
+          "key": "keywords",
+          "label": "风格关键词",
+          "type": "tags"
+        },
+        {
+          "key": "materials",
+          "label": "常用材质",
+          "type": "relation_many",
+          "target": "material"
+        },
+        {
+          "key": "suitable_house",
+          "label": "适合户型",
+          "type": "text"
+        }
+      ]
+    },
+    "material": {
+      "label": "材料工艺",
+      "fields": [
+        {
+          "key": "brand",
+          "label": "品牌/来源",
+          "type": "text"
+        },
+        {
+          "key": "grade",
+          "label": "环保等级",
+          "type": "text"
+        },
+        {
+          "key": "craft",
+          "label": "施工节点",
+          "type": "richtext"
+        }
+      ]
+    },
+    "designer": {
+      "label": "设计师",
+      "fields": [
+        {
+          "key": "title",
+          "label": "职位",
+          "type": "text"
+        },
+        {
+          "key": "years",
+          "label": "从业年限",
+          "type": "number"
+        },
+        {
+          "key": "specialties",
+          "label": "擅长方向",
+          "type": "tags"
+        },
+        {
+          "key": "bio",
+          "label": "个人简介",
+          "type": "richtext"
+        }
+      ]
+    }
+  },
+  "install_modes": {
+    "theme_only": {
+      "label": "仅安装模板",
+      "apply_modules": false,
+      "apply_menu": false,
+      "apply_fields": false,
+      "import_demo": false
+    },
+    "structure": {
+      "label": "模板 + 行业结构",
+      "apply_modules": true,
+      "apply_menu": true,
+      "apply_fields": true,
+      "import_demo": false
+    },
+    "demo": {
+      "label": "模板 + 完整演示数据",
+      "apply_modules": true,
+      "apply_menu": true,
+      "apply_fields": true,
+      "import_demo": true,
+      "backup_before": true
+    }
+  },
+  "uninstall_policy": {
+    "theme_remove_keeps_data": true,
+    "module_disable_keeps_data": true,
+    "drop_data_requires_explicit_confirmation": true
+  }
+}
