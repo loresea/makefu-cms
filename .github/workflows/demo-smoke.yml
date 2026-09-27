@@ -35,6 +35,7 @@ jobs:
           test -f demo/renovation-luxury.html
           test -f demo/renovation-retro.html
           test -f demo/renovation-oriental.html
+          test -f demo/renovation-urban.html
           test -f demo/renovation-market.html
           test -f demo/renovation-page.html
           test -f demo/renovation-showcase.css
@@ -93,7 +94,13 @@ jobs:
           grep -q 'makeTemplatePreview' demo/industry-market.html
           grep -q 'makeTemplatePreview' demo/cms.html
           grep -q 'renovation-variants.json' demo/cms.html
-          grep -q 'count.*5' demo/renovation-variants.json
+          grep -q '"count": 6' demo/renovation-variants.json
+          grep -q 'case-detail' demo/renovation-showcase.js
+          grep -q 'service-detail' demo/renovation-showcase.js
+          grep -q 'style-detail' demo/renovation-showcase.js
+          grep -q 'designer-detail' demo/renovation-showcase.js
+          grep -q 'article-detail' demo/renovation-showcase.js
+          grep -q 'materials' demo/renovation-showcase.js
 
       - name: Check internal demo links
         run: |
