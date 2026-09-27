@@ -83,10 +83,22 @@ function stats(){
  const arr=(BLUEPRINT.metrics&&BLUEPRINT.metrics.length?BLUEPRINT.metrics:[['10+','行业服务经验'],['500+','项目与客户'],['24h','咨询响应'],['98%','交付满意度']]).slice(0,4);
  return '<div class="wrap stats">'+arr.map(x=>'<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div>'
 }
+function variantHomeOrder(blocks){
+ const list=[...(blocks||[])],cta=list.filter(x=>x==='cta'),core=list.filter(x=>x!=='cta');
+ const prefer=(ids)=>[...ids.filter(x=>core.includes(x)),...core.filter(x=>!ids.includes(x))];
+ let ordered=core;
+ if(variant===1)ordered=prefer(['cases','projects','properties','routes','facilities','certifications']);
+ if(variant===2)ordered=prefer(['services','solutions','pricing','process','forms']);
+ if(variant===3)ordered=prefer(['articles','cases','team','teachers','doctors','outcomes']);
+ if(variant===4)ordered=prefer(['products','collections','vehicles','programs','routes','properties']);
+ if(variant===5)ordered=prefer(['cases','team','designers','teachers','doctors','story']);
+ return [...ordered,...cta];
+}
 function renderModuleSection(id,index=0){
  const label=moduleLabel(id);
- const count=6;
- return '<section class="section '+(index%2?'alt':'')+'"><div class="wrap"><div class="head"><div><h2>'+esc(label)+'</h2><p>'+esc(moduleIntro(id))+'</p></div><a href="'+templateUrl(id)+'">查看全部 →</a></div><div class="grid3">'+Array.from({length:count},(_,i)=>'<a class="card" href="'+templateUrl(id+'-detail',i)+'"><div class="cardMedia">'+img(VISUALS[(index*3+i+1)%VISUALS.length],itemTitle(id,i))+'</div><div class="cardBody"><small>'+esc(INDUSTRY.name)+'</small><h3>'+esc(itemTitle(id,i))+'</h3><p>'+esc(moduleIntro(id))+'</p><span class="more">查看详情 →</span></div></a>').join('')+'</div></div></section>'
+ const useFour=variant===4&&(index%2===0);
+ const count=useFour?8:6,gridClass=useFour?'grid4':'grid3';
+ return '<section class="section '+(index%2?'alt':'')+'"><div class="wrap"><div class="head"><div><h2>'+esc(label)+'</h2><p>'+esc(moduleIntro(id))+'</p></div><a href="'+templateUrl(id)+'">查看全部 →</a></div><div class="'+gridClass+'">'+Array.from({length:count},(_,i)=>'<a class="card" href="'+templateUrl(id+'-detail',i)+'"><div class="cardMedia">'+img(VISUALS[(index*3+i+1)%VISUALS.length],itemTitle(id,i))+'</div><div class="cardBody"><small>'+esc(INDUSTRY.name)+'</small><h3>'+esc(itemTitle(id,i))+'</h3><p>'+esc(moduleIntro(id))+'</p><span class="more">查看详情 →</span></div></a>').join('')+'</div></div></section>'
 }
 function renderFeatureBlock(kind,index=0){
  const titleMap={technology:'技术与能力',factory:'生产与交付实力',specs:'关键参数与标准',trust:'为什么值得信赖',story:'品牌与故事',reviews:'客户真实评价',capacity:'服务能力',features:'核心优势',location:'区位与价值',hero:'体验亮点'};
@@ -98,7 +110,7 @@ function cta(){
 }
 function renderHome(){
  let html=hero()+stats();
- (BLUEPRINT.home||[]).forEach((block,i)=>{
+ variantHomeOrder(BLUEPRINT.home||[]).forEach((block,i)=>{
   if(block==='cta'){html+=cta();return}
   const known=(BLUEPRINT.modules||[]).some(x=>x[0]===block)||['products','services','cases','articles','solutions','applications','routes','destinations','programs','teachers','doctors','facilities','stores','collections','projects','network','vehicles','locations','reviews','properties','team','materials','pricing','process','outcomes','certifications','downloads'].includes(block);
   html+=known?renderModuleSection(block,i):renderFeatureBlock(block,i);
