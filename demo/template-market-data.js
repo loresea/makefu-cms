@@ -72,6 +72,10 @@ function marketBusinessPosition(x,p){
       'renovation-retro':'设计事务所 / 复古住宅','renovation-oriental':'现代东方 / 高端私宅','renovation-urban':'都市公寓 / LOFT'
     }; return map[x.slug]||'装修设计企业';
   }
+  if(x.blueprint_label){
+    const key=(x.keywords||[]).slice(0,2).join(' / ');
+    return x.blueprint_label+(key?' · '+key:'');
+  }
   if(p.style==='legal-luxury'||p.style==='realestate-premium')return '中高端品牌';
   if(p.layout==='conversion')return '获客转化';
   if(p.layout==='portfolio')return '作品展示';
@@ -79,6 +83,7 @@ function marketBusinessPosition(x,p){
   return '企业品牌';
 }
 function marketFeatures(x){
+  if(x.module_labels?.length)return [...x.module_labels.slice(0,5),x.cta||'咨询联系'];
   if(x.industry_slug==='renovation') return ['案例详情','服务详情','设计风格','材料工艺','设计团队','装修知识','预约量房'];
   const map={
     'professional-trust':['专业领域','团队详情','案例详情','观点文章','预约咨询'],
@@ -102,7 +107,7 @@ function enrichMarketTemplate(x,p,index){
   const isNew=age<28||String(x.slug).startsWith('renovation-');
   const isHot=installs>1150||trend>78;
   const isPremium=['legal-luxury','realestate-premium','home-editorial'].includes(p.style);
-  const uses=MARKET_USE_CASES[x.family]||['企业官网','品牌展示','内容SEO'];
+  const uses=x.module_labels?.length?[...x.module_labels.slice(0,3),x.cta||'咨询联系']:(MARKET_USE_CASES[x.family]||['企业官网','品牌展示','内容SEO']);
   const badges=[];
   if(isHot)badges.push('热门');
   if(isNew)badges.push('新品');
