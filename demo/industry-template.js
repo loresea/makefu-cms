@@ -1,5 +1,5 @@
 const params=new URLSearchParams(location.search);
-let INDUSTRY=null,TEMPLATE=null,BLUEPRINT=null,VISUALS=[];
+let INDUSTRY=null,TEMPLATE=null,BLUEPRINT=null,MANIFEST=null,VISUALS=[];
 const industrySlug=params.get('industry')||'machinery';
 const variant=Math.max(0,Math.min(5,Number(params.get('variant')||0)));
 const page=params.get('page')||'home';
@@ -76,10 +76,11 @@ function renderShell(){
  q('#copyright').innerHTML='© 2026 '+esc(TEMPLATE.name)+'演示站 · <a href="https://www.makefu.com/" target="_blank" rel="noopener">技术支持：码科服网站开发</a><br>浙ICP备2026XXXX号-1';
 }
 function hero(){
- return '<section class="hero">'+img(VISUALS[0],INDUSTRY.name+'主视觉','heroImg')+'<div class="wrap heroIn"><div class="heroCopy"><span class="eyebrow">'+esc(TEMPLATE.direction||TEMPLATE.display_name)+'</span><h1>'+esc(INDUSTRY.headline||TEMPLATE.headline)+'</h1><p>'+esc(TEMPLATE.headline)+'</p><div class="actions"><a class="btn" href="'+templateUrl(BLUEPRINT.nav[1]?.[0]||'contact')+'">查看核心内容</a><a class="btn ghost" href="'+templateUrl('contact')+'">获取方案 / 咨询</a></div></div></div></section>'
+ const key=(BLUEPRINT.keywords||[]).slice(0,3).join(' · ');
+ return '<section class="hero">'+img(VISUALS[0],INDUSTRY.name+'主视觉','heroImg')+'<div class="wrap heroIn"><div class="heroCopy"><span class="eyebrow">'+esc(TEMPLATE.direction||TEMPLATE.display_name)+'</span><h1>'+esc(INDUSTRY.headline||TEMPLATE.headline)+'</h1><p>'+esc(TEMPLATE.headline)+(key?' '+esc(key)+'。':'')+'</p><div class="actions"><a class="btn" href="'+templateUrl(BLUEPRINT.nav[1]?.[0]||'contact')+'">查看核心内容</a><a class="btn ghost" href="'+templateUrl('contact')+'">'+esc(BLUEPRINT.cta||TEMPLATE.cta||'获取方案 / 咨询')+'</a></div></div></div></section>'
 }
 function stats(){
- const arr=[['10+','行业服务经验'],['500+','项目与客户'],['24h','咨询响应'],['98%','交付满意度']];
+ const arr=(BLUEPRINT.metrics&&BLUEPRINT.metrics.length?BLUEPRINT.metrics:[['10+','行业服务经验'],['500+','项目与客户'],['24h','咨询响应'],['98%','交付满意度']]).slice(0,4);
  return '<div class="wrap stats">'+arr.map(x=>'<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')+'</div>'
 }
 function renderModuleSection(id,index=0){
@@ -110,14 +111,31 @@ function subHero(title,desc){
 function renderList(id){
  return subHero(moduleLabel(id),moduleIntro(id))+renderModuleSection(id,0)+cta();
 }
+function sampleFieldValue(field,i){
+ const l=field.label||'',n=i+1;
+ if(/面积/.test(l))return (90+n*15)+'㎡';
+ if(/户型/.test(l))return ['两居室','三居室','四居室'][i%3];
+ if(/价格|费用|预算/.test(l))return ['按项目报价','¥3.8 万起','面议'][i%3];
+ if(/型号|系列/.test(l))return 'MKF-'+String(600+n*10);
+ if(/周期|时间|有效期/.test(l))return (15+n*10)+' 天';
+ if(/年限/.test(l))return (8+n*2)+' 年';
+ if(/评分/.test(l))return '4.9 / 5';
+ if(/地址|地区|区域/.test(l))return '核心服务区域 '+n;
+ if(/国家/.test(l))return '20+ 国家与地区';
+ if(/标准|等级|认证|资质/.test(l))return '行业标准 / 专业认证';
+ if(/适合|对象|客户/.test(l))return '目标客户 / 典型场景';
+ if(/方式|类型/.test(l))return '标准方案';
+ return ['完整配置','专业方案','可后台维护','支持关联内容'][i%4];
+}
 function renderDetail(id,i){
- const title=itemTitle(id,i),label=moduleLabel(id);
+ const title=itemTitle(id,i),label=moduleLabel(id),schema=MANIFEST?.content_types?.[id],fields=schema?.fields||[];
+ const fieldRows=(fields.length?fields.slice(0,5):[{label:'所属行业'},{label:'模板风格'},{label:'内容编号'},{label:'状态'}]).map((f,idx)=>'<div class="sideRow"><span>'+esc(f.label)+'</span><b>'+esc(sampleFieldValue(f,idx))+'</b></div>').join('');
  return subHero(title,label+'详情 · '+INDUSTRY.name)+
  '<section class="section"><div class="wrap detail"><article class="detailMain">'+img(VISUALS[(i+3)%VISUALS.length],title)+
- '<h2>内容概述</h2><p>'+esc(moduleIntro(id))+' 该页面不是占位跳转，而是完整的独立详情结构，可在后台维护标题、图片、参数、正文、关联内容与咨询按钮。</p>'+
- '<h2>核心信息</h2><ul><li>针对'+esc(INDUSTRY.name)+'的真实业务字段组织内容</li><li>支持关联案例、团队、产品/服务与文章</li><li>支持 SEO 标题、描述、结构化内容与分享图</li><li>支持桌面、平板和手机响应式展示</li></ul>'+
+ '<h2>'+esc(BLUEPRINT.detailNoun||label)+'详情</h2><p>'+esc(moduleIntro(id))+' 该页面按'+esc(BLUEPRINT.label)+'的真实业务决策逻辑组织内容，可在后台维护行业字段、图片、正文、参数、关联内容与'+esc(BLUEPRINT.cta||'咨询')+'入口。</p>'+
+ '<h2>核心信息</h2><ul><li>针对'+esc(INDUSTRY.name)+'的'+esc((BLUEPRINT.keywords||[]).join('、'))+'等业务重点组织内容</li><li>支持关联案例、团队、产品/服务与文章</li><li>支持 SEO 标题、描述、结构化内容与分享图</li><li>支持桌面、平板和手机响应式展示</li></ul>'+
  '<div class="gallery">'+[0,1,2].map(n=>img(VISUALS[(i+n+7)%VISUALS.length],title+' '+(n+1))).join('')+'</div></article>'+
- '<aside class="side"><h3>'+esc(label)+'信息</h3><div class="sideRow"><span>所属行业</span><b>'+esc(INDUSTRY.name)+'</b></div><div class="sideRow"><span>模板风格</span><b>'+esc(TEMPLATE.direction||'行业模板')+'</b></div><div class="sideRow"><span>内容编号</span><b>#'+String(i+1).padStart(2,'0')+'</b></div><div class="sideRow"><span>状态</span><b>已发布</b></div><a class="btn" style="width:100%;margin-top:18px" href="'+templateUrl('contact')+'">咨询这项业务</a></aside></div></section>'+renderModuleSection(id,1);
+ '<aside class="side"><h3>'+esc(label)+'字段</h3>'+fieldRows+'<a class="btn" style="width:100%;margin-top:18px" href="'+templateUrl('contact')+'">'+esc(BLUEPRINT.cta||'咨询这项业务')+'</a></aside></div></section>'+renderModuleSection(id,1);
 }
 function renderAbout(){
  return subHero('关于我们','围绕'+INDUSTRY.name+'建立可信赖的企业介绍、资质、团队与发展内容。')+renderFeatureBlock('trust',0)+renderModuleSection('cases',1)+cta();
@@ -132,6 +150,7 @@ async function boot(){
  const catalog=buildIndustryTemplates([INDUSTRY]);
  TEMPLATE=catalog.find(x=>x.variant_index===variant)||catalog[0];
  BLUEPRINT=getIndustryBlueprint(INDUSTRY);
+ MANIFEST=buildIndustryManifest(INDUSTRY);
  VISUALS=getIndustryVisuals({...INDUSTRY,accent:TEMPLATE.accent},20);
  renderShell();
  let html='';
