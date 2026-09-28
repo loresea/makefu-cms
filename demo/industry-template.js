@@ -103,10 +103,11 @@ function renderModuleSection(id,index=0){
 function renderFeatureBlock(kind,index=0){
  const titleMap={technology:'技术与能力',factory:'生产与交付实力',specs:'关键参数与标准',trust:'为什么值得信赖',story:'品牌与故事',reviews:'客户真实评价',capacity:'服务能力',features:'核心优势',location:'区位与价值',hero:'体验亮点'};
  const title=titleMap[kind]||'核心能力';
- return '<section class="section '+(index%2?'alt':'')+'"><div class="wrap featureSplit"><div class="featureImg">'+img(VISUALS[(12+index)%VISUALS.length],title)+'</div><div class="featureCopy"><small class="eyebrow" style="color:var(--accent);border-color:var(--accent)">'+esc(BLUEPRINT.label)+'</small><h2>'+esc(title)+'</h2><p style="color:var(--muted)">结合'+esc(INDUSTRY.name)+'真实业务决策逻辑组织信息，让客户在首页就能看懂企业优势、服务边界和下一步行动。</p><div class="featureList">'+['专业能力','真实案例','标准流程','持续服务'].map((x,i)=>'<div class="featureItem"><b>'+x+'</b><span>完整内容、详情页面与咨询入口全部可管理。</span></div>').join('')+'</div></div></div></section>'
+ const features=['专业能力','真实案例','标准流程','持续服务'];
+ return '<section class="section '+(index%2?'alt':'')+'"><div class="wrap featureSplit"><div class="featureImg">'+img(VISUALS[(12+index)%VISUALS.length],title)+'</div><div class="featureCopy"><small class="eyebrow" style="color:var(--accent);border-color:var(--accent)">'+esc(BLUEPRINT.label)+'</small><h2>'+esc(title)+'</h2><p style="color:var(--muted)">结合'+esc(INDUSTRY.name)+'真实业务决策逻辑组织信息，让客户在首页就能看懂企业优势、服务边界和下一步行动。</p><div class="featureList">'+features.map((x,i)=>'<div class="featureItem"><div class="featureThumb">'+img(VISUALS[(index*4+i+5)%VISUALS.length],x)+'</div><div><b>'+x+'</b><span>完整内容、详情页面与咨询入口全部可管理。</span></div></div>').join('')+'</div></div></div></section>'
 }
 function cta(){
- return '<section class="section"><div class="wrap"><div class="quote"><div><h2>让客户看到网站，就知道这正是他要找的'+esc(INDUSTRY.name)+'。</h2><p>业务结构、内容详情和咨询路径已经完整搭好，安装后直接替换真实企业内容。</p></div><a class="btn" style="background:#fff;color:#111827;border-color:#fff" href="'+templateUrl('contact')+'">立即咨询</a></div></div></section>'
+ return '<section class="section"><div class="wrap"><div class="quote mediaQuote">'+img(VISUALS[VISUALS.length-1],INDUSTRY.name+'咨询','quoteBg')+'<div class="quoteShade"></div><div class="quoteContent"><h2>让客户看到网站，就知道这正是他要找的'+esc(INDUSTRY.name)+'。</h2><p>业务结构、内容详情和咨询路径已经完整搭好，安装后直接替换真实企业内容。</p></div><a class="btn quoteBtn" href="'+templateUrl('contact')+'">立即咨询</a></div></div></section>'
 }
 function renderHome(){
  let html=hero()+stats();
@@ -118,7 +119,8 @@ function renderHome(){
  return html;
 }
 function subHero(title,desc){
- return '<section class="subHero"><div class="wrap"><small style="color:var(--accent);font-weight:900">'+esc(TEMPLATE.direction||'行业模板')+' · '+esc(INDUSTRY.name)+'</small><h1>'+esc(title)+'</h1><p>'+esc(desc)+'</p></div></section>'
+ const idx=(String(title).length+variant*3)%VISUALS.length;
+ return '<section class="subHero"><div class="wrap subHeroGrid"><div class="subHeroCopy"><small style="color:var(--accent);font-weight:900">'+esc(TEMPLATE.direction||'行业模板')+' · '+esc(INDUSTRY.name)+'</small><h1>'+esc(title)+'</h1><p>'+esc(desc)+'</p></div><div class="subHeroMedia">'+img(VISUALS[idx],title)+'</div></div></section>'
 }
 function renderList(id){
  return subHero(moduleLabel(id),moduleIntro(id))+renderModuleSection(id,0)+cta();
