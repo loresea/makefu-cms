@@ -111,14 +111,42 @@ function generatedIndustryVisual(label='MAKEFU',accent='#f97316',index=0){
   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900"><defs><linearGradient id="g" x1="0" x2="1" gradientTransform="rotate('+angle+' .5 .5)"><stop stop-color="'+accent+'"/><stop offset="1" stop-color="#0f172a"/></linearGradient><pattern id="p" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M0 64L64 0" stroke="#fff" stroke-opacity=".055"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/><rect width="100%" height="100%" fill="url(#p)"/><circle cx="'+(220+(index%5)*210)+'" cy="'+(180+(index%3)*130)+'" r="'+(120+(index%4)*34)+'" fill="#fff" fill-opacity=".08"/><rect x="'+(760-(index%3)*90)+'" y="'+(130+(index%4)*70)+'" width="420" height="240" rx="28" fill="#fff" fill-opacity=".07"/><text x="72" y="760" font-size="58" font-family="Arial,sans-serif" font-weight="800" fill="white">'+safe+'</text><text x="74" y="815" font-size="22" font-family="Arial,sans-serif" fill="#ffffffb5">MAKEFU CMS · VISUAL '+String(index+1).padStart(2,'0')+'</text></svg>';
   return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
 }
+const RELATED_IMAGE_POOLS={
+  tech:['tech','industrial','professional','creative','property'],
+  industrial:['industrial','tech','professional','energy','logistics'],
+  professional:['professional','property','tech','creative','home'],
+  travel:['travel','property','food','home','creative'],
+  home:['home','property','creative','commerce','professional'],
+  medical:['medical','professional','local','education','home'],
+  education:['education','professional','creative','home','local'],
+  food:['food','travel','commerce','home','local'],
+  commerce:['commerce','home','creative','professional','food'],
+  local:['local','professional','home','commerce','auto'],
+  property:['property','home','professional','creative','travel'],
+  creative:['creative','home','professional','commerce','property'],
+  energy:['energy','industrial','tech','logistics','property'],
+  logistics:['logistics','industrial','auto','tech','energy'],
+  auto:['auto','industrial','tech','local','commerce']
+};
 function getIndustryVisuals(industry,count=12){
   const key=FAMILY_IMAGE_MAP[industry.family]||'professional';
-  const pool=IMAGE_POOLS[key]||IMAGE_POOLS.professional;
+  const related=RELATED_IMAGE_POOLS[key]||[key,'professional','tech','creative','home'];
+  const merged=[];
+  related.forEach(k=>(IMAGE_POOLS[k]||[]).forEach(url=>{if(!merged.includes(url))merged.push(url)}));
   const h=imageHash(industry.slug);
   const out=[];
   for(let i=0;i<count;i++){
-    if(i<pool.length)out.push(pool[(h+i)%pool.length]);
-    else out.push(generatedIndustryVisual(industry.name,industry.accent||'#f97316',i));
+    if(merged.length){
+      const idx=(h+i*3+(i%5))%merged.length;
+      let url=merged[idx];
+      if(out.includes(url)){
+        const fallbackIdx=(idx+i+1)%merged.length;
+        url=merged[fallbackIdx];
+      }
+      out.push(url);
+    }else{
+      out.push(generatedIndustryVisual(industry.name,industry.accent||'#f97316',i));
+    }
   }
   return out;
 }
