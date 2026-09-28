@@ -74,6 +74,12 @@ jobs:
           grep -q 'template-detail.html' demo/industry-market.html
           grep -q 'MARKET_COLLECTIONS' demo/template-market-data.js
           grep -q 'getIndustryVisuals' demo/image-library.js
+          grep -q 'RELATED_IMAGE_POOLS' demo/image-library.js
+          grep -q 'getIndustryVisuals' demo/template-preview.js
+          grep -q 'image-library.js' demo/industry-market.html
+          grep -q 'image-library.js' demo/template-detail.html
+          grep -q 'mediaQuote' demo/industry-template.js
+          grep -q 'subHeroMedia' demo/industry-template.js
           grep -q 'industry-template.html' demo/industry-template-system.js
 
       - name: Check internal demo links
