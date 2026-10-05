@@ -406,17 +406,17 @@
     {
       "slug": "doors-windows",
       "name": "门窗",
-      "style": "creative-studio",
+      "style": "home-editorial",
       "layout": "editorial",
-      "motion": "mask-reveal",
-      "heroVariant": "mesh",
-      "cardVariant": "outline",
-      "navVariant": "minimal",
+      "motion": "image-zoom",
+      "heroVariant": "photo",
+      "cardVariant": "image-first",
+      "navVariant": "light",
       "density": "airy",
-      "imageShape": "offset",
-      "radius": 8,
+      "imageShape": "wide",
+      "radius": 6,
       "hueShift": -1,
-      "fingerprint": "creative-studio|editorial|mask-reveal|mesh|outline|minimal|airy|offset|8|-1"
+      "fingerprint": "home-editorial|editorial|image-zoom|photo|image-first|light|airy|wide|6|-1"
     },
     {
       "slug": "building-materials",
