@@ -29,6 +29,16 @@ const IMAGE_POOLS={
     'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=84',
     'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=84'
   ],
+  doorswindows:[
+    'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=86',
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=86',
+    'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1800&q=86',
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=86',
+    'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=86',
+    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=86',
+    'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=86',
+    'https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1800&q=86'
+  ],
   medical:[
     'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=84',
     'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1800&q=84',
@@ -99,7 +109,7 @@ const FAMILY_IMAGE_MAP={
 };
 function imageHash(s){let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h}
 function getIndustryImages(industry){
-  const key=FAMILY_IMAGE_MAP[industry.family]||'professional';
+  const key=industry.slug==='doors-windows'?'doorswindows':(FAMILY_IMAGE_MAP[industry.family]||'professional');
   const pool=IMAGE_POOLS[key]||IMAGE_POOLS.professional;
   const h=imageHash(industry.slug);
   const rotate=(n)=>pool[(h+n)%pool.length];
@@ -112,6 +122,7 @@ function generatedIndustryVisual(label='MAKEFU',accent='#f97316',index=0){
   return 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
 }
 const RELATED_IMAGE_POOLS={
+  doorswindows:['doorswindows','home','property','creative','professional'],
   tech:['tech','industrial','professional','creative','property'],
   industrial:['industrial','tech','professional','energy','logistics'],
   professional:['professional','property','tech','creative','home'],
@@ -129,7 +140,7 @@ const RELATED_IMAGE_POOLS={
   auto:['auto','industrial','tech','local','commerce']
 };
 function getIndustryVisuals(industry,count=12){
-  const key=FAMILY_IMAGE_MAP[industry.family]||'professional';
+  const key=industry.slug==='doors-windows'?'doorswindows':(FAMILY_IMAGE_MAP[industry.family]||'professional');
   const related=RELATED_IMAGE_POOLS[key]||[key,'professional','tech','creative','home'];
   const merged=[];
   related.forEach(k=>(IMAGE_POOLS[k]||[]).forEach(url=>{if(!merged.includes(url))merged.push(url)}));
